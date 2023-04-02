@@ -8,3 +8,29 @@ categories:
 tags:
   - R Markdown
 ---
+```{r, echo=FALSE}
+source("~/dwdRstuff/utilities/whiteside.R")
+source("~/dwdRstuff/utilities/rotate.R")
+source("~/dwdRstuff/utilities/shift.R")
+
+ par(
+   mfrow = c(1, 1),
+   bg = "black",
+   ann = FALSE,
+   pty = "s",
+   mai = c(.1, 0, .1, 0)
+ )
+
+ plot(NULL, xlim = c(-1.2, 1.2), ylim = c(-1.2, 1.2))
+ whiteside(
+   rho = .98,
+   sigmae = .015,
+   theEnd = 500,
+   white = rgb(1, 1, 1, .2),
+   white2 = rgb(1, 1, 1, 1),
+   width = 1,
+   fill = F
+ )
+
+```
+
