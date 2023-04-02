@@ -8,25 +8,32 @@ categories:
 tags:
   - R Markdown
 ---
-```{r, echo=FALSE}
+```{r, echo=FALSE,out.width = "100%"}
 source("~/dwdRstuff/utilities/whiteside.R")
 source("~/dwdRstuff/utilities/rotate.R")
 source("~/dwdRstuff/utilities/shift.R")
 
+
+#\definecolor{greenSlate}{RGB}{158,185,157}
+#\definecolor{sandStone}{RGB}{206,181,153}
+#\definecolor{skyBlue}{RGB}{181,212,228}
+#\definecolor{brown}{RGB}{59,41,25}
+
  par(
    mfrow = c(1, 1),
-   bg = "black",
+   bg = rgb(158/255, 185/255, 157/255),
+#   bg = rgb(181,212,228,max=255),
    ann = FALSE,
    pty = "s",
    mai = c(.1, 0, .1, 0)
  )
 
- plot(NULL, xlim = c(-1.2, 1.2), ylim = c(-1.2, 1.2))
+ plot(NULL, xlim = c(-1.2, 1.2), ylim = c(-1.2, 1.2),axes=F)
  whiteside(
    rho = .98,
    sigmae = .015,
    theEnd = 500,
-   white = rgb(1, 1, 1, .2),
+   white = rgb(181/255, 212/255, 228/255, .2),
    white2 = rgb(1, 1, 1, 1),
    width = 1,
    fill = F
