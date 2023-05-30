@@ -1,0 +1,14 @@
+---
+title: "SBC and Salesforce"
+slug: salesforce-and-stock-based-compensation
+categories:
+  - CaseStudies
+tags:
+  - GreatExpectations
+---
+
+````{=html}
+```{r, echo=FALSE, results='asis'}
+xfun::file_string('/Users/douglasdwyer/dwdRstuff/Damodaran/SalesForce_V3.html')
+```
+````
