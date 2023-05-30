@@ -13,7 +13,7 @@ permalinks:
 
 menu:
   main:
-    - name: Home
+    - name: Posts
       url: ""
       weight: 1
     - name: About

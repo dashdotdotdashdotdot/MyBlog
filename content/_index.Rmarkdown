@@ -1,6 +1,15 @@
 ---
 title: Home
+author: R package build
+date: '2023-05-30'
+output:
+  html_document:
+    css: styles.css
 ---
+
+![](pagebreak6.png)
+
+# Home 
 
 Q: Why did those movies flop?
 
@@ -10,6 +19,8 @@ Q: Why were those movies so successful?
 
 Ans: They were funny. The difference is for the first set of movies we went directly to filming after writing, whereas for the second set we spent the summer working out the jokes on vaudeville and then filmed.
 
-These posts is intended to work out ideas. You are warned, and your feedback and participation is welcomed.  
+These posts is intended to work out ideas. You are warned, and your feedback and participation is welcomed and greatly appreciated.  
+
+![](pagebreak6.png)
 
 # Posts in reverse chronological order
