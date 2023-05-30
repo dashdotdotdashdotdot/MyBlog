@@ -17,7 +17,9 @@ Ans: They weren't funny
 
 Q: Why were those movies so successful?
 
-Ans: They were funny. The difference is for the first set of movies we went directly to filming after writing, whereas for the second set we spent the summer working out the jokes on vaudeville and then filmed. These posts are intended to work out ideas. Feedback and participation is greatly appreciated.  
+Ans: They were funny. The difference is for the first set of movies we went directly to filming after writing, whereas for the second set we spent the summer working out the jokes on vaudeville and then filmed. 
+
+These posts are intended to work out ideas. Feedback and participation is greatly appreciated.  
 
 ![](pagebreak6.png)
 
