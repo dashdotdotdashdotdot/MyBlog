@@ -4,7 +4,7 @@ title: Home
 
 Q: Why did those movies flop?
 
-Ans: They were not funny
+Ans: They weren't funny
 
 Q: Why were those movies so successful?
 

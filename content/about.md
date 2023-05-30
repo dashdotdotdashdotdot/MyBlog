@@ -19,8 +19,9 @@ I am starting a blog that focuses on the issue of corporate valuations. While th
 I have yet to see equity research that says that a stock is mis-priced by an order of magnitude or larger. I will not say something is mispriced either, but I will draw attention to cases where the current valuation seems very expensive or very cheap and ponder what the market sees that I am missing.
 
 
-</span>
+### Trade secrets?
 
+I am an admiring of the legendary photographer Ansel Adams who said: "I have no secrets of craft, I answer as best I can inquiries on equipment, methods, and relevant situations. I have also used the detailed captions of my technical books as a means of teaching by example and these have apparently been one of the books most appealing aspects." It is this standard that I aspire to in this context.
 
 
 
