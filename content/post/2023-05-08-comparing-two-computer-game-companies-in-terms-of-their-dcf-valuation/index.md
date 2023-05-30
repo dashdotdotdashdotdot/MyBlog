@@ -1,11 +1,16 @@
 ---
-title: Contrasting Two Computer Game Companies
-author: DWD
+title: Why Does Berkshire Hathaway hold SNOW?
+author: A Notebook by DWD
 date: '2023-05-08'
 tags:
   - R Markdown
 slug: comparing-two-computer-game-companies-in-terms-of-their-dcf-valuation
 ---
+This link takes you too what is called a "shiny notebook".  It uses interactive graphics, and the link is hosted by the company Posit (formerly Rstudio).  It may take a few moments to load.  The reason for this is it is actually deploying a virtual server for you to interact with.   The scatter plots have dynamic axes and you can hover over points to see the ticker of the firm that corresponds to the point.
 
-[Shiny Document](https://rart.shinyapps.io/Two_Gaming_Companies/)!
+The notebook asks but does not answer the question: "Why Does Berkshire Hathaway hold Snow?" Snowflake (SNOW) is a rapidly growing company that has negative net income and a very expensive valuation. It is very unusual for Berkshire Hathaway to hold this type of company.  The notebook also looks at the holdings of two growth funds:  Morgan Stanley Institutional Growth Fund (MSEQX)  and Fidelity Growth Company (FDGRX).  MSEQX holds SNOW and many companies with expensive valuations, whereas FDGRX does not. 
+
+[Shiny Notebookt](https://rart.shinyapps.io/SNOW/)!
+
+
 

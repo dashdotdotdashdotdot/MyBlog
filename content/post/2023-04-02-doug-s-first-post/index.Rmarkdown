@@ -1,6 +1,6 @@
 ---
 title: Doug's First Post
-author: R package build
+author: DWD
 date: '2023-04-02'
 slug: doug-s-first-post
 categories:
@@ -8,6 +8,8 @@ categories:
 tags:
   - R Markdown
 ---
+
+This is just a test...
 ```{r, echo=FALSE,out.width = "100%"}
 #source("~/dwdRstuff/utilities/whiteside.R")
 source("~/dwdRstuff/utilities/rotate.R")
