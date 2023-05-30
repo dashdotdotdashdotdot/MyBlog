@@ -9,9 +9,10 @@ tags:
   - R Markdown
 ---
 ```{r, echo=FALSE,out.width = "100%"}
-source("~/dwdRstuff/utilities/whiteside.R")
+#source("~/dwdRstuff/utilities/whiteside.R")
 source("~/dwdRstuff/utilities/rotate.R")
 source("~/dwdRstuff/utilities/shift.R")
+source("~/dwdRstuff/utilities/polly.R")
 
 
 #\definecolor{greenSlate}{RGB}{158,185,157}
@@ -28,16 +29,26 @@ source("~/dwdRstuff/utilities/shift.R")
    mai = c(.1, 0, .1, 0)
  )
 
+ polly1 = polly(4)
  plot(NULL, xlim = c(-1.2, 1.2), ylim = c(-1.2, 1.2),axes=F)
- whiteside(
-   rho = .98,
-   sigmae = .015,
-   theEnd = 500,
-   white = rgb(181/255, 212/255, 228/255, .2),
-   white2 = rgb(1, 1, 1, 1),
-   width = 1,
-   fill = F
- )
+ lines(polly1, col=rgb(181/255, 212/255, 228/255, 1),lwd=3)
+ lines(rotate(polly1,pi/12), col=rgb(181/255, 212/255, 228/255, 1),lwd=3)
+ lines(rotate(polly1,2*pi/12), col=rgb(181/255, 212/255, 228/255, 1),lwd=3)
+lines(rotate(polly1,3*pi/12), col=rgb(181/255, 212/255, 228/255, 1),lwd=3)
+lines(rotate(polly1,4*pi/12), col=rgb(181/255, 212/255, 228/255, 1),lwd=3)
+lines(rotate(polly1,5*pi/12), col=rgb(181/255, 212/255, 228/255, 1),lwd=3)
+
+#
+#
+# whiteside(
+#   rho = .98,
+#   sigmae = .015,
+#   theEnd = 500,
+#   white = rgb(181/255, 212/255, 228/255, .2),
+#   white2 = rgb(1, 1, 1, 1),
+#   width = 1,
+#   fill = F
+# )
 
 ```
 
