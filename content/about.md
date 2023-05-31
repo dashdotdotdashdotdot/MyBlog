@@ -21,7 +21,7 @@ I have yet to see equity research that says that a stock is mis-priced by an ord
 
 ### Trade secrets?
 
-I am an admirer of the legendary photographer Ansel Adams who said: "I have no secrets of craft, I answer as best I can inquiries on equipment, methods, and relevant situations. I have also used the detailed captions of my technical books as a means of teaching by example and these have apparently been one of the books most appealing aspects." It is this standard that I aspire to in this context.
+I am an admirer of the legendary photographer Ansel Adams who said: "I have no secrets of craft, I answer as best I can inquiries on equipment, methods, and relevant situations. I have also used the detailed captions of my technical books as a means of teaching by example and these have apparently been one of the books most appealing aspects." It is this standard that I aspire to in this context (within reason).
 
 ### Powered by a dashboard
 

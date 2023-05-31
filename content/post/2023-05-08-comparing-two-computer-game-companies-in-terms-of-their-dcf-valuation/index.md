@@ -5,10 +5,10 @@ date: '2023-05-08'
 categories:
   - CaseStudies
 tags:
-  - R Markdown
+  - GreatExpectations
 slug: comparing-two-computer-game-companies-in-terms-of-their-dcf-valuation
 ---
-![](pagebreak6.png)
+
 
 This link takes you too what is called a "shiny notebook".  It uses interactive graphics, and the link is hosted by the company Posit (formerly Rstudio).  It may take a few moments to load.  The reason for this is it is actually deploying a virtual server for you to interact with.   The scatter plots have dynamic axes and you can hover over points to see the ticker of the firm that corresponds to the point.
 

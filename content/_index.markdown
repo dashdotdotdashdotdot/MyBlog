@@ -6,10 +6,10 @@ output:
   html_document:
     css: styles.css
 ---
-
+# The Posts of the Valuation Space Blog
 ![](pagebreak6.png)
 
-# Prologue:
+## Prologue:
 
 Q: Why did those movies flop?
 
@@ -23,4 +23,4 @@ These posts are intended to work out ideas. Feedback and participation is greatl
 
 ![](pagebreak6.png)
 
-# Posts in reverse chronological order
+## Posts in reverse chronological order
