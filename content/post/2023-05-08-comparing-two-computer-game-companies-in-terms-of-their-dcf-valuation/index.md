@@ -14,7 +14,7 @@ This link takes you to what is called a "shiny notebook".  It uses interactive g
 
 The notebook asks but does not answer the question: "Why Does Berkshire Hathaway hold Snow?" Snowflake (SNOW) is a rapidly growing company that has negative net income and a very expensive valuation. It is very unusual for Berkshire Hathaway to hold this type of company.  The notebook also looks at the holdings of two growth funds:  Morgan Stanley Institutional Growth Fund (MSEQX)  and Fidelity Growth Company (FDGRX).  MSEQX holds SNOW and many companies with expensive valuations, whereas FDGRX does not. 
 
-[Shiny Notebookt](https://rart.shinyapps.io/SNOW/)
+[Shiny Notebook](https://rart.shinyapps.io/SNOW/)
 
 
 ![](pagebreak6.png)
