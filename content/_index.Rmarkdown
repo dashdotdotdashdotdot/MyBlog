@@ -6,20 +6,18 @@ output:
   html_document:
     css: styles.css
 ---
+
+
 # The Posts of the Valuation Space Blog
-![](pagebreak6.png)
 
-## Prologue:
+### Good investments start with good valuations! Good things come from good investments! And vice-versa!
 
-Q: Why did those movies flop?
 
-Ans: They weren't funny.
+I am starting a blog that focuses on the issue of corporate valuations. While the framework applies to all non-financial corporations, I am starting with what I can see---where I can see financial statements and prices.  My current source of financial statements is Edgar so my focus is on firms that have to file their statements with the U.S. Securities Exchange Commission. I also have access to equity research available to a retail investor.
 
-Q: Why were those movies so successful?
 
-Ans: They were funny. The difference is for the first set of movies we went directly to filming after writing, whereas for the second set we spent the summer working out the jokes on vaudeville and then filmed. 
+I have yet to see equity research that says that a stock is mis-priced by an order of magnitude or larger. I will not say something is mispriced either, but I will draw attention to cases where the current valuation seems very expensive or very cheap and ponder what the market sees that I am missing.
 
-These posts are intended to work out ideas. Feedback and participation is greatly appreciated.  
 
 ![](pagebreak6.png)
 
