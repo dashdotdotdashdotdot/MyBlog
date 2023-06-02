@@ -7,6 +7,7 @@ output:
     css: styles.css
 ---
 
+[<img src="/./about_files/cliff-event7088.jpg" alt=""  height="150px" />](https://www.linkedin.com/in/douglas-dwyer-dd/)
 
 # The Posts of the Valuation Space Blog
 
