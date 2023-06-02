@@ -13,12 +13,12 @@ permalinks:
 
 menu:
   main:
-    - name: Posts
-      url: ""
-      weight: 2
     - name: About
       url: "about/"
       weight: 1
+    - name: Posts
+      url: ""
+      weight: 2
     - name: Categories
       url: "categories/"
       weight: 3
