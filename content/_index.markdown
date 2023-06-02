@@ -13,7 +13,7 @@ output:
 
 Q: Why did those movies flop?
 
-Ans: They weren't funny
+Ans: They weren't funny.
 
 Q: Why were those movies so successful?
 
