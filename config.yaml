@@ -1,6 +1,6 @@
 baseurl: "/"
 languageCode: "en-us"
-title: "A minimal Hugo website"
+title: "Valuation Space"
 theme: "hugo-xmin"
 googleAnalytics: ""
 disqusShortname: ""
@@ -27,7 +27,7 @@ menu:
       weight: 4
 
 params:
-  description: "The Blog of Valuation Space"
+  description: "Valuation Space"
   footer: "&copy; Douglas Dwyer 2023 -- {Year} "
 
 markup:
