@@ -11,8 +11,9 @@ output:
 # The Valuation Space Blog
 
 ### Good investments start with good valuations! Good things come from good investments! And vice-versa!
-
+These posts vary in content and form.  Some are summaries of a _note_ with a link to load it.  A _note_ is a 2-3 page pdf with text, figure and tables.  Other posts are summaries of a shiny notebook with a link to load it. A shiny notebook contains interactive graphs and tables.  They may take a minute to load.  Some posts are self contained and typically discuss methodological issues.
 
 ![](pagebreak6.png)
 
 ## Posts in reverse chronological order
+

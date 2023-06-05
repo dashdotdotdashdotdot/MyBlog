@@ -1,5 +1,5 @@
 ---
-title: NVDA a Trillion Company?
+title: NVDA a Trillion Dollar Company?
 author: DWD
 date: '2023-06-01'
 slug: nvda-a-trillion-company
@@ -17,4 +17,4 @@ How great are the expectations for company given a $1T valuation? How can we thi
 
 This note demonstrates that a $1T valuation of NVDA implies a 7.55\% rate of return for an investor if NVDA is as successful over the next 15 years as Apple has been over the past 15 years.  Investors that have held Apple over the past 15 years have been rewarded with returns of about 25\%.  
 
-[The Note](/docs/NVDA_V3.pdf)
+[Load Note (3 Page pdf)](/docs/NVDA_V3.pdf)

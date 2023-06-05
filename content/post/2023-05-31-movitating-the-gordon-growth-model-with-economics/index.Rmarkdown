@@ -1,13 +1,19 @@
 ---
-title: Motivating the Gordon Growth Model with Economics
+title: Linking the Gordon Growth Model with Economic Theory
 author: DWD
 date: '2023-05-31'
-slug: movitating-the-gordon-growth-model-with-economics
 categories:
   - Musings
 tags:
   - WACC
+slug: movitating-the-gordon-growth-model-with-economics
 ---
+
+This methodological post is intended to show how the Gordon Growth Model can be motivated/derived using a standard growth model from the economics literature using a number of explicit assumptions. It also shown that growth is only good for firm value when the return on investment exceeds the cost of capital. 
+
+The post links the _payout ratio_ to the growth of the firm.  Growth is caused by reinvesting the earnings that are not paid out in the form of a dividend.  This explicit linkage differs from how the concept is taught in corporate finance.  In the corporate finance literature the payout ratio is not directly connected with the growth of the firm (See for example: https://pages.stern.nyu.edu/~adamodar/New_Home_Page/lectures/pe.html).
+
+
 
 # Gordon Growth Model
 
@@ -25,9 +31,9 @@ Suppose a firm uses capital to generate profit.  There are no taxes, the firm ha
 
 $$ profit = \pi K $$
 
-A well know result from growth theory is that if the price of output, the price of the quick adjustment variable (the quick adjustment variable is typicaly thought of as labor whose price is wage per unit time) and productivity is fixed and we use a constant returns to scale production function that profit per unit slow adjustment variable (i.e., capital) is independent of firm size (cf., Dwyer, Douglas “Technology Locks, Creative Destruction, and Non-Convergence in Productivity Levels”. Review of Economic Dynamics, 1998).  In terms of accounting, this profit could be thought of as "operating income" which would be more or less "net income" if there is no debt and there are no taxes.  In terms of accounting or corporate finance, $\pi$ could be called return on capital.
+A well know result from growth theory is that if the price of output, the price of the labor (or the quick adjustment variable) and productivity is fixed and we use a constant returns to scale production function that profit per unit capital (or the slow adjustment variable) is independent of firm size (cf., Dwyer, Douglas “Technology Locks, Creative Destruction, and Non-Convergence in Productivity Levels”. Review of Economic Dynamics, 1998).  In terms of accounting, this profit could be thought of as "operating income" which would be more or less "net income" if there is no debt and there are no taxes.  In terms of accounting or corporate finance, $\pi$ could be called return on capital.
 
-Suppose a firm reinvests a constant percentage of profit, $\phi$, and we choose to measure units of capital of capital such that $K = A$ where $A$ is the total assets of the firm (A firm with 10 trucks each worth \$10,000 has 100,000 units of trucks where a unit of trucks is 1/10,000 of a truck and the book value of assets is \$100,000).  The assets in the next period will be the assets in this period plus the amount of reinvest: 
+Suppose a firm reinvests a constant percentage of profit, $\phi$, and we choose to measure units of capital such that $K = A$ where $A$ is the total assets of the firm (A firm with 10 trucks each worth \$10,000 has 100,000 units of trucks where a unit of trucks is 1/10,000 of a truck and the book value of assets is \$100,000).  The assets in the next period will be the assets in this period plus the amount of reinvestment: 
 
 
 $$ A_{t+1} = A_t + \phi \pi A_t$$
@@ -53,6 +59,13 @@ The condition for whether or not more growth increases firm value is found by di
 
 $$ \frac{dV}{dg}= \frac{-A(r-g)+(\pi-g)A }{(r-g)^2}=\frac{A(\pi-r)}{(r-g)^2}$$
 which states that if the operating margin exceeds the cost of capital more incremental growth increases firm value.  Also, if we interpret $\pi$ as $(1-t)m\frac{S}{A}$ where $t$ is the tax rate and $m$ is the operating margin and $\frac{S}{A}$ is asset turnover (or asset productivity), then the condition becomes that in order for incremental growth to increase firm value $(1-t)m\frac{S}{A}$ must exceed the cost of capital.  This construct $(1-t)m\frac{S}{A}$ is referred to as the return on investment in the corporate finance literature -- in order for growth to be good for firm value the return on investment must exceed the cost of capital.
+
+
+A common construct that is used to assess the richness of the valuation of a stock is the P/E ratio. In this context, we obtain an expression for the P/E ratio by dividing our firm value equation by $\pi A$:
+
+$$ \frac{V}{\pi A} = \frac{1}{r-g}-\frac{g}{\pi (r-g)}$$ 
+So two firms with the same cost of capital and the same growth rate can have different P/E ratios.  A larger return on capital will make the second term smaller and thereby increase the P/E ratio; growth is less expensive for the firm with a high return on capital.
+
 
 
 ```{r,echo=FALSE}
