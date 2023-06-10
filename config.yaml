@@ -28,7 +28,7 @@ menu:
 
 params:
   description: "Valuation Space"
-  footer: "&copy; Douglas Dwyer 2023 -- {Year} "
+  footer: "&copy; Douglas Dwyer 2023 -- {Year} |[The Dashboard](https://rart.shinyapps.io/DWD_DCF/)"
 
 markup:
   highlight:
