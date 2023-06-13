@@ -7,6 +7,7 @@ output:
 ---
 
 [<img src="/./about_files/cliff-event7088.jpg" alt=""  height="300px" />](https://www.linkedin.com/in/douglas-dwyer-dd/)
+ <a href='https://www.linkedin.com/in/douglas-dwyer-dd/' target="_blank">Linkedin profile</a>
 
 
 Begun in May 2023, this blog focuses on the issue of corporate valuations. While the framework applies to all non-financial corporations, I am starting with what I can see---where I can see financial statements and prices.  My current source of financial statements is Edgar so my focus is on firms that have to file their statements with the U.S. Securities Exchange Commission. I also have access to equity research available to a retail investor.
