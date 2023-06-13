@@ -1,0 +1,116 @@
+---
+title: 'Up to Date Time Series of Interest' 
+author: DWD
+date: '2023-06-13'
+slug: test-use-of-rmarkdown-in-blogdown
+categories:
+  - Example
+tags:
+  - Test
+---
+
+
+This post pulls some time series that I follow from here:
+
+https://fred.stlouisfed.org/series/BAMLH0A2HYBEY
+
+
+
+```{r,  echo=F,message=FALSE,warning=FALSE}
+library(plotly)
+library(ggplot2)
+library(quantmod)
+
+makeTS = function(symbol,src0="FRED") {
+getSymbols(symbol, src =src0)
+
+tmp = eval( str2lang(symbol))
+x=as.numeric(tmp[nrow(tmp),1])
+#plot(tmp,main=paste("MR of",symbol,"is",x))
+
+#df <- data.frame(date = index(symbol), value = coredata(symbol))
+df <- data.frame(date = index(tmp), value = coredata(tmp))
+
+tst = ggplot(data = df, aes(x = df[,1], y = df[,2])) +
+  geom_line() +
+  labs(title = paste("Time Series Plot of",symbol), x = "Date", y = "Value")
+
+
+sentence = paste0("Most Recent Value of ",symbol," is ",x, " (as of ", max(df$date),")")
+plot1 = ggplotly(tst)
+return(list(plot1,sentence))
+}
+
+TBill_ts = makeTS('DGS10')
+BB_yield_ts = makeTS("BAMLH0A1HYBBEY")
+VIX_ts =makeTS("VIXCLS")
+B_yield_ts = makeTS("BAMLH0A2HYBEY")
+CPI_ts = makeTS("CPALTT01USA661S")
+```
+
+
+# Time Series of the 10 year T bill
+
+`r TBill_ts[[2]]`
+
+```{r}
+TBill_ts[[1]]
+```
+
+
+# Time Series of yield on B Bond
+
+`r B_yield_ts[[2]]`
+
+```{r}
+B_yield_ts[[1]]
+```
+
+
+
+# Time Series of the yield on a BB bond
+
+`r BB_yield_ts[[2]]`
+
+```{r}
+BB_yield_ts[[1]]
+```
+
+
+# Time Series of the VIX
+
+`r VIX_ts[[2]]`
+
+```{r}
+VIX_ts[[1]]
+```
+
+```{r}
+getSymbols('^GSPC')
+symbol='GSPC'
+tmp = eval( str2lang(symbol))
+x=as.numeric(tmp[nrow(tmp),1])
+#plot(tmp,main=paste("MR of",symbol,"is",x))
+
+#df <- data.frame(date = index(symbol), value = coredata(symbol))
+df <- data.frame(date = index(tmp), value = coredata(tmp))
+
+tst = ggplot(data = df, aes(x = df[,1], y = df[,2])) +
+  geom_line() +
+  labs(title = paste("Time Series Plot of",symbol), x = "Date", y = "Value")
+
+
+sentence = paste0("Most Recent Value of ",symbol," is ",x, " (as of ", max(df$date),")")
+plot1 = ggplotly(tst)
+GSPC_ts = list(plot1,sentence)
+
+```
+
+
+# Time Series of the S&P 500
+
+`r GSPC_ts[[2]]`
+
+```{r, echo=F,message=FALSE,warning=FALSE}
+GSPC_ts[[1]]
+```
