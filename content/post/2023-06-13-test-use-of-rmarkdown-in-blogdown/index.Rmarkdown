@@ -10,9 +10,7 @@ tags:
 ---
 
 
-This post pulls some time series that I follow from here:
-
-https://fred.stlouisfed.org/series/BAMLH0A2HYBEY
+This post pulls some time series that I follow from <a href='https://fred.stlouisfed.org/series/BAMLH0A2HYBEY' target="_blank">Fred (Economic Data from the St. Louis Fed). </a>
 
 
 
@@ -53,7 +51,7 @@ CPI_ts = makeTS("CPALTT01USA661S")
 
 `r TBill_ts[[2]]`
 
-```{r}
+```{r,  echo=F,message=FALSE,warning=FALSE}
 TBill_ts[[1]]
 ```
 
@@ -62,7 +60,7 @@ TBill_ts[[1]]
 
 `r B_yield_ts[[2]]`
 
-```{r}
+```{r,  echo=F,message=FALSE,warning=FALSE}
 B_yield_ts[[1]]
 ```
 
@@ -72,7 +70,7 @@ B_yield_ts[[1]]
 
 `r BB_yield_ts[[2]]`
 
-```{r}
+```{r,  echo=F,message=FALSE,warning=FALSE}
 BB_yield_ts[[1]]
 ```
 
@@ -81,11 +79,11 @@ BB_yield_ts[[1]]
 
 `r VIX_ts[[2]]`
 
-```{r}
+```{r,  echo=F,message=FALSE,warning=FALSE}
 VIX_ts[[1]]
 ```
 
-```{r}
+```{r, echo=F,message=FALSE,warning=FALSE}
 getSymbols('^GSPC')
 symbol='GSPC'
 tmp = eval( str2lang(symbol))
