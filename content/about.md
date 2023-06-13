@@ -23,9 +23,12 @@ I am an admirer of the legendary photographer Ansel Adams who said: "I have no s
 
 ### Powered by a Dashboard
 
-The blog is powered by a shiny dashboard that analyzes over 400 firms including the non-financial firms in the S&P 500.  It allows the user to analyze the current valuation of a firm from the perspective of a Discounted Cash Flow calculation. The dashboard runs on a _server in the cloud_ hosted by the company Posit (formerly rStudio).  The posts in this blog take advantage of the code base behind the dashboard. If you click on the screen shot below it will launch.  It can take a minute to load.  It may say "please wait" during this interval. 
+The blog is powered by a shiny dashboard that analyzes over 400 firms including the non-financial firms in the S&P 500.  It allows the user to analyze the current valuation of a firm from the perspective of a Discounted Cash Flow calculation. The dashboard runs on a _server in the cloud_ hosted by the company Posit (formerly rStudio).  The posts in this blog take advantage of the code base behind the dashboard...  When interacting with the dashboard, the _server in the cloud_ is running R (the statistical programming language).  The link is at the bottom of the page, which will open in a new tab.   It can take a minute to load.  It may say "please wait" during this interval.
 
-[<img src="/./docs/ScreenshotDashboard.png" alt="" width="400px"/>](https://rart.shinyapps.io/DWD_DCF/)
+
+### And a Single Name Report
+
+We also have developed a facility to run a report on a single name, which is accomplished by selecting a new ticker.  The report provides insight into how the name is valued and whether or not a value investor would consider it. The full report is generated on the fly in the cloud using R code. One can export it as a pdf using one's browser.  The link is at the bottom of the page, which will open in a new tab.  It may take about a minute to load and about a minute to run on a new firm.
 
 
 
