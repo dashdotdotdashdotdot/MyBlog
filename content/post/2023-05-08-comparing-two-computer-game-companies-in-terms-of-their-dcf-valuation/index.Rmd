@@ -13,7 +13,7 @@ The notebook asks but does not answer the question: "Why Does Berkshire Hathaway
 
 This link takes you to what is called a "shiny notebook".  It uses interactive graphics, and the link is hosted by the company Posit (formerly Rstudio).  It may take a few moments to load.  The reason for this is it is deploying a virtual server for you to interact with.   The scatter plots have dynamic axes, and you can hover over points to see the ticker of the firm that corresponds to the point.
 
-[Shiny Notebook](https://rart.shinyapps.io/SNOW/)
 
+<a href='https://rart.shinyapps.io/SNOW/' target="_blank">Shiny Notebook</a>
 
 ![](pagebreak6.png)

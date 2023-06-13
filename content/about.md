@@ -6,7 +6,9 @@ output:
     css: styles.css
 ---
 
-[<img src="/./about_files/cliff-event7088.jpg" alt=""  height="300px" />](https://www.linkedin.com/in/douglas-dwyer-dd/)
+
+<img src="/./about_files/cliff-event7088.jpg" alt=""  height="300px" />
+
  <a href='https://www.linkedin.com/in/douglas-dwyer-dd/' target="_blank">Linkedin profile</a>
 
 

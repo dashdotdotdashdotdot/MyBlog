@@ -12,5 +12,9 @@ tags:
 This post looks at the valuation of Two Gaming Companies: Activision (ATVI) and Roblox (RBLX).  Microsoft is seeking to buy Activision and Berkshire Hathaway is a shareholder.  It's valuation is on the expensive side .he price of RBLX, in contrast, is rather extreme.  Here is the link to the shiny notebook discussing.
 
 
-https://rart.shinyapps.io/Two_Gaming_Companies/
+
+<a href='https://rart.shinyapps.io/Two_Gaming_Companies/' target="_blank">Shiny Notebook</a>
+
+![](pagebreak6.png)
+
 
