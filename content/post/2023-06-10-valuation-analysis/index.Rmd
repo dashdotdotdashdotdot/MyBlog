@@ -15,4 +15,4 @@ The notebook is a first pass at a generic report that does a valuation analysis 
 
 If you go to the Single Name Report link at the bottom you can generate another version of this report for the selected ticker.  
 
-[Load Note (5 page pdf)](/docs/SingleNameReport_GLW.pdf)
+[Load Report (a short pdf)](/docs/SingleNameReport_GLW.pdf)
