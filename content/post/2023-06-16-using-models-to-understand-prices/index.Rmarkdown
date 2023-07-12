@@ -33,11 +33,11 @@ In order to use the Black-Scholes formula to compute the value of an option you 
 
 # Valuation Space Approach to Implied Sustainable Margins
 
-In using a discounted cash flows approach to valuing a company, the inputs to the value function are revenue projections, margin projections, asset turnover projections, the tax rate, net operating losses and the weighted average cost of capital. In order to ensure a finite value, one generally assumes that at some point in the future revenue growth will converge to a long run rate of growth of the economy as a whole.
+In using a discounted cash flows approach to valuing a company, the inputs to the value function are revenue projections, margin projections, asset turnover projections, the tax rate, net operating losses and the weighted average cost of capital. In order to ensure a finite value, one generally assumes that at some point in the future revenue growth will converge to a long-run rate of growth of the economy as a whole.
 
 ## Revenue Projections
 
-We assume that that growth of a company over the next five years will equal average growth over the past five years and that growth will taper off to 2% between years 5 and 10.  These are reasonable and round numbers that are consistent with common practices found in the corporate finance literature. 
+We assume that that growth of a company over the next five years will equal average growth over the past five years and that growth will taper off to 2% between years 5 and 10. These are reasonable and round numbers that are consistent with common practices found in the corporate finance literature.
 
 ## Asset Turnover
 
@@ -45,11 +45,11 @@ For asset turnover (ratio of sales to assets) we can assume that median value ov
 
 ## Initial Operating Margin
 
-Operating Margin, which we define as the ratio of operating income to sales, is often volatile in any given year as it can be influenced by unusual events. For this value we can assume that the initial margin of the firm is equal to the median margin of the firm over the past five years. We use the median rather than the mean as it is less sensitive to outliers. 
+Operating Margin, which we define as the ratio of operating income to sales, is often volatile in any given year as it can be influenced by unusual events. For this value we can assume that the initial margin of the firm is equal to the median margin of the firm over the past five years. We use the median rather than the mean as it is less sensitive to outliers.
 
 ## Net Operating Losses
 
-A firm that has a history of losing money will not have to pay taxes until they make the money back.  For this construct we simply assume that net operating losses are equal to the negative of the sum of operating income over the past five years if negative.
+A firm that has a history of losing money will not have to pay taxes until they make the money back. For this construct we simply assume that net operating losses are equal to the negative of the sum of operating income over the past five years if negative.
 
 ## Cost of Capital
 
@@ -57,8 +57,8 @@ We assume 400bps risk premium over the ten-year treasury.
 
 ## Implied Sustainable Margin
 
-The remaining construct required to determine the value of the firm is where will the margin end up. We solve for this construct by setting the present discounted value of the free cash flows equal to its current enterprise value.   We assume it gets there by year five and persists forever. 
+The remaining construct required to determine the value of the firm is where will the margin end up. We solve for this construct by setting the present discounted value of the free cash flows equal to its current enterprise value. We assume it gets there by year five and persists forever.
 
 This approach enables a value attribution of the firm -- how would its value change if rather than having the estimated growth rate it had no growth? how would its value change if rather than converging to the implied sustainable margin it stayed at its current margin. Additionally, this allows one to characterize the valuations into value types and identify valuation outliers.
 
-A set of projections is also useful a benchmark for planning purposes and monitoring.  Sometimes this approach will solve for an unreasonable project.  For example, it can solve for an implied sustainable margin that is implausibly large.   The dashboard allows the user to lower the implied sustainable margin and adjust other levers to get a projection that is more reasonable as required.
+A set of projections is also useful a benchmark for planning purposes and monitoring. Sometimes this approach will solve for an unreasonable project. For example, it can solve for an implied sustainable margin that is implausibly large. The dashboard allows the user to lower the implied sustainable margin and adjust other levers to get a projection that is more reasonable as required.
