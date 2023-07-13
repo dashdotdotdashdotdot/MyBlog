@@ -1,5 +1,5 @@
 ---
-title: Comparizon of Two Gaming Companies
+title: Comparison of Two Gaming Companies
 author: R package build
 date: '2023-06-05'
 slug: comparizon-of-two-gaming-companies
