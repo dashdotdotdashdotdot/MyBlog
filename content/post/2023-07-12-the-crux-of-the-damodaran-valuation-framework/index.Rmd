@@ -14,7 +14,7 @@ Here we lay out the key equations derived from Damodaran's spreadsheet and provi
 
 # Inputs to the framework
 
-The inputs to the "Crux of the framework" are vectors of growth rates, $g_t$, operating margins, $om_t$, weighted average cost of capital $WACC_t$, the tax rate $taxRate_t$, and asset turnover, $RevToCap_t$ and an initial value for revenue $Rev_0$ and Net Operating Losses $NOL_0$. To compute the book assets of the firm at any point in time, one also need an initial value for book assets, $Cap_0$.  The _crux_ is the calculation of the present discounted value of cash flows to compute the _value of operations as a going concern_, which I will refer to as _Enterprise Value_.  Damodaran's spreadsheet does a number of other useful calculations for which additional inputs are required that I will not elaborate on.  As his spreadsheet goes out 10 years, what I refer to as $T$ is typically 10 and a time interval is a full year, but it need not be.
+The inputs to the "Crux of the framework" are vectors of growth rates, $g_t$, operating margins, $om_t$, weighted average cost of capital $WACC_t$, the tax rate $taxRate_t$, and asset turnover, $RevToCap_t$ and an initial value for revenue $Rev_0$ and Net Operating Losses $NOL_0$. To compute the book assets of the firm at any point in time, one also need an initial value for book assets, $Cap_0$.  Finally, one needs a $T$ to compute the terminal value with respect to. In order to compute the terminal value using the Gordon growth model, we will need to compute Free Cash Flow to the firm in $T + 1$, so vectors need to be of length $T + 1$. The _crux_ is the calculation of the present discounted value of cash flows to compute the _value of operations as a going concern_, which I will refer to as _Enterprise Value_.  Damodaran's spreadsheet does a number of other useful calculations for which additional inputs are required that I will not elaborate on.  As his spreadsheet goes out 10 years, what I refer to as $T$ is typically 10 and a time interval is a full year, but it need not be.
 
 
 # First, compute Revenue and EBIT 
@@ -43,7 +43,7 @@ Net Operating Losses captures the concept that if a firm has a history of losing
 The next step is to compute Reinvestment. A key input to compute reinvestment is Asset Turnover, which we will write as $RevToCap_t$. Asset Turnover is the amount of additional assets the firm needs to acquire to generate one incremental unit of revenue in period t.
 
 $$ reinvestment_t = \frac{Rev_{t+1} - Rev_{t}}{RevToCap_t} $$
-what this equation implies is that in order to achieve an increase in revenue of $Rev_{t+1} - Rev_t$ one needs to invest this amount divided by Asset Turnover. 
+what this equation implies is that in order to achieve an increase in revenue of $Rev_{t+1} - Rev_t$ one needs to invest this amount divided by Asset Turnover in $t$. 
 
 The assets of the firm in any given period are given by:
 
@@ -58,7 +58,7 @@ where $Cap_0$ is the initial _book assets_ of the firm.
 Damodaran computes “Free Cash Flow to the Firm (FCFF)” as 
 
 
-$$ FCFF = EBITaftertax - reinvestment, $$
+$$ FCFF = EBITaftertax - reinvestment $$
 
 
 which deserves some explanation that I provide below.
@@ -74,11 +74,11 @@ $$ DF_t =  \prod_{\tau=1}^t \frac{1}{1+WACC_\tau}$$
 and the present discounted value of cash flows:
 
 $$  PV \quad of \quad FCFF = \sum_{t=1}^T DF_\tau
-FCFF_\tau + DF_T \bigg( \frac{FFCF_T}{r_T-g_T} \bigg)\ $$
+FCFF_\tau + DF_T \bigg( \frac{FFCF_{T+1}}{WACC_{T+1}-g_{T+1}} \bigg)\ $$
 
 The last term is the terminal value:
 
-$$DF_T \bigg( \frac{FFCF_T}{r_T-g_T} \bigg)\ $$
+$$DF_T \bigg( \frac{FFCF_{T+1}}{WACC_{T+1}-g_{T+1}} \bigg)\ $$
 
 which is computed using a Gordon growth model and then discounted. 
 
