@@ -3,9 +3,9 @@ title: Why Does Berkshire Hathaway hold SNOW?
 author: A Notebook by DWD
 date: '2023-05-08'
 categories:
-  - CaseStudies
+  - Case Studies
 tags:
-  - GreatExpectations
+  - Great Expectations
 slug: comparing-two-computer-game-companies-in-terms-of-their-dcf-valuation
 ---
 

@@ -4,9 +4,9 @@ author: DWD
 date: '2023-06-01'
 slug: nvda-a-trillion-company
 categories:
-  - CaseStudies
+  - Case Studies
 tags:
-  - GreatExpectations
+  - Great Expectations
 ---
 
 

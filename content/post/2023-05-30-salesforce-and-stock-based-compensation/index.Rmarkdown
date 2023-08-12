@@ -3,9 +3,9 @@ title: Stock Based Comp and Salesforce
 author: DWD
 date: '2023-05-30'
 categories:
-  - CaseStudies
+  - Case Studies
 tags:
-  - GreatExpectations
+  - Great Expectations
 slug: salesforce-and-stock-based-compensation
 ---
 

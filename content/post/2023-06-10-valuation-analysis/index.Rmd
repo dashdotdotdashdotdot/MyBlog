@@ -4,7 +4,7 @@ author: DWD
 date: '2023-06-10'
 slug: valuation-analysis
 categories:
-  - CaseStudies
+  - Case Studies
 tags:
   - BusinessAsUsual
 ---
