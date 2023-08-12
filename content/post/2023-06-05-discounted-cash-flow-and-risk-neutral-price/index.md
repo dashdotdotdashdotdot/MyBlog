@@ -2,11 +2,12 @@
 title: Discounted Cash Flow and Risk Neutral Pricing
 author: DWD
 date: '2023-06-05'
-slug: discounted-cash-flow-and-risk-neutral-price
 categories:
   - Musings
 tags:
   - WACC
+  - Theory
+slug: discounted-cash-flow-and-risk-neutral-price
 ---
 
 ![](images/pagebreak6.png)

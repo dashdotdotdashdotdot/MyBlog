@@ -5,7 +5,7 @@ date: '2023-05-31'
 categories:
   - Musings
 tags:
-  - WACC
+  - PEratio
 slug: movitating-the-gordon-growth-model-with-economics
 ---
 

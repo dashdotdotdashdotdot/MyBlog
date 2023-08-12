@@ -1,12 +1,12 @@
 ---
-title: 'A Set of Updated Time Series' 
+title: A Set of Updated Time Series
 author: DWD
 date: '2023-06-13'
-slug: test-use-of-rmarkdown-in-blogdown
 categories:
   - Macro
 tags:
-  - Test
+  - Macro Time Series
+slug: test-use-of-rmarkdown-in-blogdown
 ---
 
 
