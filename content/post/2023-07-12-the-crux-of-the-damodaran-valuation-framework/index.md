@@ -3,7 +3,7 @@ title: The Crux of the Damodaran Valuation Framework
 author: DWD
 date: '2023-07-12'
 categories:
-  - Musings
+  - Methodology
 tags:
   - Theory
 slug: the-crux-of-the-damodaran-valuation-framework

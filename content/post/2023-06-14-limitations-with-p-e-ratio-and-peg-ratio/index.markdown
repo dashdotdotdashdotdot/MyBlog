@@ -7,11 +7,12 @@ categories:
   - Musings
 tags:
   - Theory
+  - PE ratio
 ---
 
-If one's cost of capital is 7% and return on investment is 5%, then one should forego investment. This seemingly innocuous statement has implications for intrepreting both the P/E ratio and the PEG ratio, which are common metrics used in the valuation of firms.
+If one's cost of capital is 7% and return on investment is 5%, then one should forego investment. This seemingly innocuous statement has implications for interpreting both the P/E ratio and the PEG ratio, which are common metrics used in the valuation of firms.
 
-A straightforward way to illustrate the limitations is to assume a firm with positive earnings doesn't pay a dividend until time period T and then at time period T sets the dividend equal to earnings and stops growing. We will assume that a firm reinvests earnings is to grew its balance sheet, which is necessary to grow earnings. We will assume that the ratio of earnings to book assets stays constant as the firm grows.
+A straightforward way to illustrate the limitations is to assume a firm with positive earnings doesn't pay a dividend until time period T and then at time period T sets the dividend equal to earnings and stops growing. We will assume that a firm reinvests earnings to grow its balance sheet, which is necessary to grow earnings. We will assume that the ratio of earnings to book assets stays constant as the firm grows.
 
 As an equation we have:
 
@@ -21,9 +22,9 @@ $$ A_{t+1}-A_t = E_t;  \; for \; t <T$$ (for `\(t \leq T\)`), which implies that
 
 $$ \hat{A} = \pi $$
 
-(for `\(t\leq T\)`). In this context, the growth of both the firms assets and earnings are directly linked to the return on investment, which we assume to be constant over the growth period.
+(for `\(t\leq T\)`). In this context, the growth of both the firm's assets and earnings are directly linked to the return on investment, which we assume to be constant over the growth period.
 
-It implies
+It implies:
 
 `$$A_t = A_0(1+\pi)^t$$`
 
@@ -45,7 +46,7 @@ If we divide both sides by earnings we get:
 
 $$ \frac{V_0}{E_0} =  \frac{1}{r}\bigg(\frac{1+\pi}{1+r}\bigg)^T $$
 
-which is the *P/E Ratio*. Note that if \$\pi \> r \$ then the P/E is increasing in `\(T\)` and if the firm could choose to grow forever that they would, vand conversely if `\(\pi < r\)` the firm maximizes falling by setting `\(T\)` to 0 and not growing. In other words, in order for growth to be value enhancing ones return on investment needs to exceed its cost of capital. It also demonstrates if two firms have the same growth rates the one that can sustain the growth rate for a longer period of time will be worth more (if \$\pi \> r).
+which is the *P/E Ratio*. Note that if \$\pi \> r \$ then the P/E is increasing in `\(T\)` and if the firm could choose to grow forever that they would, and conversely if `\(\pi < r\)` the firm maximizes falling by setting `\(T\)` to 0 and not growing. In other words, in order for growth to be value enhancing one's return on investment needs to exceed its cost of capital. It also demonstrates if two firms have the same growth rates the one that can sustain the growth rate for a longer period of time will be worth more (if \$\pi \> r).
 
 For different Ts, we can create a table that maps the P/E ratio to the `\(\pi\)`.
 
@@ -53,7 +54,7 @@ For different Ts, we can create a table that maps the P/E ratio to the `\(\pi\)`
 
 # The PEG ratio
 
-The so called PEG ratio is computed as the P/E ratio divided by the expected growth measured in percent per year, so that a P/E ratio of 10 and an expected annual growth rate of 10% translates to a PEG of 1. If the PEG is less than 1 is viewed as under valued.
+The so-called PEG ratio is computed as the P/E ratio divided by the expected growth measured in percent per year, so that a P/E ratio of 10 and an expected annual growth rate of 10% translates to a PEG of 1. If the PEG is less than 1 is viewed as under-valued.
 
 In this setting the so called *PEG* is represented as:
 
@@ -78,7 +79,7 @@ and
 
 $$G = \bigg(\frac{1+\pi}{1+r} \bigg)^T $$. 
 
-That is an Income component and a Growth.  So if one firm has a cost of capital of 10% and a P/E ratio of 12, then the growth expectations for the of the firm are increasing the value of the firm by 20%.   The limitation of this decomposition, however, is it is not clear how to apply it to a firm with negative earnings.
+There is an Income component and a Growth.  Therefore, So if one firm has a cost of capital of 10% and a P/E ratio of 12, then the growth expectations for the of the firm are increasing the value of the firm by 20%.   The limitation of this decomposition, however, is it is not clear how to apply it to a firm with negative earnings.
 
 
 

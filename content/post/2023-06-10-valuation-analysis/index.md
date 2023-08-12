@@ -6,7 +6,7 @@ slug: valuation-analysis
 categories:
   - Case Studies
 tags:
-  - BusinessAsUsual
+  - Business As Usual
 ---
 
 
