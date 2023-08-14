@@ -6,7 +6,7 @@ output:
     css: styles.css
 ---
 
-I remember my uncle telling me a good way to lose money was buying companies that were doing well. He explained that companies that are doing well the market knows are doing well and are priced accordingly. To make money buying a company that is already doing well the company will have to do even better. If the company ends up doing just okay, the price will go down and you will lose money. My uncle was a sell-side analyst. When he made a buy and sell recommendations, he was assessing whether or not the firm would exceed what the market expected of the firm.
+I remember my uncle telling me a good way to lose money was buying companies that were doing well. He explained that companies that are doing well the market knows are doing well and are priced accordingly. To make money buying a company that is already doing well the company will have to do even better. If the company ends up doing just okay, the price will go down and you will lose money. My uncle was a sell-side equity analyst. When he made a buy and sell recommendations, he was assessing whether or not the firm would exceed what the market expected of the firm.
 
 The intent of "Valuation Space" is to provide a framework that translates the price of a company's common stock into a representation of what the market expects of the company in terms of its ability to deliver free cash flow to its stakeholders into the future. The coverage is the non-financial firms in the S&P 500 and the analyses are updated once a quarter to reflect the most recent financial information (as derived from SEC filings). "Valuation Space" is designed to be accessible to both the interested retail investor and the _quant_ who wants to learn value investing.
 
@@ -18,7 +18,7 @@ The Valuation Space has three pillars: a Dashboard, a Single Name Report and a B
 
 # Powered by a Dashboard
 
-The core or the valuation space is the dashboard, which provides the user with the ability to bring up a company and examine a trajectory for sales, margin, asset turnover, cost of capital and the tax rate that is consistent with the valuation using the most recent financial statement information and the market price as of the end of the most recent quarter. The user can customize this trajectory to examine the implications of their own views on the firm's possible trajectories. The dashboard also does a value attribution analysis of the S&P 500 as a portfolio. The dashboard is able to perform multiple analyses in real-time for the user with up-to-date information for any of the non-financial firms in the S&P 500. When interacting with the dashboard, the server in the cloud is running R (the statistical programming language). The link is at the bottom of each page of this blog; it will open in a new window. It can take a minute to load. It may say "please wait" during this interval. 
+The core or the valuation space is the Dashboard, which provides the user with the ability to bring up a company and examine a trajectory for sales, margin, asset turnover, cost of capital and the tax rate that is consistent with the valuation using the most recent financial statement information and the market price as of the end of the most recent quarter. The user can customize this trajectory to examine the implications of their own views on the firm's possible trajectories. The Dashboard also does a value attribution analysis of the S&P 500 as a portfolio. The Dashboard is able to perform multiple analyses in real-time for the user with up-to-date information for any of the non-financial firms in the S&P 500. When interacting with the Dashboard, the server in the cloud is running R (the statistical programming language). The link is at the bottom of each page of this blog; it will open in a new window. It can take a minute to load. It may say "please wait" during this interval. 
 
 # And A Single Name Report
 
@@ -28,7 +28,7 @@ The full report is generated on the fly in the cloud using R code. One can expor
 
 # The Blog
 
-The blog serves as a mechanism to organize and release multiple types of content. It provides case studies that analyze how the market is valuing a given firm using the Dashboard and the corresponding code base. It also has posts that document the methodology used in the dashboard, and introduces methodological enhancements.
+The blog serves as a mechanism to organize and release multiple types of content. It provides case studies that analyze how the market is valuing a given firm using the Dashboard and the corresponding code base. It also has posts that document the methodology used in the Dashboard, and introduces methodological enhancements.
 
 
 # Different From Other Approaches?
@@ -37,12 +37,12 @@ One approach to "Expectations Investing" involves the use of analyst forecasts f
 
 The approach here is somewhat different. All financial statement information is drawn directly from SEC filings that use GAAP accounting. The methodology determines sales growth, asset turnover, tax rates and initial margin from history and then solves for the implied sustainable margin for each firm that is implied by the current enterprise value. For investors who want to invest in a limited number of names, these trajectories are intended to provide a starting point for a more detailed analysis.
 
-Alternatively, one could use this framework to derive possible "alpha signals" across all the non-financial firms in the S&P 500 and develop a trading strategy that over weights the names with strong alpha signals. Before implementing such a strategy, one would want to back test it and determine its historical risk and return performance over a long history. Backing testing traditional value investing over a long history, in contrast, is challenging because the decision making process of the traditional value investor cannot be reduced an explicit set of decision rules that a back test requires.
+Alternatively, one could use this framework to derive possible "alpha signals" across all the non-financial firms in the S&P 500 and develop a trading strategy that over weights the names with strong alpha signals. Before implementing such a strategy, one would want to back test it and determine its historical risk and return performance over a long history. Backing testing traditional value investing over a long history, in contrast, is challenging because the decision making process of the traditional value investor cannot be reduced to an explicit set of decision rules that a back test requires.
 
 # Technology behind the Valuation Space
 
 Users may be interested in how I have implemented the Valuation Space.
 
-The blog is written in blogdown. My implementation process started by following a presentation of [Yi Hui](<https://slides.yihui.org/2022-useR-blogdown.html#1>). The blog is hosted by the company Netlify.
+The blog is written in blogdown. My implementation process started by following a presentation of [Yi Hui](https://yihui.org/en/2022/06/user-blogdown/). The blog is hosted by the company Netlify.
 
-The dashboard and single name report use "shiny" as the "UI front end" to interact with a server running R. The server is hosted by the company that developed Shiny, Posit (formerly known as rStudio). When one uses the dashboard and the single, a 'server is booted' in the cloud. Consequently, one may need to wait for the server to "boot" when launching the dashboard or the single name report.
+The Dashboard and Single Name Report use "shiny" as the "UI front end" to interact with a server running R. The server is hosted by the company that developed Shiny, Posit (formerly known as rStudio). When one uses the Dashboard and the Single Name Report, a 'server is booted' in the cloud. Consequently, one may need to wait for the server to "boot" when launching the Dashboard or the Single Name Report.
