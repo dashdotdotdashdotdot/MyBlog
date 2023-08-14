@@ -1,0 +1,16 @@
+---
+title: 'Ordinary Returns for Extraordinary Performance: Two Views on Nvida'
+author: Douglas Dwyer
+date: '2023-08-14'
+slug: ordinary-returns-for-extraordinary-performance-two-views-on-nvida
+categories:
+  - Case Studies
+tags:
+  - Verification
+  - Great Expectations
+---
+
+This note verifies the approach taken on Nvida (NVDA) in _Valuation Space_ by first replicating the approach taken by Damodaran and then comparing it with the approach in _Valuation _Space_. Investing in NVDA is an act of accepting stock ordinary returns for the extraordinary performance of Nvida as a company.  This state hold for a trillion dollar valuation (as was observed at the end of Q2 2023) and for a valuation.
+
+
+[Load Note (5 page pdf)](/docs/OrdinaryReturns.pdf)
