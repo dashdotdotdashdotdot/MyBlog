@@ -6,7 +6,7 @@ output:
     css: styles.css
 ---
 
-I have experience in economic growth theory, econometrics, option pricing theory and corporate finance. For two decades, I led the team that developed, calibrated, validated and updated the industries' leading commercial models of credit risk. I have also participated in the development of model validation processes at commercial banks. I seek to bring this unique background to the field of valuation with the Valuation Space.
+I have experience in economic growth theory, econometrics, option pricing theory and corporate finance. For two decades, I led the team that developed, calibrated, validated and updated the industries' leading commercial models of credit risk. I have also participated in the development of model validation processes at commercial banks. I seek to bring this unique background to the field of valuation with _Valuation Space_.
 
 Begun in May 2023, this blog focuses on the issue of corporate valuations. While the framework applies to all non-financial corporations, I am starting with what I can see---where I can see financial statements and prices. My current source of financial statements is Edgar so my focus is on firms that have to file their statements with the U.S. Securities Exchange Commission. I also have access to equity research available to a retail investor.
 
