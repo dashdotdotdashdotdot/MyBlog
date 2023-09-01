@@ -50,7 +50,7 @@ Among the numerous tests of the framework that we  have conducted, two stand out
 
 # What is Next for Valuation Space?
 
-Currently,  we am developing Valuation Space with the aim of fostering interest and active involvement and we intend to allow open access to the Blog, the Gym and the Single Name Report, with the data being updated every quarter.
+Currently,  we are developing Valuation Space with the aim of fostering interest and active involvement and we intend to allow open access to the Blog, the Gym and the Single Name Report, with the data being updated every quarter.
 
 What comes next for valuation space will depend on the nature of the interest and participation that it generates.  Possibilities include:
 
