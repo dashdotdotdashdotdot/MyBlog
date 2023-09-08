@@ -1,0 +1,135 @@
+---
+title: Validation of the Value Zone (Q3 2023 Update)
+author: Douglas Dwyer
+date: '2023-09-06'
+slug: validation-of-the-value-zone-in-q3-2023
+categories:
+  - Methodology
+tags:
+  - Validation
+---
+
+```{r,fig.width=10,fig.height=5, echo=F,message=FALSE,warning=FALSE}
+setwd("~/Rstuff/SingleNameReport")
+source('global.R')
+library(ggplot2)
+library(plotly)
+library(kableExtra)
+library(ggthemes)
+#firmNum = which(ticker007 == tickers)
+load("Rdata/nameLookup.Rdata")
+
+
+attributionTable = makeAttribution(allParms)        
+
+#strength=makeStrengthChart(attributionTable,outputData=T,sector="ALL",showBuffett = TRUE,                                         YMAX=30,XMIN = -75,warrenTickers0 =peerTickers,holder=paste0("Peers of ",ticker007)) 
+
+simple = simpleAttribution(allParms,outputData=T)
+#firmName = simple$firmName[firmNum]
+xyz = cbind(simple[,5:6],attributionTable[,1])
+#valuationType = whatTypeOfFirmIsIt(xyz[firmNum,])
+#buffetBuy = wouldBuffetBuyIt(xyz[firmNum,])
+warrenTickers = buffet_Q3_2023
+```
+
+
+This post is an update to the analysis of the holdings of Berkshire Hathaway that we did in Q2 of 2023 (See Post: Valuation of the Value Zone, 2023/08/16) to reflect both recent updates to the holdings of Berkshire Hathaway and market movements.  Using the new information, we fine tune our filter for whether or not a name would be acceptable to a value investor at the current price.
+
+Based on this updated analysis, of the 437 names in our sample, we classify 314 as being acceptable to the value investor and Berkshire Hathaway held 23 (7.3%).  Further, we classify 122 as not being acceptable to the value investor and Berkshire Hathaway held only one (0.84%).  Snowflake Enterprises (SNOW) continues to be the marked exception to Berkshire Hathaway's stock picking patterns.
+
+
+The non-financial firms in our sample that Berkshire Hathaway recently purchased are D.R. Horton (DHI), Lennar (LEN) and NVR Inc, (NVR), and the non-financial firms in our sample that Berkshire Hathaway recently sold are Activision Blizzard (ATVI) and McKesson (MCK).  Further, between the end of Q1 2023 and the end of Q2 2023 markets moved which caused movements in our growth attributions. Consequently, we can refine our decision rule regarding what a value investor would consider purchasing.  We will make the valuation zone somewhat bigger.  
+
+The table below shows these five companies. The table is sorted by descending revenue placing MCK at the top. The largest margin expansion is for ATVI (from an initial operating margin of 29.5% (OM1) to a sustainable implied operating margin (OM5) of 53.6%). Berkshire recently sold their position in ATVI. The biggest margin contraction was DHI (from an initial margin of 15.7% to an implied sustainable margin of 8.7%).  DHI is a new holding for Berkshire.  The historical growth rates for these companies are all positive with DHI having the most rapid growth. 
+
+```{r,  echo=F,message=FALSE,warning=FALSE}
+peerTickers = c("DHI", "LEN","NVR","ATVI","MCK")
+
+source('~/Rstuff/damodaran/R/make_DCF_table2.R')
+
+df3 = make_DCF_table2(peerTickers,returnDF=TRUE,order="REV")
+#df3 = df3[as.numeric(gsub("%","",df3$Recent_Growth))>15,]
+#kableExtra::kable(df3, row.names=FALSE) %>% kable_styling()
+names(df3) = c("Ticker",     "Mk To Ev",     "EV to EBIT", "OM1",        "OM5",        "G",         
+ "Asset Turn",  "EV",         "MKCAP",      "REV",        "Sector")    
+
+done = df3[,c(1,3:8,10)]
+
+alldone = done %>% mutate(Sold = ifelse(Ticker %in% sold,"Sold","New Holding"))
+
+names(alldone) = c(names(alldone)[1:8],"Sold?")
+
+kable(alldone, format = "markdown", row.names = FALSE)
+```
+
+
+
+
+
+# Revenue Multiple and Operating Margin
+
+Once again, we begin by plotting the Revenue Multiple (Enterprise Value to Revenue) of firms against their initial margin. Additionally, we plot a line representing the expected Revenue Multiple of a firm based on the firm’s revenue and operating margin (the Modeled Revenue Multiple). The Modeled Revenue Multiple is calculated using an estimated operating margin multiple when the operating margin exceeds 11.1%, and a constant estimate otherwise. These estimates were chosen to align with the sample, minimizing the sum of relative pricing errors. The blue triangles on the graph indicate the companies held by Berkshire Hathaway. It’s noteworthy that they exclusively hold names with positive initial margins and revenue multiples that are reasonably close to the modeled multiples. The sole exception is Snowflake (SNOW).
+
+
+```{r, echo=F,message=FALSE,warning=FALSE}
+valid = data.frame(ticker = attributionTable$ticker, wouldBuy = wouldBuffetBuyIt(xyz,  xbounds=c(-2.51,6.21),ybounds=c(-.4,5.71),zBound=0)$allStatisfied)
+valid$buffetBought = ifelse(valid$ticker %in% warrenTickers,1,0) 
+
+#head(valid)
+#table(valid$wouldBuy,valid$buffetBought)
+
+tmp=as.matrix(table(valid$wouldBuy,valid$buffetBought))
+
+#nrow(valid)
+#22/(289+22)
+result = c(tmp[1,2]/sum(tmp[1,]),tmp[2,2]/sum(tmp[2,]))
+```
+
+
+
+```{r,fig.width=10,fig.height=5, echo=F,message=FALSE,warning=FALSE}
+makeStrengthChart(attributionTable,outputData=F,sector="ALL",showBuffett = TRUE,
+                                         YMAX=30,XMIN = -75,warrenTickers0 =warrenTickers,holder=paste0("Held by Berkshire Hathaway"), showAfirm="",
+                  doPlotly =TRUE) 
+
+
+```
+
+The chart below illustrates how the Assumed Growth Rate and the Implied Margin influence the firm’s Revenue Multiple. The impact of the Margin is assessed by calculating the Revenue Multiple under the condition that everything else remains constant, except for setting the margin to the median value observed over the past five years for the next ten years. This computed value is then subtracted from the current Revenue Multiple. The Impact of Growth is assessed by calculating the Revenue Multiple under the assumption of zero revenue growth in the future. This calculated value is then subtracted from the Current Revenue Multiple.
+
+The square box is the "value zone" which represents our filter for whether or not a value investor would consider the name. Our filter also requires that a firm has a positive operating margin for a least three of the past five years as shown in the prior chart.
+
+With this update, we make the square box somewhat bigger. The range of the margin attribution increased from $\{ -1.3, 5.8 \}$ to $\{-2.51, 6.21 \}$, and the range of the growth attribution increased from $\{-0.4, 5.4\}$ to $\{-. 4, 5.71\}$.  We made the lower end of the margin attribution range more negative due to the purchase of DHI.  The valuation of DHI is 2.5 annual revenues lower than what it would be if it were to sustain its current margin forever. We increase the upper bound of the range for both margin attribution and growth attribution to keep MCO and VRSN in the value zone.  Both the margin attribution and the growth attribution of these names increased due to stock price appreciation in Q2 2023.
+
+
+```{r,fig.width=10,fig.height=5, echo=F,message=FALSE,warning=FALSE}
+ simpleAttribution(allParms,outputData=F,sector="ALL",showBuffett = TRUE,XMAX=25,YMAX=25,warrenTickers,holder=paste0("Held by Berkshire Hathaway"),
+                  doPlotly =TRUE,valueZone=F, BAU=FALSE,whatValueZone = "2023q3") 
+
+
+simple =  simpleAttribution(allParms,outputData=T,sector="ALL",showBuffett = TRUE,XMAX=25,YMAX=25,warrenTickers,holder=paste0("Held by Berkshire Hathaway"),
+                  doPlotly =TRUE,valueZone=F, BAU=FALSE,whatValueZone = "2023q3") 
+
+#View(simple)
+
+```
+
+
+The table below presents the data for the two prior figures for each firm that Berkshire bought and sold.  The Excess Value is the difference between the revenue multiple of the firm and the modeled revenue.  The highest Excess Value was for ATVI, which was sold, and the lowest Excess Value was for DHI which was sold and MCK which was bought. The largest margin attribution and Growth Attribution was for ATVI, which was slow and the smallest Margin Attribution was for DHI which was bought.
+
+```{r,  echo=F,message=FALSE,warning=FALSE}
+
+#done = dplyr::left_join(df4,simple, by ="ticker")
+#alldone = done %>% select(ticker,firmName,)
+
+xyz = cbind(simple[,5:6],attributionTable[,1])
+
+wouldBuy = wouldBuffetBuyIt(xyz,  xbounds=c(-2.51,6.21),ybounds=c(-.4,5.71),zBound=0)$allStatisfied
+
+alldone = simple %>% mutate(Sold=ifelse(ticker %in% sold,"Sold","New Holding"))
+alldone = alldone %>% filter (ticker %in% peerTickers) %>% select(-FirmNumber,-warren) 
+
+names(alldone) = c("Ticker","Name","Excess Value","Margin Attribution", "Growth Attribution", "Sold?")
+kable(alldone)
+```
+
