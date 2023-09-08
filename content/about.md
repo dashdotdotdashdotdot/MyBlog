@@ -12,7 +12,7 @@ Making such an evaluation involves three steps: the first step is to convert the
 
 The intent of _Valuation Space_ is to provide an environment where the investor can easily move between a valuation of a company and trajectories for cash flows consistent with that valuation. The framework initially provides trajectories of cash flows that are  consistent with the current valuation of the firm. These trajectories can be customized. The coverage is focused on the non-financial firms in the S&P 500. The underlying data are updated regularly. 
 
-We aim for _Valuation Space_ to be valued by at least two groups. The first group consits of retail investors interested in an accessible, structured approach to stock selection.  The second group comprises _the quants_ with a background in quantitative methods and data science who are interested in learning value investing. 
+We aim for _Valuation Space_ to be valued by at least two groups. The first group consists of retail investors interested in an accessible, structured approach to stock selection.  The second group comprises _the quants_ with a background in quantitative methods and data science who are interested in learning value investing. 
 
 Valuation Space has three components: The Gym, a Single Name Report and a Blog.
 
@@ -50,7 +50,7 @@ Among the numerous tests of the framework that we  have conducted, two stand out
 
 # What is Next for Valuation Space?
 
-Currently,  we are developing Valuation Space with the aim of fostering interest and active involvement and we intend to allow open access to the Blog, the Gym and the Single Name Report, with the data being updated every quarter.
+Currently,  we are developing Valuation Space with the aim of fostering interest and active involvement, and we intend to allow open access to the Blog, the Gym and the Single Name Report, with the data being updated every quarter.
 
 What comes next for valuation space will depend on the nature of the interest and participation that it generates.  Possibilities include:
 
