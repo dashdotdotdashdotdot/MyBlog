@@ -1,0 +1,150 @@
+---
+title: The Super Seven
+author: Douglas Dwyer
+date: '2023-09-07'
+slug: the-super-seven
+categories:
+  - Case Studies
+tags:
+  - Great Expectations
+---
+```{r, echo=FALSE}
+#5.6*117/741 #meta
+#208*6.9/2560 #MSFT
+#86*7.6/815 # TSLA 
+#18*25.9/1050
+#37*25.9/1050
+
+```
+
+
+In September of 2023, the seven largest stocks in the S&P 500 by market capitalization are Apple (APPL),  Amazon (AMZN), Alphabet (GOOG), Meta Platforms (META), Microsoft (MSFT), Nvidia (NVDA) and Tesla (TSLA).  In this post, we use the conceptual framework of Value Space to determine which ones are suitable to a value investor at current prices.
+
+APPL, AMZN, and GOOG are priced in a range that is suitable to the value investor.
+
+META currently has a weak valuation.  If it were able to sustain its current margin and growth trajectory the discounted cash flow would be 5.6 annual revenue more than the DCF implied by its current valuation, which would approximately double its enterprise value. A value investor is unlikely to purchase META as its stock price is "too good to be true". 
+
+MSFT has a strong valuation. If MSFT revenue were to stop growing, the discounted value of free cash flows to the firm would decline by 6.9 annual revenues, which would be approximately a 56% reduction in enterprise value.  A value investor is unlikely to purchase MSFT at its current price as the assumptions required on growth to justify its price are too strong.
+
+TSLA has a strong valuation. If TSLA is not able to expand its current margin, the discounted value of free cash flows to the firm would decline by 9.4 annual revenues (which would eliminate its Enterprise Value).  If TSLA were to stop growing, the discounted value of free cash flows to the firm would decline by 7.6 annual revenues (an 80% reduction in Enterprise Value). A value investor is unlikely to purchase TSLA at its current price as the assumptions required on both growth and margin expansion to justify its price are too strong.
+
+NVDA has an exceptionally strong valuation. If it stops growing, its enterprise value will decline by 37 annual revenues (91% of its Enterprise Value). If it is unable to expand its margin, its enterprise value will decline by 18 annual revenues (44% of its Enterprise Value). A value investor is unlikely to purchase NVDA at its current price as the assumptions required on both growth and margin expansion are too strong to justify its price.
+
+Of the Super Seven, Berkshire Hathaway is currently holding AAPL and AMZN.  In contrast, the MSCI Quality Factor ETF currently holds NVDA, MSFT, APPL, META and GOOG, and does not hold TSLA and AMZN (see [MSCI Quality Factor](https://www.ishares.com/us/products/256101/ishares-msci-usa-quality-factor-etf)).  It has been argued that Berkshire Hathaway achieves a strong alpha by loading up on the Quality Factor.^[Frazzini, Kabiller & Pedersen, 2018, 'Buffett's Alpha', The Financial Analyst's Journal] 
+
+
+
+```{r,fig.width=10,fig.height=5, echo=F,message=FALSE,warning=FALSE}
+setwd("~/Rstuff/SingleNameReport")
+source('global.R')
+load("~/Rstuff/SingleNameReport/Rdata/allParmsAll_bayes.Rdata")
+
+bayesTickers = c("NVDA","FICO","DD","MCO","LVS","RCL","CCL","NCLH","CZR","BBWI","WYNN","MAR","HWM","GE","GEN","BA","MTCH",
+                 "APRN","IBM","BIIB","FTV","VRSK","LLY","ROP",
+                 "MCD","CDNS","CSGP","ISRG","TDG","AWK","ANSS","SNPS","ATVI",
+                 "CTRA","EXC")
+
+changeToBayes = which(tickers %in% c(bayesTickers))
+
+for (i in 1:length(changeToBayes)){
+  allParmsAll[[changeToBayes[i]]] =   allParmsAll_bayes[[changeToBayes[i]]] 
+}
+
+library(ggplot2)
+library(plotly)
+library(kableExtra)
+library(ggthemes)
+#firmNum = which(ticker007 == tickers)
+load("Rdata/nameLookup.Rdata")
+
+
+attributionTable = makeAttribution(allParmsAll)        
+
+#strength=makeStrengthChart(attributionTable,outputData=T,sector="ALL",showBuffett = TRUE,                                         YMAX=30,XMIN = -75,warrenTickers0 =peerTickers,holder=paste0("Peers of ",ticker007)) 
+
+simple = simpleAttribution(allParmsAll,outputData=T)
+#firmName = simple$firmName[firmNum]
+xyz = cbind(simple[,5:6],attributionTable[,1])
+#valuationType = whatTypeOfFirmIsIt(xyz[firmNum,])
+buffetBuy = data.frame(Ticker=tickers,woudlBuy = as.logical(wouldBuffetBuyIt(xyz)$allStatisfied))
+peerTickers = c("META","AAPL","GOOG", "AMZN","MSFT","NVDA","TSLA")
+wouldBuy = buffetBuy[buffetBuy[,1] %in% peerTickers,]
+
+warrenTickers = buffet_Q3_2023
+
+termValue = data.frame(Ticker=sapply(allParmsAll,function(x) x[[1]]),termValue=sapply(allParmsAll,function(x) DCF_dwd(x)$pvTermValue/DCF_dwd(x)$sumPV))
+
+#View(termValue)
+
+```
+
+# Summary Table
+
+The table below summarizes how we are computing trajectories that are consistent with the current valuations of each of seven firms.  The second column is the ratio of Enterprise Value to EBIT.  The third column is the initial operating margin that we use for the trajectory. We compute it as the median of operating profit to revenue over the past five years.  The fourth column is the initial growth assumption that we assume will be sustained for five years and then taper off to a long run growth rate of 2% by year ten.  The fifth column, Asset Turn, is the median ratio of Sales to Assets over the past five years which we assume will be sustained into the future and determines the investment require to realize revenue growth. The fourth column, OM5, is the implied sustainable operating margin.  We solve for this margin to set the value of discounted free cash flows to the firm equal to the Enterprise Value of the firm (as of end of Q2 2023).  The ninth column, Terminal Value to Value, is the proportion of the value of the firm represented by cash flows that are more than ten years in the future. The last column is whether or not the firm is suitable to a value investor according to our filter: if the firm is inside of both boxes in the figures below, we say that the firm is potentially suitable to the value investor at the current price.
+
+
+```{r,  echo=F,message=FALSE,warning=FALSE}
+
+
+source('~/Rstuff/damodaran/R/make_DCF_table2.R')
+
+df3 = make_DCF_table2(peerTickers,returnDF=TRUE,order="REV")
+#df3 = df3[as.numeric(gsub("%","",df3$Recent_Growth))>15,]
+#kableExtra::kable(df3, row.names=FALSE) %>% kable_styling()
+names(df3) = c("Ticker",     "Mk To Ev",     "EV to EBIT", "OM1",        "OM5",        "G",         
+ "Asset Turn",  "EV",         "MKCAP",      "REV",        "Sector")    
+
+
+
+done = df3[,c(1,3:8,10)]
+done = dplyr::left_join(done,termValue, by = "Ticker")
+done$termValue = dwdForm(done$termValue,"To%")
+done = dplyr::left_join(done,wouldBuy, by = "Ticker") 
+names(done) = c( names(done)[1:8],"Terminal Value to Value","Suitable to Value Investor?")
+kable(done, format = "markdown", row.names = FALSE)
+```
+
+
+# Revenue Multiple and Operating Margin
+
+We plot the Revenue Multiple (Enterprise Value to Revenue) of firms against their initial margin. Additionally, we plot a line representing the expected Revenue Multiple of a firm based on the firm’s revenue and operating margin (the Modeled Revenue Multiple). The Modeled Revenue Multiple is calculated using an estimated operating margin multiple when the operating margin exceeds 11.1%, and a constant estimate otherwise. These estimates were chosen to align with the sample, minimizing the sum of relative pricing errors. The blue triangles on the graph indicate the companies in the Super Seven. 
+
+```{r,fig.width=10,fig.height=5, echo=F,message=FALSE,warning=FALSE}
+makeStrengthChart(attributionTable,outputData=F,sector="ALL",showBuffett = TRUE,
+                                         YMAX=45,XMIN = -75,warrenTickers0 =peerTickers,holder=paste0("Super Seven"), showAfirm="",
+                  doPlotly =TRUE) 
+
+
+```
+# Growth and Margin Attribution
+
+```{r,fig.width=10,fig.height=5, echo=F,message=FALSE,warning=FALSE}
+ simpleAttribution(allParmsAll,outputData=F,sector="ALL",showBuffett = TRUE,XMAX=25,YMAX=40,peerTickers,holder=paste0("Super Seven"),
+                  doPlotly =TRUE,valueZone=F, BAU=FALSE,whatValueZone = "2023q3") 
+
+
+simple =  simpleAttribution(allParmsAll,outputData=T,sector="ALL",showBuffett = TRUE,XMAX=25,YMAX=25,peerTickers,holder=paste0("The Super Seven"),
+                  doPlotly =TRUE,valueZone=F, BAU=FALSE,whatValueZone = "2023q3") 
+
+#View(simple)
+
+```
+
+# Attribution Analysis Table
+
+The table below presents the data for the two prior figures for each firm in the Super Seven. The Excess Value is the difference between the revenue multiple of the firm and the modeled revenue. The Margin Attribution and the Growth Attribution columns are the $x$ and $y$ axes of the Valuation Attribution Chart above.  The last column is whether or not the name is suitable to a value investor according to our filter.  
+
+
+```{r,  echo=F,message=FALSE,warning=FALSE}
+
+#done = dplyr::left_join(df4,simple, by ="ticker")
+#alldone = done %>% select(ticker,firmName,)
+
+alldone = simple %>% filter (ticker %in% peerTickers) %>% select(-FirmNumber,-warren) 
+names(wouldBuy)[1]="ticker"
+alldone = dplyr::left_join(alldone,wouldBuy,by = "ticker")
+
+
+names(alldone) = c("Ticker","Name","Excess Value","Margin Attribution", "Growth Attribution", "Suitable to Value Investor?")
+kable(alldone)
+```
