@@ -88,7 +88,7 @@ The table below summarizes how we are computing trajectories that are consistent
 
 source('~/Rstuff/damodaran/R/make_DCF_table2.R')
 
-df3 = make_DCF_table2(peerTickers,returnDF=TRUE,order="REV")
+df3 = make_DCF_table2(peerTickers,returnDF=TRUE,order="REV",indata=allParmsAll)
 #df3 = df3[as.numeric(gsub("%","",df3$Recent_Growth))>15,]
 #kableExtra::kable(df3, row.names=FALSE) %>% kable_styling()
 names(df3) = c("Ticker",     "Mk To Ev",     "EV to EBIT", "OM1",        "OM5",        "G",         
