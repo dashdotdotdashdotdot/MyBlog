@@ -1,13 +1,14 @@
 ---
-title: 'Ordinary Returns for Extraordinary Performance'
+title: Ordinary Returns for Extraordinary Performance
 author: Douglas Dwyer
 date: '2023-08-14'
-slug: ordinary-returns-for-extraordinary-performance-two-views-on-nvida
 categories:
   - Case Studies
+  - Model Management
 tags:
-  - Verification
   - Great Expectations
+  - Verification
+slug: ordinary-returns-for-extraordinary-performance-two-views-on-nvida
 ---
 
 This note verifies the approach taken on NVIDIA Corporation (NVDA) in _Valuation Space_ by first replicating the approach taken by Damodaran and then comparing it with the approach in _Valuation Space_. Buying and holding NVDA is an act of accepting ordinary stock returns for the extraordinary performance of NVDA as a company.  This statement holds for a trillion-dollar valuation (as was observed at the end of Q2 2023) and as well as for a valuation of \$329B.

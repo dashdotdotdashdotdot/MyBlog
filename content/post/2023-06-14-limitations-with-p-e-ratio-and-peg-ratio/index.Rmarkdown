@@ -2,12 +2,12 @@
 title: Intrepreting the P/E Ratio and PEG Ratio
 author: DWD
 date: '2023-06-14'
-slug: limitations-with-p-e-ratio-and-peg-ratio
 categories:
-  - Musings
+  - General Theory
 tags:
-  - Theory
   - PE ratio
+  - Theory
+slug: limitations-with-p-e-ratio-and-peg-ratio
 ---
 
 If one's cost of capital is 7% and return on investment is 5%, then one should forego investment. This seemingly innocuous statement has implications for interpreting both the P/E ratio and the PEG ratio, which are common metrics used in the valuation of firms.

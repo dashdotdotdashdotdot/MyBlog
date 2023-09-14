@@ -2,11 +2,12 @@
 title: Validation of the Value Zone
 author: Douglas Dwyer
 date: '2023-08-16'
-slug: validation-of-the-value-zone
 categories:
   - Methodology
+  - Model Management
 tags:
   - Validation
+slug: validation-of-the-value-zone
 ---
 
 Some claim that Buffett outperforms the market by buying 'cheap, safe, high-quality stocks'.^[Frazzini, Kabiller & Pedersen, 2018, 'Buffett's Alpha', The Financial Analyst's Journal] In this note, we will utilize the 'Value Space' framework to demonstrate the types of firms Berkshire Hathaway is holding in 2023. We will show that Berkshire Hathaway invests in firms with positive operating profit. Additionally, we will demonstrate that Berkshire Hathaway does not hold stocks whose valuations imply significant margin expansions, substantial revenue growth, or both. Furthermore, Berkshire Hathaway does not invest in stocks that are extremely cheap—those whose market prices imply a significant decline in margins or negative growth. This analysis validates the use of the Valuation Space framework as an initial screen to determine whether a stock is potentially suitable for a value investor.
@@ -26,7 +27,7 @@ We begin by plotting the Revenue Multiple (Enterprise Value to Revenue) of firms
 
 
 ```{r,fig.width=10,fig.height=5, echo=F,message=FALSE,warning=FALSE}
-setwd("~/dwdRstuff/testShiny/SingleNameReport")
+setwd("~/Rstuff/SingleNameReport")
 source('global.R')
 library(ggplot2)
 library(plotly)

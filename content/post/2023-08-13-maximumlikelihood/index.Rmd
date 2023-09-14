@@ -2,11 +2,12 @@
 title: 'Methodological Advance '
 author: Douglas Dwyer
 date: '2023-08-13'
-slug: maximumLikelihood
 categories:
   - Methodology
+  - Model Management
 tags:
   - Theory
+slug: maximumLikelihood
 ---
 
 
@@ -55,9 +56,9 @@ In our Dashboard, we now allow the user to choose methodology 1,2 or 3.  Method 
 
 ```{r, echo=FALSE, message=FALSE,warning=FALSE}
 rm(list=ls())
-setwd("~/dwdRstuff/Damodaran/")
+setwd("~/Rstuff/damodaran/")
 source("global.R")
-setwd("~/dwdRstuff/testPackages/MyBlog")
+setwd("~/MyBlog")
 
 
 allParmsAll = allParms

@@ -2,11 +2,12 @@
 title: Validation of the Value Zone (Q3 2023 Update)
 author: Douglas Dwyer
 date: '2023-09-06'
-slug: validation-of-the-value-zone-in-q3-2023
 categories:
   - Methodology
+  - Model Management
 tags:
   - Validation
+slug: validation-of-the-value-zone-in-q3-2023
 ---
 
 ```{r,fig.width=10,fig.height=5, echo=F,message=FALSE,warning=FALSE}
