@@ -2,11 +2,11 @@
 title: Doug's First Post
 author: DWD
 date: '2023-04-02'
-slug: doug-s-first-post
 categories:
-  - Example
+  - Test Post
 tags:
   - R Markdown
+slug: doug-s-first-post
 ---
 
 This is just a test...

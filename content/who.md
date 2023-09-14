@@ -1,5 +1,5 @@
 ---
-title: Who?
+title: DWD
 author: Douglas W. Dwyer
 output: 
   html_document:

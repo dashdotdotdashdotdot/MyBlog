@@ -3,7 +3,7 @@ title: Linking the Gordon Growth Model with Economic Theory
 author: DWD
 date: '2023-05-31'
 categories:
-  - Musings
+  - General Theory
 tags:
   - PE ratio
 slug: movitating-the-gordon-growth-model-with-economics

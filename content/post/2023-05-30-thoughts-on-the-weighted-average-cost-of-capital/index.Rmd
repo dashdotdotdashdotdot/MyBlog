@@ -3,7 +3,7 @@ title: Thoughts on the WACC
 author: DWD
 date: '2023-05-30'
 categories:
-  - Musings
+  - General Theory
 tags:
   - WACC
 slug: thoughts-on-the-weighted-average-cost-of-capital

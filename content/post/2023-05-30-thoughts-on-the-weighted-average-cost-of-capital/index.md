@@ -3,20 +3,21 @@ title: Thoughts on the WACC
 author: DWD
 date: '2023-05-30'
 categories:
-  - Musings
+  - General Theory
 tags:
   - WACC
 slug: thoughts-on-the-weighted-average-cost-of-capital
 ---
 
-In this methodological note, we discuss our thinking around our approach for determining a value for the weighted average capital.  Rather than performing an elegant calculation of the WACC for each name, we deploy an initial reasonable number and then expect the user to provide their own value (or term structure) for the WACC.  We also provide a tool to assess the sensitivity of valuation to the value used. 
+
+In corporate valuation a lot of attention is paid to determine appropriate weighted average cost of capital (WACC). I do not focus on the WACC but rather use the yield on a ten-year T-Bill plus 400bps.  I have built the infrastructure to allow one to input their own WACC and have it be time varying. Also, the infrastructure includes a sensitivity of the valuation to the WACC.
 
 
 # Why?
 
 ## First,
 
-To date, we are focused on the concept of Enterprise Value---how much it costs to buy the company cash free and debt free. If you own a house with a 30-year mortgage at a low rate, the mortgage does not impact the value of the home as the mortgage would typically not be transferable.  By defining enterprise value as above, the assumption is that neither the debt nor the cash is transferable.
+To date, I am focused on the concept of Enterprise Value---how much it costs to buy the company cash free and debt free. If you own a house with a 30-year mortgage at a low rate, the mortgage does not impact the value of the home as the mortgage would typically not be transferable.  By defining enterprise value as above, the assumption is that neither the debt nor the cash is transferable.
 
 ## Second,
 

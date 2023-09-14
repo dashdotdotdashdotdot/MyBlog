@@ -22,16 +22,22 @@ menu:
     - name: Categories
       url: "categories/"
       weight: 3
-    - name: Tags
-      url: "tags/"
-      weight: 4
-    - name: Who?
-      url: "who/"
+#    - name: Tags
+#      url: "tags/"
+#      weight: 4
+    - name: The Gym
+      url: "gym/"
       weight: 5
+    - name: An Exercise Sequence
+      url: "sequence/"
+      weight: 6
+    - name: DWD
+      url: "who/"
+      weight: 7
 
 params:
   description: "Valuation Space"
-  footer: '&copy; Douglas Dwyer 2023 -- {Year} | <a href="https://rart.shinyapps.io/SingleNameReport/" target="_blank">Single Name Report</a> | <a href="https://rart.shinyapps.io/TheGym/" target="_blank">The Gym</a> |'
+  footer: '&copy; Douglas Dwyer 2023 -- {Year} | | <a href="https://rart.shinyapps.io/TheGym/" target="_blank">The Gym</a> | <a href="https://rart.shinyapps.io/SingleNameReport/" target="_blank">An Exercise Sequence</a> '
 
 
 
