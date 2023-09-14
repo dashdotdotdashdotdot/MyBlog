@@ -34,13 +34,15 @@ We want _Valuation Space_ to be a place in which investment ideas can be evaluat
 4) Custom research on a specific firm and its peer group
 5) Customized backtesting of trading strategies utilizing _Valuation Space_ metrics
 
+If you would like to suggest a post or to be including on our mailing list, please email douglas.dwyer@me.com
+
 ### What am I doing with it?
 
 I am using the _Valuation Space_ framework to re-evaluate my investment strategy. 
 
-I buy and hold index funds, and I have enjoyed solid returns in the past few decades. While index funds will likely continue to be my core strategy, I may also create a portfolio of firms that I think: (1) have a promising future; (2) are run by honest people; and (3) are favorably reasonably price. I am finding _Valuation Space_ to be useful for this purpose.
+I buy and hold index funds, and I have enjoyed solid returns in the past few decades. While index funds will likely continue to be my core strategy, I may also create a portfolio of firms that I think: (1) have a promising future; (2) are run by honest people; and (3) are favorably price. I am finding _Valuation Space_ to be useful for this purpose.
 
-In building out _Valuation Space_, I have been surprised by the number of firms whose valuations seem surprisingly rich (see the Post: Ordinary Returns for Extraordinary Performane (2023/08/14)). Through my index funds, I have exposure to such firms. I am considering taking small short positions on these firms as a hedge.  The _Valuation Space_ appears useful at identifying such firms. Before pursing such a strategy, however, I want to back test its performance using a large data set with a long history. I am in the process of building out this data set. I plan to post what I learn from such back tests.
+In building out _Valuation Space_, I have been surprised by the number of firms whose valuations seem surprisingly rich (see the Post: Ordinary Returns for Extraordinary Performance (2023/08/14)). Through my index funds, I have exposure to such firms. I am considering taking small short positions on these firms as a hedge.  The _Valuation Space_ appears useful at identifying such firms. Before pursing such a strategy, however, I want to back test its performance using a large data set with a long history. I am in the process of building out this data set. I plan to post what I learn from such back tests.
 
 # Testing the Framework
 
