@@ -1,6 +1,6 @@
 ---
 title: The Super Seven
-author: Douglas Dwyer
+author: Douglas W. Dwyer
 date: '2023-09-07'
 slug: the-super-seven
 categories:
@@ -18,11 +18,11 @@ tags:
 ```
 
 
-In September of 2023, the seven largest stocks in the S&P 500 by market capitalization are Apple (APPL),  Amazon (AMZN), Alphabet (GOOG), Meta Platforms (META), Microsoft (MSFT), Nvidia (NVDA) and Tesla (TSLA).  In this post, we use the conceptual framework of Value Space to determine which ones are suitable to a value investor at current prices.
+In September of 2023, the seven largest stocks in the S&P 500 by market capitalization are Apple (APPL),  Amazon (AMZN), Alphabet (GOOG), Meta Platforms (META), Microsoft (MSFT), Nvidia (NVDA) and Tesla (TSLA).  In this post, we use the conceptual framework of _Value Space_ to determine which ones are unlikely to be held by a value investor at current prices.
 
-APPL, AMZN, and GOOG are priced in a range that is suitable to the value investor.
+APPL, AMZN, and GOOG are priced in a range that a value investor would consider.
 
-META currently has a weak valuation.  If it were able to sustain its current margin and growth trajectory the discounted cash flow would be 5.6 annual revenue more than the DCF implied by its current valuation, which would approximately double its enterprise value. A value investor is unlikely to purchase META as its stock price is "too good to be true". 
+META currently has a weak valuation given its recent growth rates and operating margins.  If it were able to sustain its current margin and growth trajectory the discounted cash flow values would be 5.6 annual revenues more than the DCF implied by its current valuation, which would approximately double its enterprise value. A value investor is unlikely to purchase META as its current stock price is "too good to be true". 
 
 MSFT has a strong valuation. If MSFT revenue were to stop growing, the discounted value of free cash flows to the firm would decline by 6.9 annual revenues, which would be approximately a 56% reduction in enterprise value.  A value investor is unlikely to purchase MSFT at its current price as the assumptions required on growth to justify its price are too strong.
 
@@ -30,8 +30,25 @@ TSLA has a strong valuation. If TSLA is not able to expand its current margin, t
 
 NVDA has an exceptionally strong valuation. If it stops growing, its enterprise value will decline by 37 annual revenues (91% of its Enterprise Value). If it is unable to expand its margin, its enterprise value will decline by 18 annual revenues (44% of its Enterprise Value). A value investor is unlikely to purchase NVDA at its current price as the assumptions required on both growth and margin expansion are too strong to justify its price.
 
-Of the Super Seven, Berkshire Hathaway is currently holding AAPL and AMZN.  In contrast, the MSCI Quality Factor ETF currently holds NVDA, MSFT, APPL, META and GOOG, and does not hold TSLA and AMZN (see [MSCI Quality Factor](https://www.ishares.com/us/products/256101/ishares-msci-usa-quality-factor-etf)).  It has been argued that Berkshire Hathaway achieves a strong alpha by loading up on the Quality Factor.^[Frazzini, Kabiller & Pedersen, 2018, 'Buffett's Alpha', The Financial Analyst's Journal] 
+Other reference points for whether or not a value investor would want to hold the Super Seven include looking at the holdings of "Value Factor ETFs" and the holdings of Berkshire Hathaway. The table below indicates which of the Super Seven are held by the iShares S&P 500 Value ETF, iShares MSCI USA Quality Factor ETF, Berkshire Hathaway as well as whether Value Space views the stock as a likely purchase of a value investor.  
 
+## Who Holds the Super Seven?
+
+Stock | Value ETF | Quality ETF | Berkshire | Value Space |
+|----------|----------|----------|----------|----------|
+| AAPL |  | Holds | Holds | Possible |
+| AMZN |Holds   |  | Holds | Possible |
+| GOOG | | Holds | | Possible |
+| META | Holds | Holds | | Unlikely |
+| MSFT |Holds | Holds | | Unlikely |
+| NVDA | | Holds | | Unlikely |
+| TSLA | |  | | Unlikely |
+
+- Not Surprisingly, the Value Space view aligns best with Berkshire Hathaway.  Berkshire doesn't hold any of the names that we say a value investor is unlikely to purchase and holds two of the three that we say a value investor would consider.
+
+- The Quality ETF holds NVDA because the inclusion in the Quaility ETF is determined by financial statement ratios that do not factor the actual price of the stock and NVDA has strong financial statement ratios.  The Quality ETF seeks firms with "high return on equity, low earnings variability and low leverage."
+
+- The Value ETF considers "book value to price ratio, earnings to price ratio and sales to price ratio" which leads it to avoid names with the largest growth expectations built into their current price (NVDA & TSLA).  Why this fund holds AMZN, META and MSFT and not APPL and GOOG, however, is not obvious. 
 
 
 ```{r,fig.width=10,fig.height=5, echo=F,message=FALSE,warning=FALSE}
@@ -78,9 +95,10 @@ termValue = data.frame(Ticker=sapply(allParmsAll,function(x) x[[1]]),termValue=s
 
 ```
 
-# Summary Table
+# Detailed Analysis
+## Summary Table
 
-The table below summarizes how we are computing trajectories that are consistent with the current valuations of each of seven firms.  The second column is the ratio of Enterprise Value to EBIT.  The third column is the initial operating margin that we use for the trajectory. We compute it as the median of operating profit to revenue over the past five years.  The fourth column is the initial growth assumption that we assume will be sustained for five years and then taper off to a long run growth rate of 2% by year ten.  The fifth column, Asset Turn, is the median ratio of Sales to Assets over the past five years which we assume will be sustained into the future and determines the investment require to realize revenue growth. The fourth column, OM5, is the implied sustainable operating margin.  We solve for this margin to set the value of discounted free cash flows to the firm equal to the Enterprise Value of the firm (as of end of Q2 2023).  The ninth column, Terminal Value to Value, is the proportion of the value of the firm represented by cash flows that are more than ten years in the future. The last column is whether or not the firm is suitable to a value investor according to our filter: if the firm is inside of both boxes in the figures below, we say that the firm is potentially suitable to the value investor at the current price.
+The table below summarizes how we are computing trajectories that are consistent with the current valuations of each of seven firms.  The second column is the ratio of Enterprise Value to EBIT.  The third column is the initial operating margin that we use for the trajectory. We compute it as the median of operating profit to revenue over the past five years.  The fourth column is the initial growth assumption that we assume will be sustained for five years and then taper off to a long run growth rate of 2% by year ten.  The fifth column, Asset Turn, is the median ratio of Sales to Assets over the past five years which we assume will be sustained into the future and determines the investment require to realize revenue growth. The fourth column, OM5, is the implied sustainable operating margin.  We solve for this margin to set the value of discounted free cash flows to the firm equal to the Enterprise Value of the firm (as of end of Q2 2023).  The ninth column, Terminal Value to Value, is the proportion of the value of the firm represented by cash flows that are more than ten years in the future. The last column is whether or not the firm is a likely purchase of a value investor according to our filter: if the firm is inside of both boxes in the figures below, we say that the firm is potentially suitable to the value investor at the current price.
 
 
 ```{r,  echo=F,message=FALSE,warning=FALSE}
@@ -100,12 +118,12 @@ done = df3[,c(1,3:8,10)]
 done = dplyr::left_join(done,termValue, by = "Ticker")
 done$termValue = dwdForm(done$termValue,"To%")
 done = dplyr::left_join(done,wouldBuy, by = "Ticker") 
-names(done) = c( names(done)[1:8],"Terminal Value to Value","Suitable to Value Investor?")
+names(done) = c( names(done)[1:8],"Terminal Value to Value","Likely Purchase of Value Investor?")
 kable(done, format = "markdown", row.names = FALSE)
 ```
 
 
-# Revenue Multiple and Operating Margin
+## Revenue Multiple and Operating Margin
 
 We plot the Revenue Multiple (Enterprise Value to Revenue) of firms against their initial margin. Additionally, we plot a line representing the expected Revenue Multiple of a firm based on the firm’s revenue and operating margin (the Modeled Revenue Multiple). The Modeled Revenue Multiple is calculated using an estimated operating margin multiple when the operating margin exceeds 11.1%, and a constant estimate otherwise. These estimates were chosen to align with the sample, minimizing the sum of relative pricing errors. The blue triangles on the graph indicate the companies in the Super Seven. 
 
@@ -116,7 +134,7 @@ makeStrengthChart(attributionTable,outputData=F,sector="ALL",showBuffett = TRUE,
 
 
 ```
-# Growth and Margin Attribution
+## Growth and Margin Attribution
 
 ```{r,fig.width=10,fig.height=5, echo=F,message=FALSE,warning=FALSE}
  simpleAttribution(allParmsAll,outputData=F,sector="ALL",showBuffett = TRUE,XMAX=25,YMAX=40,peerTickers,holder=paste0("Super Seven"),
@@ -130,9 +148,9 @@ simple =  simpleAttribution(allParmsAll,outputData=T,sector="ALL",showBuffett = 
 
 ```
 
-# Attribution Analysis Table
+## Attribution Analysis Table
 
-The table below presents the data for the two prior figures for each firm in the Super Seven. The Excess Value is the difference between the revenue multiple of the firm and the modeled revenue. The Margin Attribution and the Growth Attribution columns are the $x$ and $y$ axes of the Valuation Attribution Chart above.  The last column is whether or not the name is suitable to a value investor according to our filter.  
+The table below presents the data for the two prior figures for each firm in the Super Seven. The Excess Value is the difference between the revenue multiple of the firm and the modeled revenue. The Margin Attribution and the Growth Attribution columns are the $x$ and $y$ axes of the Valuation Attribution Chart above.  The last column is whether or not the name is a value investor is likely to purchase according to our filter.  
 
 
 ```{r,  echo=F,message=FALSE,warning=FALSE}
@@ -145,6 +163,6 @@ names(wouldBuy)[1]="ticker"
 alldone = dplyr::left_join(alldone,wouldBuy,by = "ticker")
 
 
-names(alldone) = c("Ticker","Name","Excess Value","Margin Attribution", "Growth Attribution", "Suitable to Value Investor?")
+names(alldone) = c("Ticker","Name","Excess Value","Margin Attribution", "Growth Attribution", "Likely Purchase of Value Investor?")
 kable(alldone)
 ```

@@ -34,7 +34,7 @@ We want _Valuation Space_ to be a place in which investment ideas can be evaluat
 4) Custom research on a specific firm and its peer group
 5) Customized backtesting of trading strategies utilizing _Valuation Space_ metrics
 
-If you would like to suggest a post or to be including on our mailing list, please email douglas.dwyer@me.com
+If you would like to suggest a post or to be included on our mailing list, please email douglas.dwyer@me.com
 
 ### What am I doing with it?
 
