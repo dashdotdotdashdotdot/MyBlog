@@ -15,27 +15,32 @@ tags:
 <script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
 
+
 # Introduction
 
-There is a long literature on the existence of so-called factors that represent "long-short" portfolios that are self financing and have positive returns on average over long periods of time.  Some factors such as "market minus the risk free" rate have obvious risk/reward intreprations: going long the market and shorting a risk free asset should have a positive return as the market is riskier than the risk free rate. For other factors, their are a variety of hypothesis to explain the abnormal returns including systematic pricing errors by the market. 
+There is a long literature on the existence of so-called factors that represent "long-short" portfolios that are self-financing and have positive returns on average over long periods of time.  Some factors such as "market minus the risk-free" rate have obvious risk/reward interpretations: : going long the market and shorting a risk-free asset should have a positive return as the market is riskier than the risk-free rate. For other factors, there are a variety of hypothesis to explain the abnormal returns including systematic pricing errors by the market. 
 
-The existence of such factors imply that if one can construct a well diversified portfolio that has a beta of about one and has positive exposures to these factors, one will outperform the market as measured by Sharpe Ratios, Excess Returns and Information Ratios.  For a retail investor to construct and maintain such a portfolio by taking exposures to individual stocks, however, is a daunting task as one would need to rebalance positions in many different stocks regularly.
+The existence of such factors implies that if one can construct a well-diversified portfolio that has a beta of about one and has positive exposures to these factors, one will outperform the market as measured by Sharpe Ratios, Excess Returns and Information Ratios.  For a retail investor to construct and maintain such a portfolio by taking exposures to individual stocks, however, is a daunting task as one would need to rebalance positions in many different stocks regularly.
 
 Of course, there are numerous mutual funds who claim to be able to construct a "smart beta" portfolio for their investors and charge a fee for their service.  A reasonable question is: "How do I know they will be smart going forward? smart enough to earn their fee?"
 
 A retail investor can investor in SPY, which is an exchange traded fund that is designed to track the S&P 500 and carries only a minimal fee (SPY is colloquially referred to as "spiders").  Consequently, a portfolio of SPY will have the advantage of guaranteeing the investor that they will not under perform the S&P 500; and the disadvantage that they will not out-perform the S&P 500. 
 
-What about other ETFs?  There are in fact "factor ETFs" that are sold by iShares (part of BlackRock) and will often track indices published by MSCI. They form portfolios using a specific set of rules.  Such funds are inexpensive to maintain when implemented on a large scale.  Consequently, these ETFs have minimial fees as well.  Can a retail investor using such ETFs to outperform the S&P 500?
+What about other ETFs?  There are in fact "factor ETFs" that are sold by iShares (part of BlackRock) and will often track indices published by MSCI. They form portfolios using a specific set of rules.  Such funds are inexpensive to maintain when implemented on a large scale.  Consequently, these ETFs have minimal fees as well.  Can a retail investor using such ETFs to outperform the S&P 500?
 
-This paper builds on a paper that assessed the performance of Berkshire Hathaway (BRK) over forty years^["Buffett's Alpha", A. Frazzini, D. Kabiller and LH Pedersen, _Financial Analysts Journal_, Fourth Quarter, 2018]. The authors of the paper concluded that BRK's outstanding alpha of 0.79 can be replicated by loading on two factors that are called BAB (Betting against Beta) and QMJ (Quality Minus Junket).  Additionally, BRK takes advantage of its ability to borrow at low interest rates to deploy leverage and increase their excess returns.  I believe the authors of the paper work for AQR, who publishes the factors BAB and QMJ, and the authors were coauthors on the paper that introduced the Quality Minus Junk factor. 
+This paper builds on a paper that assessed the performance of Berkshire Hathaway (BRK) over forty years. The authors of the paper concluded that BRK's outstanding alpha of 0.79 can be replicated by loading on two factors that are called BAB (Betting against Beta) and QMJ (Quality Minus Junket).  Additionally, BRK takes advantage of its ability to borrow at low interest rates to deploy leverage and increase their excess returns.  
+
+The paper that this builds on is "Buffett's Alpha" by A. Frazzini, D. Kabiller and LH Pedersen.  It was published in the Fourth Quarter of 2018 of the _Financial Analysts Journal_. The authors of the paper are associated with AQR. AQR is an investment management firm that publishes the factors UMD, BAB and QMJ.  Additionally, the authors were coauthors of the paper that introduced the Quality Minus Junk factor. 
 
 As a result of this analysis, I ended up buying two such funds.  
+
+![](images/pagebreak5.png)
 
 # Measuring performance
 
 In "Buffet's Alpha," Table 2 reports the Beta, Average Excess Return, Total Volatility, Idiosyncratic Volatility, Sharpe Ratio, Information Ratio and Leverage of Berkshire Hathaway in Column 1 and that of the "Overall Stock Market Performance," as a reference in Column 4. The first row of Table 1 below replicates the first Column of Table 4. In Addition, I present Alpha in the last column that matches Alpha in Column one of Table 4 from Buttet's Alpha as well.  This is an analysis of the performance of Berkshire Hathaway using the time interval considered in the paper (10/1976-3/2017).  
 
-The numbers are obtained as follows. First, I downloaded the returns on Berkshire Hathaway from WRDS. Second, I downloaded the "Fama French Factors" from Ken French's website, and merge.  Third, I downloaded the factors UMD, BAB, and QMJ from AQR's website. Fourth, I eliminated rows outside of the desired time period. Fifth, create excess returns for BRK by subtracting the risk free rate from the returns on BRK. 
+The numbers are obtained as follows. First, I downloaded the returns on Berkshire Hathaway from WRDS. Second, I downloaded the "Fama French Factors" from Ken French's website, and merge.  Third, I downloaded the factors UMD, BAB, and QMJ from AQR's website. Fourth, I eliminated rows outside of the desired time period. Fifth, create excess returns for BRK by subtracting the risk-free rate from the returns on BRK. 
 
 - Beta is obtained by regressing the excess returns of BRK onto the MKT factor.  The Excess returns of the market is just the returns on the S&P 500 less the return on a three month treasury, and we always work with a monthly time interval. 
 
@@ -49,9 +54,10 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
 
 - Alpha is the coefficient of the intercept of the regression of BRK's excess returns onto the excess returns of the market.
 
+![](images/pagebreak6.png)
 
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<caption><span id="tab:unnamed-chunk-1"></span>Table 1: Table 1: Funds Analyzed Through the 'Buffet's Alpha Framework'</caption>
+<caption><span id="tab:unnamed-chunk-1"></span>Table 1: Funds Analyzed Through the 'Buffet's Alpha Framework'</caption>
  <thead>
   <tr>
    <th style="text-align:left;"> Fund </th>
@@ -114,30 +120,6 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:right;"> 72.9 </td>
    <td style="text-align:right;"> 0.510 </td>
    <td style="text-align:right;"> 0.037 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> FXAIX </td>
-   <td style="text-align:left;"> Fidelity 500 Index </td>
-   <td style="text-align:right;"> 12.3 </td>
-   <td style="text-align:right;"> 0.958 </td>
-   <td style="text-align:right;"> 0.123 </td>
-   <td style="text-align:right;"> 0.146 </td>
-   <td style="text-align:right;"> 0.015 </td>
-   <td style="text-align:right;"> 84.4 </td>
-   <td style="text-align:right;"> 0.437 </td>
-   <td style="text-align:right;"> 0.007 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> RECS </td>
-   <td style="text-align:left;"> Columbia Research Enhanced Core ETF </td>
-   <td style="text-align:right;"> 4.0 </td>
-   <td style="text-align:right;"> 0.942 </td>
-   <td style="text-align:right;"> 0.141 </td>
-   <td style="text-align:right;"> 0.193 </td>
-   <td style="text-align:right;"> 0.041 </td>
-   <td style="text-align:right;"> 73.1 </td>
-   <td style="text-align:right;"> 0.362 </td>
-   <td style="text-align:right;"> 0.015 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> USMV </td>
@@ -260,18 +242,6 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:right;"> 0.011 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> SPTM </td>
-   <td style="text-align:left;"> SPDR PORTFOLIO S&amp;P 1500 COMPOSITE STOCK MARKET ETF </td>
-   <td style="text-align:right;"> 16.7 </td>
-   <td style="text-align:right;"> 0.987 </td>
-   <td style="text-align:right;"> 0.094 </td>
-   <td style="text-align:right;"> 0.163 </td>
-   <td style="text-align:right;"> 0.020 </td>
-   <td style="text-align:right;"> 57.8 </td>
-   <td style="text-align:right;"> 0.027 </td>
-   <td style="text-align:right;"> 0.001 </td>
-  </tr>
-  <tr>
    <td style="text-align:left;"> FCPVX </td>
    <td style="text-align:left;"> FIDELITY SMALL CAP VALUE </td>
    <td style="text-align:right;"> 16.7 </td>
@@ -334,13 +304,16 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
 </tbody>
 </table>
 
-The table contains rows for multiple funds.  The first thing to note is the time period. For BRK, I source returns from WRDS which enables me to go back over 45 years for the returns of Berkshire Hathaway.  For all the other funds, in contrast, the time span is at most 16.7 years, which reflects that I am pulling the returns from Yahoo Finance, which only goes back to the beginning of 2007.The table has been sorted by descending Information Ratio. Of all the funds considered, BRK upto to 2017 has the best Information Ratio and the best Alpha so it is the first row. Of course, Excess Returns and Sharpe Ratios will be tend to be higher in time periods in which the market does well and low in time periods when the market does poorly so it is difficult to compare these performance metrics across funds when measured over different time intervals, whereas Alpha and Information Ratio are more comparable as they both measure performance relative to the the market.
+The table contains rows for multiple funds.  The first thing to note is the time period. For BRK, I source returns from WRDS which enables me to go back over 45 years for the returns of Berkshire Hathaway.  For all the other funds, in contrast, the time span is at most 16.7 years, which reflects that I am pulling the returns from Yahoo Finance, which only goes back to the beginning of 2007.The table has been sorted by descending Information Ratio. Of all the funds considered, BRK up to to 2017 has the best Information Ratio and the best Alpha so it is the first row. Of course, Excess Returns and Sharpe Ratios will tend to be higher in time periods in which the market does well and low in time periods when the market does poorly so it is difficult to compare these performance metrics across funds when measured over different time intervals, whereas Alpha and Information Ratio are more comparable as they both measure performance relative to the market.
 
 The table includes other funds that a retail investor could consider investing in.  It includes funds that are designed to track an index (SPY, QQQ, IWM, FXAIX, SPTM) and other funds that are marketed as factor funds (USMV, DGRO, QUAL, MTUM, SIZE and VLUE) as well as a variety of other funds for reference purposes. I also included the stock of my former employer, MCO, as a reference point. 
 
-A few things to note. First, the performance of BRK over the past ten years (BRK3) is not as impressive as the performance of BRK in the forty years that preceeded it. Nevertheless, the performance of BRK continues to be impressive in that they almost comparable to the best "factor fund" over this time period, USMV. Among the best information ratios are QQQ and the Fidelity Growth fund. Is such performance likely to persist?  Negative information ratios and negative alphas have been experienced by the VLUE, IWM, SIZE, FCPVX.  The time period for IWM and SPY are comparable, IWM had an excess return that was 1.2% behind SPY and had more risk.  Can these differences be expected to persist?
+A few things to note. First, the performance of BRK over the past ten years (BRK3) is not as impressive as the performance of BRK in the forty years that preceded it. Nevertheless, the performance of BRK continues to be impressive in that they almost comparable to the best "factor fund" over this time period, USMV. Among the best information ratios are QQQ and the Fidelity Growth fund. Is such performance likely to persist?  Negative information ratios and negative alphas have been experienced by the VLUE, IWM, SIZE, FCPVX.  The time period for IWM and SPY are comparable, IWM had an excess return that was 1.2% behind SPY and had more risk.  Can these differences be expected to persist?
 
 These questions lead us to use a factor framework to explain where these performance differentials are coming from.
+
+![](images/pagebreak5.png)
+
 
 # Performance Attribution through a Factor Framework
 
@@ -356,9 +329,11 @@ All the funds have substantial market risk, the lowest beta is for the USMV fund
 
 What we have analysed here is how the funds load on factors using relatively short time windows (between 9 and 17 years).  Nevertheless, we can us the sixty six years of factor history to estimate what we expect the performance of each fund to be looking forward, presuming that they continue to load on the factors as they have historically.
 
+![](images/pagebreak6.png)
+
 
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<caption><span id="tab:unnamed-chunk-2"></span>Table 2: Table 2: Attributing Fund Performance To Factors</caption>
+<caption><span id="tab:unnamed-chunk-2"></span>Table 2: Attributing Fund Performance To Factors</caption>
  <thead>
   <tr>
    <th style="text-align:left;"> Fund </th>
@@ -471,18 +446,6 @@ What we have analysed here is how the funds load on factors using relatively sho
    <td style="text-align:right;"> 0.935 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> RECS </td>
-   <td style="text-align:left;"> Columbia Research Enhanced Core ETF </td>
-   <td style="text-align:right;"> 0.0096 </td>
-   <td style="text-align:right;"> 0.9773 </td>
-   <td style="text-align:right;"> -0.1498 </td>
-   <td style="text-align:right;"> 0.0886 </td>
-   <td style="text-align:right;"> -0.0335 </td>
-   <td style="text-align:right;"> 0.0107 </td>
-   <td style="text-align:right;"> 0.1191 </td>
-   <td style="text-align:right;"> 0.978 </td>
-  </tr>
-  <tr>
    <td style="text-align:left;"> MCO </td>
    <td style="text-align:left;"> MOODYS CORP COM USD0.01 </td>
    <td style="text-align:right;"> 0.0048 </td>
@@ -519,18 +482,6 @@ What we have analysed here is how the funds load on factors using relatively sho
    <td style="text-align:right;"> 0.924 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> SPTM </td>
-   <td style="text-align:left;"> SPDR PORTFOLIO S&amp;P 1500 COMPOSITE STOCK MARKET ETF </td>
-   <td style="text-align:right;"> 0.0000 </td>
-   <td style="text-align:right;"> 0.9946 </td>
-   <td style="text-align:right;"> -0.0496 </td>
-   <td style="text-align:right;"> 0.0391 </td>
-   <td style="text-align:right;"> -0.0049 </td>
-   <td style="text-align:right;"> 0.0028 </td>
-   <td style="text-align:right;"> 0.0178 </td>
-   <td style="text-align:right;"> 0.985 </td>
-  </tr>
-  <tr>
    <td style="text-align:left;"> SPY </td>
    <td style="text-align:left;"> SPDR S&amp;P 500 ETF Trust </td>
    <td style="text-align:right;"> -0.0024 </td>
@@ -540,18 +491,6 @@ What we have analysed here is how the funds load on factors using relatively sho
    <td style="text-align:right;"> -0.0123 </td>
    <td style="text-align:right;"> 0.0137 </td>
    <td style="text-align:right;"> 0.0405 </td>
-   <td style="text-align:right;"> 0.997 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> FXAIX </td>
-   <td style="text-align:left;"> Fidelity 500 Index </td>
-   <td style="text-align:right;"> -0.0024 </td>
-   <td style="text-align:right;"> 0.9934 </td>
-   <td style="text-align:right;"> -0.1276 </td>
-   <td style="text-align:right;"> 0.0032 </td>
-   <td style="text-align:right;"> -0.0082 </td>
-   <td style="text-align:right;"> 0.0080 </td>
-   <td style="text-align:right;"> 0.0570 </td>
    <td style="text-align:right;"> 0.997 </td>
   </tr>
   <tr>
@@ -641,13 +580,17 @@ What we have analysed here is how the funds load on factors using relatively sho
 </tbody>
 </table>
 
+![](images/pagebreak5.png)
+
 
 # Forward Looking Expected Performance Metrics
 
 The table below presents two different sets of performance metrics for each fund.  The first three are the in sample Excess Return, Sharpe ratio and Information Ratio as reported in Table 1. The second set are the forward looking or expected performance metrics as implied by each funds loading onto the factor model. For each fund, I assume that the Alpha is 0 and that the idiosyncratic volatility of the fund will persist. I measure idiosyncratic volatility of each fund as the RMSE of the regression of the funds returns onto the six factors. The Information Ratio is computed by subtracting one from the funds loading on the market and then computing the Sharpe Ratio for this portfolio.
 
+![](images/pagebreak6.png)
+
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<caption><span id="tab:unnamed-chunk-3"></span>Table 3: Table 3: In-Sample and Expected Performance Metrics of Based on a Six-Factor Framework</caption>
+<caption><span id="tab:unnamed-chunk-3"></span>Table 3: In-Sample and Expected Performance Metrics of Based on a Six-Factor Framework</caption>
  <thead>
   <tr>
    <th style="text-align:left;"> Fund </th>
@@ -762,17 +705,6 @@ The table below presents two different sets of performance metrics for each fund
    <td style="text-align:right;"> 18.8000 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> RECS </td>
-   <td style="text-align:left;"> Columbia Research Enhanced Core ETF </td>
-   <td style="text-align:right;"> 4.00 </td>
-   <td style="text-align:right;"> 14.10 </td>
-   <td style="text-align:right;"> 73.1 </td>
-   <td style="text-align:right;"> 36.20 </td>
-   <td style="text-align:right;"> 7.11 </td>
-   <td style="text-align:right;"> 50.10 </td>
-   <td style="text-align:right;"> 7.3200 </td>
-  </tr>
-  <tr>
    <td style="text-align:left;"> IWM </td>
    <td style="text-align:left;"> iShares Russell 2000 ETF </td>
    <td style="text-align:right;"> 16.70 </td>
@@ -793,28 +725,6 @@ The table below presents two different sets of performance metrics for each fund
    <td style="text-align:right;"> 6.52 </td>
    <td style="text-align:right;"> 47.60 </td>
    <td style="text-align:right;"> -5.2200 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> FXAIX </td>
-   <td style="text-align:left;"> Fidelity 500 Index </td>
-   <td style="text-align:right;"> 12.30 </td>
-   <td style="text-align:right;"> 12.30 </td>
-   <td style="text-align:right;"> 84.4 </td>
-   <td style="text-align:right;"> 43.70 </td>
-   <td style="text-align:right;"> 6.88 </td>
-   <td style="text-align:right;"> 46.70 </td>
-   <td style="text-align:right;"> -2.0100 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> SPTM </td>
-   <td style="text-align:left;"> SPDR PORTFOLIO S&amp;P 1500 COMPOSITE STOCK MARKET ETF </td>
-   <td style="text-align:right;"> 16.70 </td>
-   <td style="text-align:right;"> 9.43 </td>
-   <td style="text-align:right;"> 57.8 </td>
-   <td style="text-align:right;"> 2.66 </td>
-   <td style="text-align:right;"> 6.97 </td>
-   <td style="text-align:right;"> 46.40 </td>
-   <td style="text-align:right;"> 6.2300 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> SPY </td>
@@ -907,5 +817,5 @@ The table below presents two different sets of performance metrics for each fund
 </tbody>
 </table>
 
-There are a number of interesting things to note in this table.  First, despite having strong in-sample performance metrics the expected performance metrics of QQQ, FDGRX, and MSEQX are poor and expected to have negative Information Ratios.  These funds load negatively on the HML factor and have benefited from the relative strength of growth stocks over the past decade but are expected to perform poorly when one uses the sixty six year experience of the HML factor to look forward.  The best funds include, USMV, MTUM and DGRO.  These funds are expected to out perform the S&P 500 -- excess returns of 8-9% versus 7% for SPY and Sharpe Ratios of 60-70 versus 46 for SPY. Surprisingly, the expected performance of QUAL is on par with that of SPY, this is because despite its positive loading on QUAL, it has negative loadings on SMB and HML that offset the benefits from loading on QUAL.  
+There are a number of interesting things to note in this table.  First, despite having strong in-sample performance metrics the expected performance metrics of QQQ, FDGRX, and MSEQX are poor and expected to have negative Information Ratios.  These funds load negatively on the HML factor and have benefited from the relative strength of growth stocks over the past decade but are expected to perform poorly when one uses the sixty-six year experience of the HML factor to look forward.  The best funds include: USMV, MTUM and DGRO.  These funds are expected to outperform the S&P 500 -- excess returns of 8-9% versus 7% for SPY and Sharpe Ratios of 60-70 versus 46 for SPY. Surprisingly, the expected performance of QUAL is on par with that of SPY.  The modes performance of QUAL is the result off having negative loadings on SMB and HML that offset the benefits from loading on QUAL.  
 
