@@ -606,28 +606,6 @@ The table below presents two different sets of performance metrics for each fund
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:left;"> BRK2 </td>
-   <td style="text-align:left;"> Berkshire Hathaway 10/1976-3/2017 </td>
-   <td style="text-align:right;"> 40.40 </td>
-   <td style="text-align:right;"> 18.60 </td>
-   <td style="text-align:right;"> 78.8 </td>
-   <td style="text-align:right;"> 63.60 </td>
-   <td style="text-align:right;"> 11.50 </td>
-   <td style="text-align:right;"> 79.60 </td>
-   <td style="text-align:right;"> 46.7000 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> BRK </td>
-   <td style="text-align:left;"> Berkshire Hathaway 10/1976-12/2022 </td>
-   <td style="text-align:right;"> 46.20 </td>
-   <td style="text-align:right;"> 17.70 </td>
-   <td style="text-align:right;"> 76.6 </td>
-   <td style="text-align:right;"> 59.80 </td>
-   <td style="text-align:right;"> 10.60 </td>
-   <td style="text-align:right;"> 75.60 </td>
-   <td style="text-align:right;"> 39.0000 </td>
-  </tr>
-  <tr>
    <td style="text-align:left;"> USMV </td>
    <td style="text-align:left;"> iShares MSCI USA Min Vol Factor </td>
    <td style="text-align:right;"> 11.90 </td>
@@ -635,19 +613,8 @@ The table below presents two different sets of performance metrics for each fund
    <td style="text-align:right;"> 94.1 </td>
    <td style="text-align:right;"> 33.30 </td>
    <td style="text-align:right;"> 8.03 </td>
-   <td style="text-align:right;"> 71.70 </td>
-   <td style="text-align:right;"> 17.3000 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> MTUM </td>
-   <td style="text-align:left;"> iShares MSCI USA Momentum Factor ETF </td>
-   <td style="text-align:right;"> 10.40 </td>
-   <td style="text-align:right;"> 11.70 </td>
-   <td style="text-align:right;"> 76.6 </td>
-   <td style="text-align:right;"> 11.80 </td>
-   <td style="text-align:right;"> 9.81 </td>
-   <td style="text-align:right;"> 62.70 </td>
-   <td style="text-align:right;"> 57.2000 </td>
+   <td style="text-align:right;"> 67.1 </td>
+   <td style="text-align:right;"> 14.5000 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> DGRO </td>
@@ -657,8 +624,19 @@ The table below presents two different sets of performance metrics for each fund
    <td style="text-align:right;"> 73.5 </td>
    <td style="text-align:right;"> 22.60 </td>
    <td style="text-align:right;"> 7.97 </td>
-   <td style="text-align:right;"> 61.50 </td>
-   <td style="text-align:right;"> 27.5000 </td>
+   <td style="text-align:right;"> 60.1 </td>
+   <td style="text-align:right;"> 22.2000 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> MTUM </td>
+   <td style="text-align:left;"> iShares MSCI USA Momentum Factor ETF </td>
+   <td style="text-align:right;"> 10.40 </td>
+   <td style="text-align:right;"> 11.70 </td>
+   <td style="text-align:right;"> 76.6 </td>
+   <td style="text-align:right;"> 11.80 </td>
+   <td style="text-align:right;"> 9.81 </td>
+   <td style="text-align:right;"> 59.8 </td>
+   <td style="text-align:right;"> 41.3000 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> FCPVX </td>
@@ -668,8 +646,8 @@ The table below presents two different sets of performance metrics for each fund
    <td style="text-align:right;"> 48.1 </td>
    <td style="text-align:right;"> -8.37 </td>
    <td style="text-align:right;"> 9.65 </td>
-   <td style="text-align:right;"> 57.10 </td>
-   <td style="text-align:right;"> 38.4000 </td>
+   <td style="text-align:right;"> 54.8 </td>
+   <td style="text-align:right;"> 31.6000 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> FLPSX </td>
@@ -679,8 +657,8 @@ The table below presents two different sets of performance metrics for each fund
    <td style="text-align:right;"> 51.2 </td>
    <td style="text-align:right;"> -9.56 </td>
    <td style="text-align:right;"> 7.75 </td>
-   <td style="text-align:right;"> 55.40 </td>
-   <td style="text-align:right;"> 20.8000 </td>
+   <td style="text-align:right;"> 52.8 </td>
+   <td style="text-align:right;"> 14.0000 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> SIZE </td>
@@ -690,8 +668,8 @@ The table below presents two different sets of performance metrics for each fund
    <td style="text-align:right;"> 69.3 </td>
    <td style="text-align:right;"> -31.00 </td>
    <td style="text-align:right;"> 7.91 </td>
-   <td style="text-align:right;"> 53.40 </td>
-   <td style="text-align:right;"> 32.3000 </td>
+   <td style="text-align:right;"> 52.2 </td>
+   <td style="text-align:right;"> 22.4000 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> VLUE </td>
@@ -701,8 +679,8 @@ The table below presents two different sets of performance metrics for each fund
    <td style="text-align:right;"> 55.4 </td>
    <td style="text-align:right;"> -41.70 </td>
    <td style="text-align:right;"> 7.79 </td>
-   <td style="text-align:right;"> 52.10 </td>
-   <td style="text-align:right;"> 18.8000 </td>
+   <td style="text-align:right;"> 49.9 </td>
+   <td style="text-align:right;"> 13.6000 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> IWM </td>
@@ -712,19 +690,19 @@ The table below presents two different sets of performance metrics for each fund
    <td style="text-align:right;"> 39.6 </td>
    <td style="text-align:right;"> -39.10 </td>
    <td style="text-align:right;"> 9.72 </td>
-   <td style="text-align:right;"> 50.00 </td>
-   <td style="text-align:right;"> 32.6000 </td>
+   <td style="text-align:right;"> 49.7 </td>
+   <td style="text-align:right;"> 31.8000 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> BRK3 </td>
-   <td style="text-align:left;"> Berkshire Hathaway 1/2013-12/2022 </td>
-   <td style="text-align:right;"> 10.90 </td>
-   <td style="text-align:right;"> 13.50 </td>
-   <td style="text-align:right;"> 81.1 </td>
-   <td style="text-align:right;"> 29.00 </td>
-   <td style="text-align:right;"> 6.52 </td>
-   <td style="text-align:right;"> 47.60 </td>
-   <td style="text-align:right;"> -5.2200 </td>
+   <td style="text-align:left;"> BRK2 </td>
+   <td style="text-align:left;"> Berkshire Hathaway 10/1976-3/2017 </td>
+   <td style="text-align:right;"> 40.40 </td>
+   <td style="text-align:right;"> 18.60 </td>
+   <td style="text-align:right;"> 78.8 </td>
+   <td style="text-align:right;"> 63.60 </td>
+   <td style="text-align:right;"> 11.50 </td>
+   <td style="text-align:right;"> 48.1 </td>
+   <td style="text-align:right;"> 21.4000 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> SPY </td>
@@ -734,8 +712,19 @@ The table below presents two different sets of performance metrics for each fund
    <td style="text-align:right;"> 58.7 </td>
    <td style="text-align:right;"> 10.40 </td>
    <td style="text-align:right;"> 6.85 </td>
-   <td style="text-align:right;"> 46.30 </td>
-   <td style="text-align:right;"> -3.7000 </td>
+   <td style="text-align:right;"> 46.2 </td>
+   <td style="text-align:right;"> -3.3000 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BRK </td>
+   <td style="text-align:left;"> Berkshire Hathaway 10/1976-12/2022 </td>
+   <td style="text-align:right;"> 46.20 </td>
+   <td style="text-align:right;"> 17.70 </td>
+   <td style="text-align:right;"> 76.6 </td>
+   <td style="text-align:right;"> 59.80 </td>
+   <td style="text-align:right;"> 10.60 </td>
+   <td style="text-align:right;"> 46.1 </td>
+   <td style="text-align:right;"> 18.0000 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> QUAL </td>
@@ -745,19 +734,8 @@ The table below presents two different sets of performance metrics for each fund
    <td style="text-align:right;"> 79.2 </td>
    <td style="text-align:right;"> 19.50 </td>
    <td style="text-align:right;"> 6.91 </td>
-   <td style="text-align:right;"> 45.90 </td>
-   <td style="text-align:right;"> -0.0573 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> FAGIX </td>
-   <td style="text-align:left;"> FIDELITY CAPITAL &amp; INCOME </td>
-   <td style="text-align:right;"> 16.70 </td>
-   <td style="text-align:right;"> 6.47 </td>
-   <td style="text-align:right;"> 57.1 </td>
-   <td style="text-align:right;"> 14.90 </td>
-   <td style="text-align:right;"> 3.85 </td>
-   <td style="text-align:right;"> 43.50 </td>
-   <td style="text-align:right;"> -36.9000 </td>
+   <td style="text-align:right;"> 45.3 </td>
+   <td style="text-align:right;"> -0.0383 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> FBALX </td>
@@ -767,19 +745,30 @@ The table below presents two different sets of performance metrics for each fund
    <td style="text-align:right;"> 59.8 </td>
    <td style="text-align:right;"> 14.80 </td>
    <td style="text-align:right;"> 4.71 </td>
-   <td style="text-align:right;"> 42.70 </td>
-   <td style="text-align:right;"> -48.2000 </td>
+   <td style="text-align:right;"> 42.0 </td>
+   <td style="text-align:right;"> -44.3000 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> MCO </td>
-   <td style="text-align:left;"> MOODYS CORP COM USD0.01 </td>
+   <td style="text-align:left;"> BRK3 </td>
+   <td style="text-align:left;"> Berkshire Hathaway 1/2013-12/2022 </td>
+   <td style="text-align:right;"> 10.90 </td>
+   <td style="text-align:right;"> 13.50 </td>
+   <td style="text-align:right;"> 81.1 </td>
+   <td style="text-align:right;"> 29.00 </td>
+   <td style="text-align:right;"> 6.52 </td>
+   <td style="text-align:right;"> 39.7 </td>
+   <td style="text-align:right;"> -3.2900 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> FAGIX </td>
+   <td style="text-align:left;"> FIDELITY CAPITAL &amp; INCOME </td>
    <td style="text-align:right;"> 16.70 </td>
-   <td style="text-align:right;"> 14.80 </td>
-   <td style="text-align:right;"> 47.7 </td>
-   <td style="text-align:right;"> 11.50 </td>
-   <td style="text-align:right;"> 8.26 </td>
-   <td style="text-align:right;"> 38.00 </td>
-   <td style="text-align:right;"> 14.6000 </td>
+   <td style="text-align:right;"> 6.47 </td>
+   <td style="text-align:right;"> 57.1 </td>
+   <td style="text-align:right;"> 14.90 </td>
+   <td style="text-align:right;"> 3.85 </td>
+   <td style="text-align:right;"> 38.3 </td>
+   <td style="text-align:right;"> -31.9000 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> QQQ </td>
@@ -789,8 +778,8 @@ The table below presents two different sets of performance metrics for each fund
    <td style="text-align:right;"> 78.4 </td>
    <td style="text-align:right;"> 63.40 </td>
    <td style="text-align:right;"> 5.57 </td>
-   <td style="text-align:right;"> 30.10 </td>
-   <td style="text-align:right;"> -25.2000 </td>
+   <td style="text-align:right;"> 28.8 </td>
+   <td style="text-align:right;"> -17.4000 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> FDGRX </td>
@@ -800,8 +789,19 @@ The table below presents two different sets of performance metrics for each fund
    <td style="text-align:right;"> 72.9 </td>
    <td style="text-align:right;"> 51.00 </td>
    <td style="text-align:right;"> 5.55 </td>
-   <td style="text-align:right;"> 28.60 </td>
-   <td style="text-align:right;"> -21.9000 </td>
+   <td style="text-align:right;"> 27.8 </td>
+   <td style="text-align:right;"> -17.6000 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> MCO </td>
+   <td style="text-align:left;"> MOODYS CORP COM USD0.01 </td>
+   <td style="text-align:right;"> 16.70 </td>
+   <td style="text-align:right;"> 14.80 </td>
+   <td style="text-align:right;"> 47.7 </td>
+   <td style="text-align:right;"> 11.50 </td>
+   <td style="text-align:right;"> 8.26 </td>
+   <td style="text-align:right;"> 26.8 </td>
+   <td style="text-align:right;"> 5.7200 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> MSEQX </td>
@@ -811,11 +811,11 @@ The table below presents two different sets of performance metrics for each fund
    <td style="text-align:right;"> 51.1 </td>
    <td style="text-align:right;"> 7.76 </td>
    <td style="text-align:right;"> 1.13 </td>
-   <td style="text-align:right;"> 5.05 </td>
-   <td style="text-align:right;"> -53.5000 </td>
+   <td style="text-align:right;"> 4.7 </td>
+   <td style="text-align:right;"> -41.5000 </td>
   </tr>
 </tbody>
 </table>
 
-There are a number of interesting things to note in this table.  First, despite having strong in-sample performance metrics the expected performance metrics of QQQ, FDGRX, and MSEQX are poor and expected to have negative Information Ratios.  These funds load negatively on the HML factor and have benefited from the relative strength of growth stocks over the past decade but are expected to perform poorly when one uses the sixty-six year experience of the HML factor to look forward.  The best funds include: USMV, MTUM and DGRO.  These funds are expected to outperform the S&P 500 -- excess returns of 8-9% versus 7% for SPY and Sharpe Ratios of 60-70 versus 46 for SPY. Surprisingly, the expected performance of QUAL is on par with that of SPY.  The modes performance of QUAL is the result off having negative loadings on SMB and HML that offset the benefits from loading on QUAL.  
+There are a number of interesting things to note in this table.  First, despite having strong in-sample performance metrics the expected performance metrics of QQQ, FDGRX, and MSEQX are poor and expected to have negative Information Ratios.  These funds load negatively on the HML factor and have benefited from the relative strength of growth stocks over the past decade but are expected to perform poorly when one uses the sixty-six year experience of the HML factor to look forward.  The best funds include: USMV, MTUM and DGRO.  These funds are expected to outperform the S&P 500 -- excess returns of 8-9% versus 7% for SPY and Sharpe Ratios of 59-69 versus 46 for SPY. Surprisingly, the expected performance of QUAL is on par with that of SPY.  The modes performance of QUAL is the result off having negative loadings on SMB and HML that offset the benefits from loading on QUAL.  
 
