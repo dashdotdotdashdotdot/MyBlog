@@ -1,0 +1,133 @@
+---
+title: Why Did Verizon's Market Cap fall by 17% in Q3 2023?
+author: Douglas Dwyer
+date: '2023-10-08'
+categories:
+  - Case Studies
+slug: why-did-verizon-s-market-cap-17-in-q3-2023
+---
+
+Between June 30, 2023, and October 6, 2023, the Market Cap of Verizon fell from 156.35B to 129.69B (17%) and the Enterprise Value fell from 332B to 302.55B (9%).  During the same time period yields on a 10-year treasury increased from 3.85% to 4.73%.  An increase in the risk-free rate should translate into an increase in the WACC and a lower Market  Value of VZ, but by how much? 
+
+The Enterprise Value of VZ at the end of Q2 can be explained with the assumptions of:
+
+- 23.58% operating margin (forever)
+- a flat WACC of 8.73 (the 10yr treasury at end of Q2 plus 400bps) 
+- revenue growth of 1% for next five years and then expands to 2% by year 10 and stabilizes
+- Asset Turnover of 38% (forever)
+- A tax rate of 18.9%.
+
+The sum of the present discount value of the cash flows implied by these trajectories is \$332B. With the same assumptions, but a 7.85% WACC (the 10yr treasury today plus 400bps today) the enterprise value falls to $291B (-12.3%).
+
+Therefore, the drop in enterprise value that VZ has experienced in the past quarter is somewhat less than we would expect based given an 88bps increase in the WACC and using a DCF approach.
+
+```{r, echo=FALSE,warning=FALSE,message=FALSE}
+setwd('~/Rstuff/damodaran')
+  source("R/DCF_dwd.R")
+        source("R/growthFit.R")
+        source("R/trajectoryGraph.R")
+        source("R/portfolioView2.R")
+        source("R/driverCharts.R")
+        source("R/simpleAttribution.R")
+        source("R/makeAttributionTable_fn.R")
+        source("R/portfolioView3.R")
+       source("R/getFirmName.R")
+       source("R/estimatedImpliedActual.R")
+       source("R/dwdForm.R")
+       source("R/makeStrengthChart.R")
+       source("global.R")
+#        load("Rdata/allParmsAll_bayes.Rdata")
+#allParmsAll=allParmsAll_bayes
+        load("Rdata/allParmsAll.Rdata")
+
+        #source("nameLookup.R")
+ load("Rdata/nameLookup.Rdata")
+        source("R/summarize.R")
+        source("R/baseValue.R")
+        source("R/sensitivity.R")
+        source("R/adjustT.R")
+#        load("attributionTable.Rdata")
+        library(ggplot2)
+        library(plotly)
+ source("R/projectionPaths.R")
+source("R/driverCharts.R")
+
+tickers <- sapply(allParmsAll, function(x) x$ticker)
+
+
+parms007 = allParmsAll[[which(tickers=="VZ")]] 
+
+
+
+parms007$growthPaths$omVec = c(rep(23.58,11)/100)
+parms007$growthPaths$cocVec = c(rep(7.85,11)/100)
+
+v1 = DCF_dwd(parms007)$sumPV        
+parms008=parms007
+parms008$growthPaths$cocVec = c(rep(8.73,11)/100)
+
+v2 = DCF_dwd(parms007)$sumPV        
+
+#v2/v1-1
+
+```
+# Projections with End Q2 2023 WACC
+
+```{r, echo=FALSE,warning=FALSE,message=FALSE}
+library(kableExtra)
+
+df2 = projectionPaths(parms007)
+df2 = rbind(df2[1,],df2)
+df2[is.na(df2)] <- ""
+kableExtra::kable(df2) %>% kable_styling()
+
+#table <- kbl(df2, format = "latex", booktabs=TRUE, caption="DCF Calculation: Five Eighty-Three Valuation") %>%
+#kable_styling(latex_options = "hold_position")
+
+summary007=makeSummarize(parms007)
+TerminalText007 = paste("In the table above, the sum of discounted cash flows is the number in the lower right corner.  It is the sum of the column above.  The last number in this column is the terminal value", summary007[[13]],summary007[[14]],summary007[[15]],summary007[[16]],
+               summary007[[17]],
+               sep=". ")
+TerminalText007 = paste0(TerminalText007,".")
+
+#table <- footnote(table, 
+#                  general = TerminalText007,
+#                  general_title="Note:",
+#                  threeparttable = TRUE)
+#table
+
+
+```
+`r TerminalText007` 
+
+# Projections with October 8, 2023 WACC
+
+```{r, echo=FALSE,warning=FALSE,message=FALSE}
+library(kableExtra)
+parms007 = parms008
+
+df2 = projectionPaths(parms007)
+df2 = rbind(df2[1,],df2)
+df2[is.na(df2)] <- ""
+kableExtra::kable(df2) %>% kable_styling()
+
+#table <- kbl(df2, format = "latex", booktabs=TRUE, caption="DCF Calculation: Five Eighty-Three Valuation") %>%
+#kable_styling(latex_options = "hold_position")
+
+summary007=makeSummarize(parms007)
+TerminalText007 = paste("In the table above, the sum of discounted cash flows is the number in the lower right corner.  It is the sum of the column above.  The last number in this column is the terminal value", summary007[[13]],summary007[[14]],summary007[[15]],summary007[[16]],
+               summary007[[17]],
+               sep=". ")
+TerminalText007 = paste0(TerminalText007,".")
+
+#table <- footnote(table, 
+#                  general = TerminalText007,
+#                  general_title="Note:",
+#                  threeparttable = TRUE)
+#table
+
+
+```
+`r TerminalText007` 
+
+
