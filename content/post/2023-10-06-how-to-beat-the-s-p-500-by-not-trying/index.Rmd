@@ -134,7 +134,19 @@ table %>%
 
 # Forward Looking Expected Performance Metrics
 
-The table below presents two different sets of performance metrics for each fund.  The first three are the in sample Excess Return, Sharpe ratio and Information Ratio as reported in Table 1. The second set are the forward looking or expected performance metrics as implied by each funds loading onto the factor model. For each fund, I assume that the Alpha is 0 and that the idiosyncratic volatility of the fund will persist. I measure idiosyncratic volatility of each fund as the RMSE of the regression of the funds returns onto the six factors. The Information Ratio is computed by subtracting one from the funds loading on the market and then computing the Sharpe Ratio for this portfolio.
+The table below presents two different sets of performance metrics for each fund.  The first three are the in-sample Excess Return, Sharpe ratio and Information Ratio as reported in Table 1. The second set are the forward looking or expected performance metrics as implied by each fund's loading onto the factor model. For each fund, I assume that the six-factor Alpha is 0 and that the idiosyncratic volatility of the fund will persist.  I compute the Expected Excess Return of each fund as the sum product of the loading of the fund on each factor multiplied by the average excess return of the factor.  Computing expected excess returns this way implicitly sets the alpha from the six-factor regression to 0). I compute the expected total volatility of the fund as:
+
+$$ \sqrt {12\bigg(\lambda' \Sigma \lambda + \sigma_i^2\bigg)}$$
+
+where $\lambda$ is a column vector of the loadings of the fund on each factor and $\Sigma$ is the variance covariance matrix of the factors and $\sigma^2_i$ is the idiosyncratic variance of the fund's roots (the mean squared error of the regression).  The Expected Sharpe Ratio is the ratio of the expected excess returns to expected total volatility. 
+
+To compute the expected information ratio, I first need to compute the expected CAPM alpha, which is the excess return on the fund less the product of the funds expected beta and the average excess return of the market factor. The expected beta of the fund is the sum product of the loading of each factor multiplied by the covariance of each factor divided by the variance of the market factor. I compute the expected idiosyncratic variance of the fund as: 
+
+$$ \sqrt {12\bigg(\gamma' \Sigma \gamma + \sigma_i^2\bigg)}$$
+where $\gamma$ is equal to $\lambda$ except 1 has been subtracted from the first element of the vector.  It represents a portfolio that is long the fund and short the market.  The expected information ratio is computed as the expected CAPM alpha divided by the expected idiosyncratic volatility.
+
+As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio and Expected Information for Berkshire Hathaway were computed using a variance covariance matrix estimated on the time period 10/1976-3/2017 that one achieves the same numbers as the first row of Table 1.  The purpose of the exercise is to be able to use a long history of factor returns to derive a forward looking view on the potential performance of that has a relatively short history.
+
 
 ![](images/pagebreak6.png)
 
@@ -167,5 +179,5 @@ table %>%
 #plot(sharpeRatios,100*sharpe2[3,])
 ```
 
-There are a number of interesting things to note in this table.  First, despite having strong in-sample performance metrics the expected performance metrics of QQQ, FDGRX, and MSEQX are poor and expected to have negative Information Ratios.  These funds load negatively on the HML factor and have benefited from the relative strength of growth stocks over the past decade but are expected to perform poorly when one uses the sixty-six year experience of the HML factor to look forward.  The best funds include: USMV, MTUM and DGRO.  These funds are expected to outperform the S&P 500 -- excess returns of 8-9% versus 7% for SPY and Sharpe Ratios of 59-69 versus 46 for SPY. Surprisingly, the expected performance of QUAL is on par with that of SPY.  The modes performance of QUAL is the result off having negative loadings on SMB and HML that offset the benefits from loading on QUAL.  
+There are a number of interesting things to note in this table.  First, despite having strong in-sample performance metrics the expected performance metrics of QQQ, FDGRX, and MSEQX are poor and expected to have negative Information Ratios.  These funds load negatively on the HML factor and have benefited from the relative strength of growth stocks over the past decade but are expected to perform poorly when one uses the sixty-six year experience of the HML factor to look forward.  The best funds include: USMV, MTUM and DGRO.  These funds are expected to outperform the S&P 500 -- excess returns of 8-9% versus 7% for SPY and Sharpe Ratios of 59-67 versus 46 for SPY. Surprisingly, the expected performance of QUAL is on par with that of SPY.  The modest performance of QUAL is the result off having negative loadings on SMB and HML that offset the benefits from loading on QUAL.  
 

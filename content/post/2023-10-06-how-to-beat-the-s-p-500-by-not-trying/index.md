@@ -78,7 +78,7 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:left;"> Berkshire Hathaway 10/1976-3/2017 </td>
    <td style="text-align:right;"> 40.4 </td>
    <td style="text-align:right;"> 0.686 </td>
-   <td style="text-align:right;"> 0.186 </td>
+   <td style="text-align:right;"> 0.115 </td>
    <td style="text-align:right;"> 0.236 </td>
    <td style="text-align:right;"> 0.211 </td>
    <td style="text-align:right;"> 78.8 </td>
@@ -90,7 +90,7 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:left;"> Invesco QQQ Trust </td>
    <td style="text-align:right;"> 16.7 </td>
    <td style="text-align:right;"> 1.066 </td>
-   <td style="text-align:right;"> 0.149 </td>
+   <td style="text-align:right;"> 0.056 </td>
    <td style="text-align:right;"> 0.190 </td>
    <td style="text-align:right;"> 0.075 </td>
    <td style="text-align:right;"> 78.4 </td>
@@ -102,7 +102,7 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:left;"> Berkshire Hathaway 10/1976-12/2022 </td>
    <td style="text-align:right;"> 46.2 </td>
    <td style="text-align:right;"> 0.711 </td>
-   <td style="text-align:right;"> 0.177 </td>
+   <td style="text-align:right;"> 0.106 </td>
    <td style="text-align:right;"> 0.231 </td>
    <td style="text-align:right;"> 0.203 </td>
    <td style="text-align:right;"> 76.6 </td>
@@ -114,7 +114,7 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:left;"> Fidelity Growth Company </td>
    <td style="text-align:right;"> 16.7 </td>
    <td style="text-align:right;"> 1.104 </td>
-   <td style="text-align:right;"> 0.142 </td>
+   <td style="text-align:right;"> 0.056 </td>
    <td style="text-align:right;"> 0.195 </td>
    <td style="text-align:right;"> 0.073 </td>
    <td style="text-align:right;"> 72.9 </td>
@@ -126,7 +126,7 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:left;"> iShares MSCI USA Min Vol Factor </td>
    <td style="text-align:right;"> 11.9 </td>
    <td style="text-align:right;"> 0.685 </td>
-   <td style="text-align:right;"> 0.109 </td>
+   <td style="text-align:right;"> 0.080 </td>
    <td style="text-align:right;"> 0.116 </td>
    <td style="text-align:right;"> 0.057 </td>
    <td style="text-align:right;"> 94.1 </td>
@@ -138,7 +138,7 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:left;"> Berkshire Hathaway 1/2013-12/2022 </td>
    <td style="text-align:right;"> 10.9 </td>
    <td style="text-align:right;"> 0.824 </td>
-   <td style="text-align:right;"> 0.135 </td>
+   <td style="text-align:right;"> 0.065 </td>
    <td style="text-align:right;"> 0.166 </td>
    <td style="text-align:right;"> 0.112 </td>
    <td style="text-align:right;"> 81.1 </td>
@@ -150,7 +150,7 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:left;"> iShares Core Dividend Growth </td>
    <td style="text-align:right;"> 9.2 </td>
    <td style="text-align:right;"> 0.860 </td>
-   <td style="text-align:right;"> 0.106 </td>
+   <td style="text-align:right;"> 0.080 </td>
    <td style="text-align:right;"> 0.144 </td>
    <td style="text-align:right;"> 0.046 </td>
    <td style="text-align:right;"> 73.5 </td>
@@ -162,7 +162,7 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:left;"> iShares MSCI USA Quality Factor ETF </td>
    <td style="text-align:right;"> 10.2 </td>
    <td style="text-align:right;"> 0.967 </td>
-   <td style="text-align:right;"> 0.121 </td>
+   <td style="text-align:right;"> 0.069 </td>
    <td style="text-align:right;"> 0.153 </td>
    <td style="text-align:right;"> 0.033 </td>
    <td style="text-align:right;"> 79.2 </td>
@@ -174,7 +174,7 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:left;"> FIDELITY CAPITAL &amp; INCOME </td>
    <td style="text-align:right;"> 16.7 </td>
    <td style="text-align:right;"> 0.587 </td>
-   <td style="text-align:right;"> 0.065 </td>
+   <td style="text-align:right;"> 0.039 </td>
    <td style="text-align:right;"> 0.113 </td>
    <td style="text-align:right;"> 0.060 </td>
    <td style="text-align:right;"> 57.1 </td>
@@ -186,7 +186,7 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:left;"> FIDELITY BALANCED </td>
    <td style="text-align:right;"> 16.7 </td>
    <td style="text-align:right;"> 0.717 </td>
-   <td style="text-align:right;"> 0.072 </td>
+   <td style="text-align:right;"> 0.047 </td>
    <td style="text-align:right;"> 0.120 </td>
    <td style="text-align:right;"> 0.024 </td>
    <td style="text-align:right;"> 59.8 </td>
@@ -198,7 +198,7 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:left;"> iShares MSCI USA Momentum Factor ETF </td>
    <td style="text-align:right;"> 10.4 </td>
    <td style="text-align:right;"> 0.888 </td>
-   <td style="text-align:right;"> 0.117 </td>
+   <td style="text-align:right;"> 0.098 </td>
    <td style="text-align:right;"> 0.153 </td>
    <td style="text-align:right;"> 0.070 </td>
    <td style="text-align:right;"> 76.6 </td>
@@ -210,7 +210,7 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:left;"> MOODYS CORP COM USD0.01 </td>
    <td style="text-align:right;"> 16.7 </td>
    <td style="text-align:right;"> 1.284 </td>
-   <td style="text-align:right;"> 0.148 </td>
+   <td style="text-align:right;"> 0.083 </td>
    <td style="text-align:right;"> 0.311 </td>
    <td style="text-align:right;"> 0.230 </td>
    <td style="text-align:right;"> 47.7 </td>
@@ -222,7 +222,7 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:left;"> SPDR S&amp;P 500 ETF Trust </td>
    <td style="text-align:right;"> 16.7 </td>
    <td style="text-align:right;"> 0.965 </td>
-   <td style="text-align:right;"> 0.093 </td>
+   <td style="text-align:right;"> 0.068 </td>
    <td style="text-align:right;"> 0.159 </td>
    <td style="text-align:right;"> 0.016 </td>
    <td style="text-align:right;"> 58.7 </td>
@@ -234,7 +234,7 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:left;"> Morgan Stanley Institutional Growth Fund </td>
    <td style="text-align:right;"> 16.7 </td>
    <td style="text-align:right;"> 1.160 </td>
-   <td style="text-align:right;"> 0.121 </td>
+   <td style="text-align:right;"> 0.011 </td>
    <td style="text-align:right;"> 0.237 </td>
    <td style="text-align:right;"> 0.142 </td>
    <td style="text-align:right;"> 51.1 </td>
@@ -246,7 +246,7 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:left;"> FIDELITY SMALL CAP VALUE </td>
    <td style="text-align:right;"> 16.7 </td>
    <td style="text-align:right;"> 1.106 </td>
-   <td style="text-align:right;"> 0.097 </td>
+   <td style="text-align:right;"> 0.096 </td>
    <td style="text-align:right;"> 0.203 </td>
    <td style="text-align:right;"> 0.091 </td>
    <td style="text-align:right;"> 48.1 </td>
@@ -258,7 +258,7 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:left;"> FIDELITY LOW PRICED STOCK </td>
    <td style="text-align:right;"> 16.7 </td>
    <td style="text-align:right;"> 0.961 </td>
-   <td style="text-align:right;"> 0.086 </td>
+   <td style="text-align:right;"> 0.077 </td>
    <td style="text-align:right;"> 0.168 </td>
    <td style="text-align:right;"> 0.057 </td>
    <td style="text-align:right;"> 51.2 </td>
@@ -270,7 +270,7 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:left;"> iShares MSCI USA Size Factor ETF </td>
    <td style="text-align:right;"> 10.4 </td>
    <td style="text-align:right;"> 0.994 </td>
-   <td style="text-align:right;"> 0.109 </td>
+   <td style="text-align:right;"> 0.079 </td>
    <td style="text-align:right;"> 0.158 </td>
    <td style="text-align:right;"> 0.041 </td>
    <td style="text-align:right;"> 69.3 </td>
@@ -282,7 +282,7 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:left;"> iShares Russell 2000 ETF </td>
    <td style="text-align:right;"> 16.7 </td>
    <td style="text-align:right;"> 1.168 </td>
-   <td style="text-align:right;"> 0.081 </td>
+   <td style="text-align:right;"> 0.097 </td>
    <td style="text-align:right;"> 0.206 </td>
    <td style="text-align:right;"> 0.076 </td>
    <td style="text-align:right;"> 39.6 </td>
@@ -294,7 +294,7 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:left;"> iShares MSCI USA Value Factor ETF </td>
    <td style="text-align:right;"> 10.4 </td>
    <td style="text-align:right;"> 1.010 </td>
-   <td style="text-align:right;"> 0.094 </td>
+   <td style="text-align:right;"> 0.078 </td>
    <td style="text-align:right;"> 0.170 </td>
    <td style="text-align:right;"> 0.071 </td>
    <td style="text-align:right;"> 55.4 </td>
@@ -585,7 +585,19 @@ What we have analysed here is how the funds load on factors using relatively sho
 
 # Forward Looking Expected Performance Metrics
 
-The table below presents two different sets of performance metrics for each fund.  The first three are the in sample Excess Return, Sharpe ratio and Information Ratio as reported in Table 1. The second set are the forward looking or expected performance metrics as implied by each funds loading onto the factor model. For each fund, I assume that the Alpha is 0 and that the idiosyncratic volatility of the fund will persist. I measure idiosyncratic volatility of each fund as the RMSE of the regression of the funds returns onto the six factors. The Information Ratio is computed by subtracting one from the funds loading on the market and then computing the Sharpe Ratio for this portfolio.
+The table below presents two different sets of performance metrics for each fund.  The first three are the in-sample Excess Return, Sharpe ratio and Information Ratio as reported in Table 1. The second set are the forward looking or expected performance metrics as implied by each fund's loading onto the factor model. For each fund, I assume that the six-factor Alpha is 0 and that the idiosyncratic volatility of the fund will persist.  I compute the Expected Excess Return of each fund as the sum product of the loading of the fund on each factor multiplied by the average excess return of the factor.  Computing expected excess returns this way implicitly sets the alpha from the six-factor regression to 0). I compute the expected total volatility of the fund as:
+
+$$ \sqrt {12\bigg(\lambda' \Sigma \lambda + \sigma_i^2\bigg)}$$
+
+where `\(\lambda\)` is a column vector of the loadings of the fund on each factor and `\(\Sigma\)` is the variance covariance matrix of the factors and `\(\sigma^2_i\)` is the idiosyncratic variance of the fund's roots (the mean squared error of the regression).  The Expected Sharpe Ratio is the ratio of the expected excess returns to expected total volatility. 
+
+To compute the expected information ratio, I first need to compute the expected CAPM alpha, which is the excess return on the fund less the product of the funds expected beta and the average excess return of the market factor. The expected beta of the fund is the sum product of the loading of each factor multiplied by the covariance of each factor divided by the variance of the market factor. I compute the expected idiosyncratic variance of the fund as: 
+
+$$ \sqrt {12\bigg(\gamma' \Sigma \gamma + \sigma_i^2\bigg)}$$
+where `\(\gamma\)` is equal to `\(\lambda\)` except 1 has been subtracted from the first element of the vector.  It represents a portfolio that is long the fund and short the market.  The expected information ratio is computed as the expected CAPM alpha divided by the expected idiosyncratic volatility.
+
+As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio and Expected Information for Berkshire Hathaway were computed using a variance covariance matrix estimated on the time period 10/1976-3/2017 that one achieves the same numbers as the first row of Table 1.  The purpose of the exercise is to be able to use a long history of factor returns to derive a forward looking view on the potential performance of that has a relatively short history.
+
 
 ![](images/pagebreak6.png)
 
@@ -609,213 +621,213 @@ The table below presents two different sets of performance metrics for each fund
    <td style="text-align:left;"> USMV </td>
    <td style="text-align:left;"> iShares MSCI USA Min Vol Factor </td>
    <td style="text-align:right;"> 11.90 </td>
-   <td style="text-align:right;"> 10.90 </td>
+   <td style="text-align:right;"> 8.03 </td>
    <td style="text-align:right;"> 94.1 </td>
    <td style="text-align:right;"> 33.30 </td>
    <td style="text-align:right;"> 8.03 </td>
    <td style="text-align:right;"> 67.1 </td>
-   <td style="text-align:right;"> 14.5000 </td>
+   <td style="text-align:right;"> 43.30 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> DGRO </td>
    <td style="text-align:left;"> iShares Core Dividend Growth </td>
    <td style="text-align:right;"> 9.25 </td>
-   <td style="text-align:right;"> 10.60 </td>
+   <td style="text-align:right;"> 7.97 </td>
    <td style="text-align:right;"> 73.5 </td>
    <td style="text-align:right;"> 22.60 </td>
    <td style="text-align:right;"> 7.97 </td>
    <td style="text-align:right;"> 60.1 </td>
-   <td style="text-align:right;"> 22.2000 </td>
+   <td style="text-align:right;"> 47.40 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> MTUM </td>
    <td style="text-align:left;"> iShares MSCI USA Momentum Factor ETF </td>
    <td style="text-align:right;"> 10.40 </td>
-   <td style="text-align:right;"> 11.70 </td>
+   <td style="text-align:right;"> 9.81 </td>
    <td style="text-align:right;"> 76.6 </td>
    <td style="text-align:right;"> 11.80 </td>
    <td style="text-align:right;"> 9.81 </td>
    <td style="text-align:right;"> 59.8 </td>
-   <td style="text-align:right;"> 41.3000 </td>
+   <td style="text-align:right;"> 44.60 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> FCPVX </td>
    <td style="text-align:left;"> FIDELITY SMALL CAP VALUE </td>
    <td style="text-align:right;"> 16.70 </td>
-   <td style="text-align:right;"> 9.74 </td>
+   <td style="text-align:right;"> 9.65 </td>
    <td style="text-align:right;"> 48.1 </td>
    <td style="text-align:right;"> -8.37 </td>
    <td style="text-align:right;"> 9.65 </td>
    <td style="text-align:right;"> 54.8 </td>
-   <td style="text-align:right;"> 31.6000 </td>
+   <td style="text-align:right;"> 31.80 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> FLPSX </td>
    <td style="text-align:left;"> FIDELITY LOW PRICED STOCK </td>
    <td style="text-align:right;"> 16.70 </td>
-   <td style="text-align:right;"> 8.59 </td>
+   <td style="text-align:right;"> 7.75 </td>
    <td style="text-align:right;"> 51.2 </td>
    <td style="text-align:right;"> -9.56 </td>
    <td style="text-align:right;"> 7.75 </td>
    <td style="text-align:right;"> 52.8 </td>
-   <td style="text-align:right;"> 14.0000 </td>
+   <td style="text-align:right;"> 27.70 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> SIZE </td>
    <td style="text-align:left;"> iShares MSCI USA Size Factor ETF </td>
    <td style="text-align:right;"> 10.40 </td>
-   <td style="text-align:right;"> 10.90 </td>
+   <td style="text-align:right;"> 7.91 </td>
    <td style="text-align:right;"> 69.3 </td>
    <td style="text-align:right;"> -31.00 </td>
    <td style="text-align:right;"> 7.91 </td>
    <td style="text-align:right;"> 52.2 </td>
-   <td style="text-align:right;"> 22.4000 </td>
+   <td style="text-align:right;"> 31.10 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> VLUE </td>
    <td style="text-align:left;"> iShares MSCI USA Value Factor ETF </td>
    <td style="text-align:right;"> 10.40 </td>
-   <td style="text-align:right;"> 9.44 </td>
+   <td style="text-align:right;"> 7.79 </td>
    <td style="text-align:right;"> 55.4 </td>
    <td style="text-align:right;"> -41.70 </td>
    <td style="text-align:right;"> 7.79 </td>
    <td style="text-align:right;"> 49.9 </td>
-   <td style="text-align:right;"> 13.6000 </td>
+   <td style="text-align:right;"> 21.40 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> IWM </td>
    <td style="text-align:left;"> iShares Russell 2000 ETF </td>
    <td style="text-align:right;"> 16.70 </td>
-   <td style="text-align:right;"> 8.14 </td>
+   <td style="text-align:right;"> 9.72 </td>
    <td style="text-align:right;"> 39.6 </td>
    <td style="text-align:right;"> -39.10 </td>
    <td style="text-align:right;"> 9.72 </td>
    <td style="text-align:right;"> 49.7 </td>
-   <td style="text-align:right;"> 31.8000 </td>
+   <td style="text-align:right;"> 20.40 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> BRK2 </td>
    <td style="text-align:left;"> Berkshire Hathaway 10/1976-3/2017 </td>
    <td style="text-align:right;"> 40.40 </td>
-   <td style="text-align:right;"> 18.60 </td>
+   <td style="text-align:right;"> 11.50 </td>
    <td style="text-align:right;"> 78.8 </td>
    <td style="text-align:right;"> 63.60 </td>
    <td style="text-align:right;"> 11.50 </td>
    <td style="text-align:right;"> 48.1 </td>
-   <td style="text-align:right;"> 21.4000 </td>
+   <td style="text-align:right;"> 29.80 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> SPY </td>
    <td style="text-align:left;"> SPDR S&amp;P 500 ETF Trust </td>
    <td style="text-align:right;"> 16.70 </td>
-   <td style="text-align:right;"> 9.33 </td>
+   <td style="text-align:right;"> 6.85 </td>
    <td style="text-align:right;"> 58.7 </td>
    <td style="text-align:right;"> 10.40 </td>
    <td style="text-align:right;"> 6.85 </td>
    <td style="text-align:right;"> 46.2 </td>
-   <td style="text-align:right;"> -3.3000 </td>
+   <td style="text-align:right;"> 12.10 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> BRK </td>
    <td style="text-align:left;"> Berkshire Hathaway 10/1976-12/2022 </td>
    <td style="text-align:right;"> 46.20 </td>
-   <td style="text-align:right;"> 17.70 </td>
+   <td style="text-align:right;"> 10.60 </td>
    <td style="text-align:right;"> 76.6 </td>
    <td style="text-align:right;"> 59.80 </td>
    <td style="text-align:right;"> 10.60 </td>
    <td style="text-align:right;"> 46.1 </td>
-   <td style="text-align:right;"> 18.0000 </td>
+   <td style="text-align:right;"> 27.20 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> QUAL </td>
    <td style="text-align:left;"> iShares MSCI USA Quality Factor ETF </td>
    <td style="text-align:right;"> 10.20 </td>
-   <td style="text-align:right;"> 12.10 </td>
+   <td style="text-align:right;"> 6.91 </td>
    <td style="text-align:right;"> 79.2 </td>
    <td style="text-align:right;"> 19.50 </td>
    <td style="text-align:right;"> 6.91 </td>
    <td style="text-align:right;"> 45.3 </td>
-   <td style="text-align:right;"> -0.0383 </td>
+   <td style="text-align:right;"> 6.35 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> FBALX </td>
    <td style="text-align:left;"> FIDELITY BALANCED </td>
    <td style="text-align:right;"> 16.70 </td>
-   <td style="text-align:right;"> 7.17 </td>
+   <td style="text-align:right;"> 4.71 </td>
    <td style="text-align:right;"> 59.8 </td>
    <td style="text-align:right;"> 14.80 </td>
    <td style="text-align:right;"> 4.71 </td>
    <td style="text-align:right;"> 42.0 </td>
-   <td style="text-align:right;"> -44.3000 </td>
+   <td style="text-align:right;"> -4.54 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> BRK3 </td>
    <td style="text-align:left;"> Berkshire Hathaway 1/2013-12/2022 </td>
    <td style="text-align:right;"> 10.90 </td>
-   <td style="text-align:right;"> 13.50 </td>
+   <td style="text-align:right;"> 6.52 </td>
    <td style="text-align:right;"> 81.1 </td>
    <td style="text-align:right;"> 29.00 </td>
    <td style="text-align:right;"> 6.52 </td>
    <td style="text-align:right;"> 39.7 </td>
-   <td style="text-align:right;"> -3.2900 </td>
+   <td style="text-align:right;"> 9.57 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> FAGIX </td>
    <td style="text-align:left;"> FIDELITY CAPITAL &amp; INCOME </td>
    <td style="text-align:right;"> 16.70 </td>
-   <td style="text-align:right;"> 6.47 </td>
+   <td style="text-align:right;"> 3.85 </td>
    <td style="text-align:right;"> 57.1 </td>
    <td style="text-align:right;"> 14.90 </td>
    <td style="text-align:right;"> 3.85 </td>
    <td style="text-align:right;"> 38.3 </td>
-   <td style="text-align:right;"> -31.9000 </td>
+   <td style="text-align:right;"> 2.69 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> QQQ </td>
    <td style="text-align:left;"> Invesco QQQ Trust </td>
    <td style="text-align:right;"> 16.70 </td>
-   <td style="text-align:right;"> 14.90 </td>
+   <td style="text-align:right;"> 5.57 </td>
    <td style="text-align:right;"> 78.4 </td>
    <td style="text-align:right;"> 63.40 </td>
    <td style="text-align:right;"> 5.57 </td>
    <td style="text-align:right;"> 28.8 </td>
-   <td style="text-align:right;"> -17.4000 </td>
+   <td style="text-align:right;"> -32.50 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> FDGRX </td>
    <td style="text-align:left;"> Fidelity Growth Company </td>
    <td style="text-align:right;"> 16.70 </td>
-   <td style="text-align:right;"> 14.20 </td>
+   <td style="text-align:right;"> 5.55 </td>
    <td style="text-align:right;"> 72.9 </td>
    <td style="text-align:right;"> 51.00 </td>
    <td style="text-align:right;"> 5.55 </td>
    <td style="text-align:right;"> 27.8 </td>
-   <td style="text-align:right;"> -17.6000 </td>
+   <td style="text-align:right;"> -37.20 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> MCO </td>
    <td style="text-align:left;"> MOODYS CORP COM USD0.01 </td>
    <td style="text-align:right;"> 16.70 </td>
-   <td style="text-align:right;"> 14.80 </td>
+   <td style="text-align:right;"> 8.26 </td>
    <td style="text-align:right;"> 47.7 </td>
    <td style="text-align:right;"> 11.50 </td>
    <td style="text-align:right;"> 8.26 </td>
    <td style="text-align:right;"> 26.8 </td>
-   <td style="text-align:right;"> 5.7200 </td>
+   <td style="text-align:right;"> -3.64 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> MSEQX </td>
    <td style="text-align:left;"> Morgan Stanley Institutional Growth Fund </td>
    <td style="text-align:right;"> 16.70 </td>
-   <td style="text-align:right;"> 12.10 </td>
+   <td style="text-align:right;"> 1.13 </td>
    <td style="text-align:right;"> 51.1 </td>
    <td style="text-align:right;"> 7.76 </td>
    <td style="text-align:right;"> 1.13 </td>
    <td style="text-align:right;"> 4.7 </td>
-   <td style="text-align:right;"> -41.5000 </td>
+   <td style="text-align:right;"> -56.70 </td>
   </tr>
 </tbody>
 </table>
 
-There are a number of interesting things to note in this table.  First, despite having strong in-sample performance metrics the expected performance metrics of QQQ, FDGRX, and MSEQX are poor and expected to have negative Information Ratios.  These funds load negatively on the HML factor and have benefited from the relative strength of growth stocks over the past decade but are expected to perform poorly when one uses the sixty-six year experience of the HML factor to look forward.  The best funds include: USMV, MTUM and DGRO.  These funds are expected to outperform the S&P 500 -- excess returns of 8-9% versus 7% for SPY and Sharpe Ratios of 59-69 versus 46 for SPY. Surprisingly, the expected performance of QUAL is on par with that of SPY.  The modes performance of QUAL is the result off having negative loadings on SMB and HML that offset the benefits from loading on QUAL.  
+There are a number of interesting things to note in this table.  First, despite having strong in-sample performance metrics the expected performance metrics of QQQ, FDGRX, and MSEQX are poor and expected to have negative Information Ratios.  These funds load negatively on the HML factor and have benefited from the relative strength of growth stocks over the past decade but are expected to perform poorly when one uses the sixty-six year experience of the HML factor to look forward.  The best funds include: USMV, MTUM and DGRO.  These funds are expected to outperform the S&P 500 -- excess returns of 8-9% versus 7% for SPY and Sharpe Ratios of 59-67 versus 46 for SPY. Surprisingly, the expected performance of QUAL is on par with that of SPY.  The modest performance of QUAL is the result off having negative loadings on SMB and HML that offset the benefits from loading on QUAL.  
 
