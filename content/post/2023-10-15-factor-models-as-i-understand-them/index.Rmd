@@ -1,0 +1,244 @@
+---
+title: Factor Models as I Understand Them
+author: Douglas Dwyer
+date: '2023-10-15'
+slug: factor-models-as-i-understand-them
+categories:
+  - General Theory
+tags:
+  - R Markdown
+---
+
+One can download "Risk Factors" from Ken French's website and from AQR.  iShares markets "Factor ETFs" that a retail investor can invest in.  MSCI publishes Factor Indexes. 
+
+One can think of a "factor" is a rule-based strategy for constructing a self-financing portfolio that has positive returns for a long period of time.
+
+For example, one can form a market portfolio by going long all the names in the NYSE, AMEX, and NASDAQ with weights in proportion to their market values then offset this portfolio by shorting one-month T-bills.  The returns on such portfolios are the Mkt-RF factor that is available on Ken French's website.  The return on this factor is the excess return on the market over a risk free investment.  In any given month, it can be positive or negative as the market can go up or down. Nevertheless, over long periods of time the average excess return is positive.  The excess return on this factor has a clear risk-based interpretation: investors demand a risk premium for holding equity as it has more risk than a T-bill.
+
+Other risk factors generally use some version of a Double Sort. Why a double sort? One intuitive way to think about this is suppose you wanted to recruit "tall students" to be groomed as future basketball players.  Of course, you would want to recruit students that were tall for their age. If you placed a large group of students into a 10x10 grid, where you choose the row based on age and the column based on height within the age group. One could choose breakpoints to ensure that each cell has approximately the same number of students in it. The "tall cells" would consist of students that are tall for their age.  In the context of factors, one could form a "tall minus short" factor by taking the difference in performance of the students that are in the top three buckets for their height and the students that are in the bottom three buckets for their height.  This approach avoids conflating performance differences associated with height and performance differences associated with age.
+
+This is the general approach taken by Fama and French for the SMB Factor and the HML factor.  The SMB is the excess returns on small firms relative to big firms after controlling for their market to book ratio and the HML factor is the excess returns on Small Firms (as measured by Market Cap) over Large Firms after controlling for their book to market ratio.  
+
+These factors do have positive returns over a long period of time.  Nevertheless, the risk-based interpretation of the factors is not as obvious. One hypothesis is that has been put forth is that investors prefer a portfolio that does well during a recession. By over weighting SMB and HML one is effectively earning a premium on providing the market with recession insurance.  Another hypothesis is more behavioral in nature: "investors flock to popular stocks and away from unpopular stocks" implying that the unpopular stocks are underpriced. 
+
+Following "Buffet's Alpha", I use an additional three factors, UMD, BAB and QMJ as a "workhorse" factor model to do performance attribution, back test strategies and form forward looking expectations of performance.  Within the context of this note, I am thinking from the perspective of "long-only" investor who wants more excess returns and less risk, and the measure of risk is the standard deviation of excess returns.  This investor is indifferent between portfolios with the same risk/return profile but have different loadings on the other factors. 
+
+
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
+options(scipen = 999)
+library(dplyr)
+library(kableExtra)
+setwd("~/Rstuff/WRDS")
+source('realFacts.R')
+#head(DWDfact)
+```
+
+The figure below is the excess markets returns (going long the market and shorting the risk free portfolio) back to 1927.  The returns are monthly and the vertical axes runs from -10% to 10%, which hides the months that are outside of this range. The smooth dark blue line is the 20 year backward looking moving average. The smooth dark blue line is always above horizontal black line that indicates 0 excess returns, which implies that historically, someone with a twenty year horizon is always better often investing in the market relative to T-bills.  The average excess return on the market is 0.68% per month, or 8.1% per year. 
+
+# The Market Factor
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+library(plotly)
+library(ggplot2)
+library(quantmod)
+
+lim0=c(-1,1)
+
+makeFactorPlot = function(FactorName="the Market Portfolio") {
+FactorTmp$moving_avg <- FactorTmp$factor %>% 
+  zoo::rollmean(., k = k0, align = "right", fill = NA)
+
+df = FactorTmp %>% mutate(date = year + (month+0.5)/12 )   
+tst1 = ggplot(data = df, aes(x = date, y = factor)) +
+  geom_line(col="grey50") +
+  labs(title = paste("Time Series Plot of", FactorName), x = "Date", y = "Value") +  geom_line(aes(y=moving_avg), col="darkblue")  + theme_minimal() + 
+geom_hline(yintercept=0,col="black") + ylim(-.1,.1)
+
+plot1 = ggplotly(tst1)
+return(plot1)}
+
+
+k0 = 12*20
+
+FactorTmp = FFFactors %>% mutate(factor = Mkt.RF) %>% select(year, month, factor)
+makeFactorPlot()
+```
+
+The next factor is "SMB" which stands for Small minus Big. It represents the excess returns on small firms after controlling for difference in book to market ratios. Not surprisingly, the average excess returns on this factor are smaller (0.18% per month and 2.3% per year) than the "Mkt-RF". There is are twenty-year period in which the average excess returns of this factor are negative as indicated by the blue line dropping below the black line. 
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+FactorTmp = FFFactors %>% mutate(factor = SMB) %>% select(year, month, factor)
+makeFactorPlot("the SMB Factor")
+```
+# The HML Factor
+
+The next factor is the HML factor, which is the returns on firms with high market to book ratios less the returns on firms with low market to book ratios after controlling for the size of the firm.  Over the long run, the excess returns on this factor are 0.33% per month (3.96% per year).  In the past twenty years, however, these excess returns have disappeared (the average over the past 20 years is -0.04% per month or -0.48% per year)
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+FactorTmp = FFFactors %>% mutate(factor = HML) %>% select(year, month, factor)
+makeFactorPlot("the HML Factor")
+
+```
+
+
+# The Up Minus Down Factor
+
+The chart below plots the Up Minus Down factor, which is intended to capture momentum. It is the difference in performance of a portfolios with positive returns minus the difference in negative returns.  Size is controlled for by spliting into a Small and Big group and then computing value weighted returns of each portfolio.  Returns are computed over the prior 12 months, but skipping the most recent month.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+FactorTmp = FFFactors %>% mutate(factor = UMD) %>% select(year, month, factor)
+makeFactorPlot("the UMD Factor")
+
+```
+# Betting Against Beta Factor
+
+This factor is "long leveraged low-beta assets and short high-beta assets." The construction is involved.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+FactorTmp = FFFactors %>% mutate(factor = BAB) %>% select(year, month, factor)
+makeFactorPlot("the BAB Factor")
+
+```
+
+# Qualtity Minus Junk (QMJ)
+
+Quality Minus Junk goes long quality stocks and short low quality stock. A brief description of the factor construction is as follows. They first produce a quality score.  The quality score is produced by standardizing many measures of quality to have a mean of zero and standard deviation of 1 in any given cross section. The measures of quality are grouped into three groups: profitability, growth, and safety.  The metrics in the saftey group generally reflect the absence of financial distress.  The measures are averaged within each group and then the groups are averaged.  This ensures that each group is given an equal weight and that each measure within each group is given equal weight with respect to the group.
+
+After the Quality is constructed, the factor follows how the HML factor is constructed.  Within a size group firms are sorted on quality and value weighted portfolio are constructed for the top 30% and the bottom 30% and the returns are subtracted within a size group and the excess returns are averaged across each size group.
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+FactorTmp = FFFactors %>% mutate(factor = BAB) %>% select(year, month, factor)
+makeFactorPlot("the QMJ Factor")
+
+```
+
+# What is the best portfolio?
+
+We can construct a panel of 792 monthly factor returns and compute the mean excess return and the covariance matrix. In this sixty-six year period all the factors are populated. The table below presents the anualized excess returns, the volatility, the Sharpe Ratio and the CAPM Beta of each factor.  Note that BAB and UMD factors outperform the Mkt.RF in terms of both risk and return. Further, they have little in the way of systematic risk.
+
+```{r, echo=FALSE, warning =FALSE, message=FALSE}
+tmp = as.matrix(colMeans(DWDfact[2:7])*1200)
+vol = sqrt(diag(cov(DWDfact[2:7]))*12)
+sharpe = (12*colMeans(DWDfact[2:7]))/sqrt(diag(cov(DWDfact[2:7]))*12)
+
+beta = cov(DWDfact[2:7])[,1]/cov(DWDfact[2:7])[1,1]
+tmp = data.frame(round(tmp,2),round(vol*100,2),round(sharpe,2),round(beta,2))
+names(tmp) = c("Annualized Excess Return", "Volatility", "Sharpe Ratio","CAPM Beta")
+table <- kable(tmp, caption = "Excess Returns, Sharpe Ratios and CAPM Beta of Each Factor", row.names=TRUE)
+table %>%
+  kable_styling(full_width = FALSE)
+
+```
+The table below presents the covariance of the monthly factors. It is computed with respect to monthly returns.
+```{r,echo=FALSE, warning =FALSE, message=FALSE}
+cov = as.matrix(cov(DWDfact[2:7])*100)
+
+table <- kable(round(cov,3), caption = "Variance Covariance Matrix(%)", row.names=TRUE)
+table %>%
+  kable_styling(full_width = FALSE)
+
+
+```
+
+# Finding the Best Portfolio of Factors
+
+The graph below plots the factors with volatility on the X-axis and excess return on the Y-axis.  A line connects the Market portfolio with the origin. The fact that UMD, QMJ and BAB all lie above this line draws into question the traditional advice "to split your investments between a money-market fund and a broad-based, passively managed stock fund," because these factors have a higher return for the same amount of risk.  The traditional advice is an implication of the "Two Fund Theorem," which is based on the assumption of there being one priced risk factor -- one type of risk.  I searched for the portfolio with the highest Sharpe ratio across the space of portfolios that had non-negative weights on each of the factors and and summed to 1.  I constructed 1mm portfolios at random and compute the Sharpe Ratio of each found the best and then did repeated lines search around this portfolio until I converged to the best portfolio. The solution places a weight of 17% on the Mrk-Rf and places the largest weight on QMJ (36%) and the lowest weight on UMD (10%).  It has a Sharpe Ratio of  1.5.  With leverage, one could obtain any point on the risk return profile on the red line that connect the optimal portfolio with the origin.  In theory, if the only risk you care about is market risk you should construct a portfolio on this line -- which is not the market line.
+
+```{r, echo=FALSE, warning =FALSE, message=FALSE}
+par(ann=TRUE,mfrow=c(1,1),bg="grey50",mai=1*c(1,1,1,1))
+
+#form: choose b to minimize t(dvec) %*% b + (1/2)*t(b)%*%D%*%b 
+#subject to t(A)b > b0
+
+
+ER = 100*12*matrix(colMeans(DWDfact[2:7]),ncol=1)
+SD = 100*sqrt(diag(12*cov(DWDfact[2:7])))
+
+tmp=cbind(ER,SD)
+
+plot(tmp[,2],tmp[,1],xlab="Volatility (annualized Standard Deviation, %)",ylab="Excess Return (Annualized, %)",xlim=c(0,20),ylim=c(0,10),col="white",pch=4,cex=2,main = "Factor in Risk-Reward Space")
+text(tmp[,2],tmp[,1],row.names(tmp))
+lines(rbind(c(0,0),2*tmp[which(row.names(tmp)=="Mkt.RF"),2:1]),col="white")
+
+
+best=c(0.16965850, 0.13980859, 0.14985711, 0.07576843, 0.10281743, 0.36208993)
+
+optimum = portfolioPerformance(best)
+points(100*optimum[2],100*optimum[1],col="darkred",pch=4,cex=3)
+lines(rbind(c(0,0),c(3*100*optimum[2],3*100*optimum[1])),col="darkRed")
+text(100*optimum[2],100*optimum[1],"Best")
+```
+
+# Finding the Best Portfolio of Real Funds based on Factor Loadings and Residual Risk
+
+
+In practice, however, one cannot buy these factors directly \---  at least I am not aware of a fund that tracks these factors closely (with the exception of the market factor).  Further, the retail investor cannot borrow at the risk free rate. One can buy 'factor' funds and I will analyze six: SPY (tracks the S&P 500), USMV (US Minimum Vol), DGRO (Dividend Growth), VLUE (VALUE), MTUM (Momentum), and IWM (small caps, tracks the Russell 2000).  I first model the risk return profiles of these funds by determining their loadings on each factor via a regression and interpret the mean squared error of the regression as representing residual risk.  The tickers on the chart below indicate the position of each fund in risk reward space.  To determine the risk reward frontier of portfolios of these funds, I sample 200,000 portfolios with weights on the portfolios that are randomly determine and plot each as a dot in the figure below. We solve for the risk frontier by connecting the origin with the maximum Sharpe ratio portfolio.  We extend this curve by bucketing the 200,000 portfolios into 50 buckets by risk and find the maximum excess return of each bucket.  We plot these points until maximum return is achieve.  This curve represent the risk return profile available to an investor that can go long the risk free portfolio but can not borrow and can not take short position. The best Sharpe ratio is achieved by investing 100% in USMV fund and the best excess return is achieved by investing 100% in MTUM.
+
+```{r, echo=FALSE, warning =FALSE, message=FALSE}
+
+
+include = c("SPY","USMV","DGRO","VLUE","MTUM","IWM")
+
+iwv = list()
+
+for (j in 1:length(include)) {
+i = which(include[j] == DWDnames)
+ww = allResults[[i]]$QMJ$coefficients[2:7]
+vv = summary(allResults[[i]]$QMJ)$sigma
+iwv[[j]] = list(i,ww,vv)
+}
+
+
+NNN=200000
+tmp = matrix(rnorm(6*(NNN-6))^2,ncol=6)
+portfolios = tmp/rowSums(tmp)
+portfolios = rbind(diag(6),portfolios)
+ER0 = rep(0,NNN)
+var0 = rep(0,NNN)
+sharpe0 = rep(0,NNN)
+for (i in 1:nrow(portfolios)){
+  port1 = rep(0,6)
+  portVAR = 0 
+for (j in 1:length(iwv)) {
+port1 = port1 + portfolios[i,j]*iwv[[j]][[2]]
+portVAR = portVAR + portfolios[i,j]*iwv[[j]][[3]]^2
+
+} 
+portV = sqrt(portVAR)
+perf = portfolioPerformance(port1)
+ER0[i] = perf[1]
+var0[i] = ( sqrt(perf[2]^2/12 + portV^2) * sqrt(12) )
+sharpe0[i] = ER0[i]/( sqrt(perf[2]^2/12 + portV^2) * sqrt(12) )
+}
+
+space = data.frame(var=var0,ER=ER0)
+
+  space <- space %>%
+    mutate(sortbucket = ntile(var, 50))
+  
+  done = space %>% group_by(sortbucket) %>% summarize(
+      maxER = max(ER, na.rm=TRUE),
+      meanVar = mean(var),
+    ) %>% arrange(sortbucket)
+#head(done)
+
+bestRow = which.max(sharpe0)
+done = rbind(c(0,0),c(ER0[bestRow],var0[bestRow]),done[,2:3])
+
+done = done[1:which(done[,1]==max(done[,1])),]
+par(ann=TRUE,mfrow=c(1,1),bg="grey50",mai=1*c(1,1,1,1))
+
+plot(100*var0,100*ER0,main="Real Funds in Risk Return Space", xlab="Volatility (annualized Standard Deviation, %)",ylab="Excess Return (Annualized, %)",xlim=c(0,20),ylim=c(0,10),col=rgb(1,1,1,.2),pch=1,cex=1)
+lines(100*done$meanVar,100*done$maxER,col="darkred")
+text(100*var0[1:6],100*ER0[1:6],labels=include)
+
+#summary(sharpe0)
+#portfolios[which.max(var0),]
+#portfolios[which.max(ER0),]
+#portfolios[which.max(sharpe0),]
+#var0[which.max(sharpe0)]
+```
+
