@@ -38,7 +38,7 @@ As a result of this analysis, I ended up buying two such funds.
 
 # Measuring performance
 
-In "Buffet's Alpha," Table 2 reports the Beta, Average Excess Return, Total Volatility, Idiosyncratic Volatility, Sharpe Ratio, Information Ratio and Leverage of Berkshire Hathaway in Column 1 and that of the "Overall Stock Market Performance," as a reference in Column 4. The first row of Table 1 below replicates the first Column of Table 4. In Addition, I present Alpha in the last column that matches Alpha in Column one of Table 4 from Buttet's Alpha as well.  This is an analysis of the performance of Berkshire Hathaway using the time interval considered in the paper (10/1976-3/2017).  
+In "Buffett's Alpha," Table 2 reports the Beta, Average Excess Return, Total Volatility, Idiosyncratic Volatility, Sharpe Ratio, Information Ratio and Leverage of Berkshire Hathaway in Column 1 and that of the "Overall Stock Market Performance," as a reference in Column 4. The first row of Table 1 below replicates the first Column of Table 4. In Addition, I present Alpha in the last column that matches Alpha in Column one of Table 4 from Buttet's Alpha as well.  This is an analysis of the performance of Berkshire Hathaway using the time interval considered in the paper (10/1976-3/2017).  
 
 The numbers are obtained as follows. First, I downloaded the returns on Berkshire Hathaway from WRDS. Second, I downloaded the "Fama French Factors" from Ken French's website, and merge.  Third, I downloaded the factors UMD, BAB, and QMJ from AQR's website. Fourth, I eliminated rows outside of the desired time period. Fifth, create excess returns for BRK by subtracting the risk-free rate from the returns on BRK. 
 
@@ -56,8 +56,11 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
 
 ![](images/pagebreak6.png)
 
+
+
+
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<caption><span id="tab:unnamed-chunk-1"></span>Table 1: Funds Analyzed Through the 'Buffet's Alpha Framework'</caption>
+<caption><span id="tab:unnamed-chunk-2"></span>Table 1: Funds Analyzed Through the 'Buffett's Alpha Framework'</caption>
  <thead>
   <tr>
    <th style="text-align:left;"> Fund </th>
@@ -194,6 +197,18 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:right;"> 0.004 </td>
   </tr>
   <tr>
+   <td style="text-align:left;"> VIIIX </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:right;"> 16.7 </td>
+   <td style="text-align:right;"> 0.967 </td>
+   <td style="text-align:right;"> 0.069 </td>
+   <td style="text-align:right;"> 0.159 </td>
+   <td style="text-align:right;"> 0.015 </td>
+   <td style="text-align:right;"> 59.1 </td>
+   <td style="text-align:right;"> 0.145 </td>
+   <td style="text-align:right;"> 0.002 </td>
+  </tr>
+  <tr>
    <td style="text-align:left;"> MTUM </td>
    <td style="text-align:left;"> iShares MSCI USA Momentum Factor ETF </td>
    <td style="text-align:right;"> 10.4 </td>
@@ -240,6 +255,18 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:right;"> 51.1 </td>
    <td style="text-align:right;"> 0.078 </td>
    <td style="text-align:right;"> 0.011 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> QCGRIX </td>
+   <td style="text-align:left;"> CREF Growth R3 </td>
+   <td style="text-align:right;"> 3.7 </td>
+   <td style="text-align:right;"> 1.058 </td>
+   <td style="text-align:right;"> 0.062 </td>
+   <td style="text-align:right;"> 0.230 </td>
+   <td style="text-align:right;"> 0.065 </td>
+   <td style="text-align:right;"> 57.6 </td>
+   <td style="text-align:right;"> 0.052 </td>
+   <td style="text-align:right;"> 0.003 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> FCPVX </td>
@@ -301,6 +328,18 @@ The numbers are obtained as follows. First, I downloaded the returns on Berkshir
    <td style="text-align:right;"> -0.417 </td>
    <td style="text-align:right;"> -0.030 </td>
   </tr>
+  <tr>
+   <td style="text-align:left;"> VTWAX </td>
+   <td style="text-align:left;"> Vanguard Total World Stock Index Fund </td>
+   <td style="text-align:right;"> 4.6 </td>
+   <td style="text-align:right;"> 0.927 </td>
+   <td style="text-align:right;"> 0.060 </td>
+   <td style="text-align:right;"> 0.183 </td>
+   <td style="text-align:right;"> 0.038 </td>
+   <td style="text-align:right;"> 53.2 </td>
+   <td style="text-align:right;"> -0.558 </td>
+   <td style="text-align:right;"> -0.021 </td>
+  </tr>
 </tbody>
 </table>
 
@@ -317,9 +356,9 @@ These questions lead us to use a factor framework to explain where these perform
 
 # Performance Attribution through a Factor Framework
 
-I create a matrix of six factors by merging the three factors of Famma French with another three factors taken from AQR and eliminating all the rows with missing observations.  The resulting table represents 792 monthly returns of each factor over the time period July 1956 until Jun 2023 (66 years). I can estimate the expected return on each factor as the mean of its column, and the corresponding covariance matrix of the factors provides an estimate of the variance covariance matrix of the factors.  If I know how a portfolio loads onto the factors I can compute the expected return on the portfolio as well as the variance of the systematic risk of the portfolio.  One way to estimate the loadings of a portfolio onto factors is to regress the returns of the portfolio onto the returns of the factors, which is the approach taken by Table 4 of Buffet's Alpha.  
+I create a matrix of six factors by merging the three factors of Famma French with another three factors taken from AQR and eliminating all the rows with missing observations.  The resulting table represents 792 monthly returns of each factor over the time period July 1956 until Jun 2023 (66 years). I can estimate the expected return on each factor as the mean of its column, and the corresponding covariance matrix of the factors provides an estimate of the variance covariance matrix of the factors.  If I know how a portfolio loads onto the factors I can compute the expected return on the portfolio as well as the variance of the systematic risk of the portfolio.  One way to estimate the loadings of a portfolio onto factors is to regress the returns of the portfolio onto the returns of the factors, which is the approach taken by Table 4 of Buffett's Alpha.  
 
-Table 2 presents the factor loadings of each fund obtained by regressing each fund's returns on the 6 factors.  The second row matches with the fifth column of Table 4 in Buffet's alpha.^[While the numbers are not materially different, they are not identical.  The biggest difference is for the QMJ factor (0.3917 versus 0.47).  My understanding it that small differences in the results are to be expected because the factors I recently downloaded are not identical to what the paper used five years ago.]  The table as been sort by descending alpha.
+Table 2 presents the factor loadings of each fund obtained by regressing each fund's returns on the 6 factors.  The second row matches with the fifth column of Table 4 in Buffett's alpha. {While the numbers are not materially different, they are not identical.  The biggest difference is for the QMJ factor (0.3917 versus 0.47).  My understanding it that small differences in the results are to be expected because the factors I recently downloaded are not identical to what the paper used five years ago.}  The table as been sort by descending alpha.
 
 A few things to note. The so called factor ETFs are loading in a sensible manner.  DGRO & QUAL loads on QMJ, VLUE loads on SMB, SPY loads on MKT, MTUM loads on UMD and USMV loads on both BAB and QUAL.  Not surprisinginly, BRK loads on HML, BAB & QMJ at least for the long time periods.  For the past ten years, however, BRK loads heavily on HML but is short BAB and the loading on QMJ has fallen considerably.  Surprisingly, SIZE does not appear to load on SMB. I have also included two growth mutual funds that are short HML and QMJ.   
 
@@ -333,7 +372,7 @@ What we have analysed here is how the funds load on factors using relatively sho
 
 
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<caption><span id="tab:unnamed-chunk-2"></span>Table 2: Attributing Fund Performance To Factors</caption>
+<caption><span id="tab:unnamed-chunk-3"></span>Table 2: Attributing Fund Performance To Factors</caption>
  <thead>
   <tr>
    <th style="text-align:left;"> Fund </th>
@@ -418,7 +457,7 @@ What we have analysed here is how the funds load on factors using relatively sho
    <td style="text-align:right;"> 0.0211 </td>
    <td style="text-align:right;"> -0.1206 </td>
    <td style="text-align:right;"> 0.2660 </td>
-   <td style="text-align:right;"> -0.2321 </td>
+   <td style="text-align:right;"> -0.2320 </td>
    <td style="text-align:right;"> 0.806 </td>
   </tr>
   <tr>
@@ -432,6 +471,18 @@ What we have analysed here is how the funds load on factors using relatively sho
    <td style="text-align:right;"> -0.2155 </td>
    <td style="text-align:right;"> 0.0882 </td>
    <td style="text-align:right;"> 0.676 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> QCGRIX </td>
+   <td style="text-align:left;"> CREF Growth R3 </td>
+   <td style="text-align:right;"> 0.0120 </td>
+   <td style="text-align:right;"> 1.0675 </td>
+   <td style="text-align:right;"> -0.1608 </td>
+   <td style="text-align:right;"> -0.3046 </td>
+   <td style="text-align:right;"> 0.0190 </td>
+   <td style="text-align:right;"> 0.0407 </td>
+   <td style="text-align:right;"> -0.0847 </td>
+   <td style="text-align:right;"> 0.979 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> FCPVX </td>
@@ -494,6 +545,18 @@ What we have analysed here is how the funds load on factors using relatively sho
    <td style="text-align:right;"> 0.997 </td>
   </tr>
   <tr>
+   <td style="text-align:left;"> VIIIX </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:right;"> -0.0024 </td>
+   <td style="text-align:right;"> 0.9994 </td>
+   <td style="text-align:right;"> -0.1371 </td>
+   <td style="text-align:right;"> 0.0132 </td>
+   <td style="text-align:right;"> -0.0074 </td>
+   <td style="text-align:right;"> 0.0055 </td>
+   <td style="text-align:right;"> 0.0423 </td>
+   <td style="text-align:right;"> 0.997 </td>
+  </tr>
+  <tr>
    <td style="text-align:left;"> DGRO </td>
    <td style="text-align:left;"> iShares Core Dividend Growth </td>
    <td style="text-align:right;"> -0.0084 </td>
@@ -528,6 +591,18 @@ What we have analysed here is how the funds load on factors using relatively sho
    <td style="text-align:right;"> 0.1760 </td>
    <td style="text-align:right;"> -0.0140 </td>
    <td style="text-align:right;"> 0.955 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VTWAX </td>
+   <td style="text-align:left;"> Vanguard Total World Stock Index Fund </td>
+   <td style="text-align:right;"> -0.0120 </td>
+   <td style="text-align:right;"> 0.8697 </td>
+   <td style="text-align:right;"> -0.1261 </td>
+   <td style="text-align:right;"> 0.0766 </td>
+   <td style="text-align:right;"> -0.1123 </td>
+   <td style="text-align:right;"> 0.1099 </td>
+   <td style="text-align:right;"> -0.0478 </td>
+   <td style="text-align:right;"> 0.968 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> VLUE </td>
@@ -602,7 +677,7 @@ As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio
 ![](images/pagebreak6.png)
 
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<caption><span id="tab:unnamed-chunk-3"></span>Table 3: In-Sample and Expected Performance Metrics of Based on a Six-Factor Framework</caption>
+<caption><span id="tab:unnamed-chunk-4"></span>Table 3: In-Sample and Expected Performance Metrics of Based on a Six-Factor Framework</caption>
  <thead>
   <tr>
    <th style="text-align:left;"> Fund </th>
@@ -626,7 +701,7 @@ As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio
    <td style="text-align:right;"> 33.30 </td>
    <td style="text-align:right;"> 8.03 </td>
    <td style="text-align:right;"> 67.1 </td>
-   <td style="text-align:right;"> 43.30 </td>
+   <td style="text-align:right;"> 43.300 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> DGRO </td>
@@ -637,7 +712,7 @@ As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio
    <td style="text-align:right;"> 22.60 </td>
    <td style="text-align:right;"> 7.97 </td>
    <td style="text-align:right;"> 60.1 </td>
-   <td style="text-align:right;"> 47.40 </td>
+   <td style="text-align:right;"> 47.400 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> MTUM </td>
@@ -648,7 +723,7 @@ As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio
    <td style="text-align:right;"> 11.80 </td>
    <td style="text-align:right;"> 9.81 </td>
    <td style="text-align:right;"> 59.8 </td>
-   <td style="text-align:right;"> 44.60 </td>
+   <td style="text-align:right;"> 44.600 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> FCPVX </td>
@@ -659,7 +734,7 @@ As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio
    <td style="text-align:right;"> -8.37 </td>
    <td style="text-align:right;"> 9.65 </td>
    <td style="text-align:right;"> 54.8 </td>
-   <td style="text-align:right;"> 31.80 </td>
+   <td style="text-align:right;"> 31.800 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> FLPSX </td>
@@ -670,7 +745,7 @@ As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio
    <td style="text-align:right;"> -9.56 </td>
    <td style="text-align:right;"> 7.75 </td>
    <td style="text-align:right;"> 52.8 </td>
-   <td style="text-align:right;"> 27.70 </td>
+   <td style="text-align:right;"> 27.700 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> SIZE </td>
@@ -681,7 +756,7 @@ As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio
    <td style="text-align:right;"> -31.00 </td>
    <td style="text-align:right;"> 7.91 </td>
    <td style="text-align:right;"> 52.2 </td>
-   <td style="text-align:right;"> 31.10 </td>
+   <td style="text-align:right;"> 31.100 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> VLUE </td>
@@ -692,7 +767,7 @@ As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio
    <td style="text-align:right;"> -41.70 </td>
    <td style="text-align:right;"> 7.79 </td>
    <td style="text-align:right;"> 49.9 </td>
-   <td style="text-align:right;"> 21.40 </td>
+   <td style="text-align:right;"> 21.400 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> IWM </td>
@@ -703,7 +778,7 @@ As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio
    <td style="text-align:right;"> -39.10 </td>
    <td style="text-align:right;"> 9.72 </td>
    <td style="text-align:right;"> 49.7 </td>
-   <td style="text-align:right;"> 20.40 </td>
+   <td style="text-align:right;"> 20.400 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> BRK2 </td>
@@ -714,7 +789,7 @@ As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio
    <td style="text-align:right;"> 63.60 </td>
    <td style="text-align:right;"> 11.50 </td>
    <td style="text-align:right;"> 48.1 </td>
-   <td style="text-align:right;"> 29.80 </td>
+   <td style="text-align:right;"> 29.800 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> SPY </td>
@@ -725,7 +800,18 @@ As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio
    <td style="text-align:right;"> 10.40 </td>
    <td style="text-align:right;"> 6.85 </td>
    <td style="text-align:right;"> 46.2 </td>
-   <td style="text-align:right;"> 12.10 </td>
+   <td style="text-align:right;"> 12.100 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VIIIX </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:right;"> 16.70 </td>
+   <td style="text-align:right;"> 6.85 </td>
+   <td style="text-align:right;"> 59.1 </td>
+   <td style="text-align:right;"> 14.50 </td>
+   <td style="text-align:right;"> 6.85 </td>
+   <td style="text-align:right;"> 46.1 </td>
+   <td style="text-align:right;"> 11.600 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> BRK </td>
@@ -736,7 +822,7 @@ As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio
    <td style="text-align:right;"> 59.80 </td>
    <td style="text-align:right;"> 10.60 </td>
    <td style="text-align:right;"> 46.1 </td>
-   <td style="text-align:right;"> 27.20 </td>
+   <td style="text-align:right;"> 27.200 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> QUAL </td>
@@ -747,7 +833,18 @@ As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio
    <td style="text-align:right;"> 19.50 </td>
    <td style="text-align:right;"> 6.91 </td>
    <td style="text-align:right;"> 45.3 </td>
-   <td style="text-align:right;"> 6.35 </td>
+   <td style="text-align:right;"> 6.350 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VTWAX </td>
+   <td style="text-align:left;"> Vanguard Total World Stock Index Fund </td>
+   <td style="text-align:right;"> 4.58 </td>
+   <td style="text-align:right;"> 5.97 </td>
+   <td style="text-align:right;"> 53.2 </td>
+   <td style="text-align:right;"> -55.80 </td>
+   <td style="text-align:right;"> 5.97 </td>
+   <td style="text-align:right;"> 43.1 </td>
+   <td style="text-align:right;"> 0.625 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> FBALX </td>
@@ -758,7 +855,7 @@ As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio
    <td style="text-align:right;"> 14.80 </td>
    <td style="text-align:right;"> 4.71 </td>
    <td style="text-align:right;"> 42.0 </td>
-   <td style="text-align:right;"> -4.54 </td>
+   <td style="text-align:right;"> -4.540 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> BRK3 </td>
@@ -769,7 +866,7 @@ As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio
    <td style="text-align:right;"> 29.00 </td>
    <td style="text-align:right;"> 6.52 </td>
    <td style="text-align:right;"> 39.7 </td>
-   <td style="text-align:right;"> 9.57 </td>
+   <td style="text-align:right;"> 9.570 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> FAGIX </td>
@@ -780,7 +877,18 @@ As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio
    <td style="text-align:right;"> 14.90 </td>
    <td style="text-align:right;"> 3.85 </td>
    <td style="text-align:right;"> 38.3 </td>
-   <td style="text-align:right;"> 2.69 </td>
+   <td style="text-align:right;"> 2.690 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> QCGRIX </td>
+   <td style="text-align:left;"> CREF Growth R3 </td>
+   <td style="text-align:right;"> 3.67 </td>
+   <td style="text-align:right;"> 6.18 </td>
+   <td style="text-align:right;"> 57.6 </td>
+   <td style="text-align:right;"> 5.20 </td>
+   <td style="text-align:right;"> 6.18 </td>
+   <td style="text-align:right;"> 35.6 </td>
+   <td style="text-align:right;"> -28.700 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> QQQ </td>
@@ -791,7 +899,7 @@ As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio
    <td style="text-align:right;"> 63.40 </td>
    <td style="text-align:right;"> 5.57 </td>
    <td style="text-align:right;"> 28.8 </td>
-   <td style="text-align:right;"> -32.50 </td>
+   <td style="text-align:right;"> -32.500 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> FDGRX </td>
@@ -802,7 +910,7 @@ As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio
    <td style="text-align:right;"> 51.00 </td>
    <td style="text-align:right;"> 5.55 </td>
    <td style="text-align:right;"> 27.8 </td>
-   <td style="text-align:right;"> -37.20 </td>
+   <td style="text-align:right;"> -37.200 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> MCO </td>
@@ -813,7 +921,7 @@ As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio
    <td style="text-align:right;"> 11.50 </td>
    <td style="text-align:right;"> 8.26 </td>
    <td style="text-align:right;"> 26.8 </td>
-   <td style="text-align:right;"> -3.64 </td>
+   <td style="text-align:right;"> -3.640 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> MSEQX </td>
@@ -824,7 +932,7 @@ As a test, I confirmed that if the Expected Excess Return, Expected Sharpe Ratio
    <td style="text-align:right;"> 7.76 </td>
    <td style="text-align:right;"> 1.13 </td>
    <td style="text-align:right;"> 4.7 </td>
-   <td style="text-align:right;"> -56.70 </td>
+   <td style="text-align:right;"> -56.700 </td>
   </tr>
 </tbody>
 </table>

@@ -32,7 +32,7 @@ As a result of this analysis, I ended up buying two such funds.
 
 # Measuring performance
 
-In "Buffet's Alpha," Table 2 reports the Beta, Average Excess Return, Total Volatility, Idiosyncratic Volatility, Sharpe Ratio, Information Ratio and Leverage of Berkshire Hathaway in Column 1 and that of the "Overall Stock Market Performance," as a reference in Column 4. The first row of Table 1 below replicates the first Column of Table 4. In Addition, I present Alpha in the last column that matches Alpha in Column one of Table 4 from Buttet's Alpha as well.  This is an analysis of the performance of Berkshire Hathaway using the time interval considered in the paper (10/1976-3/2017).  
+In "Buffett's Alpha," Table 2 reports the Beta, Average Excess Return, Total Volatility, Idiosyncratic Volatility, Sharpe Ratio, Information Ratio and Leverage of Berkshire Hathaway in Column 1 and that of the "Overall Stock Market Performance," as a reference in Column 4. The first row of Table 1 below replicates the first Column of Table 4. In Addition, I present Alpha in the last column that matches Alpha in Column one of Table 4 from Buttet's Alpha as well.  This is an analysis of the performance of Berkshire Hathaway using the time interval considered in the paper (10/1976-3/2017).  
 
 The numbers are obtained as follows. First, I downloaded the returns on Berkshire Hathaway from WRDS. Second, I downloaded the "Fama French Factors" from Ken French's website, and merge.  Third, I downloaded the factors UMD, BAB, and QMJ from AQR's website. Fourth, I eliminated rows outside of the desired time period. Fifth, create excess returns for BRK by subtracting the risk-free rate from the returns on BRK. 
 
@@ -57,7 +57,10 @@ library(kableExtra)
 
 setwd("~/Rstuff/WRDS")
 source('realFacts.R')
+```
 
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 tmp = data.frame(Fund=DWDnames)
 #head(fundNames)
 #head(tmp)
@@ -69,7 +72,7 @@ tmp=tmp[order(-1*tmp$informationRatio),]
 names(tmp) = c("Fund","Fund Name","Years of Data","Beta","Excess Return", "Total Vol",
                  "Idiosyncratic Vol","Sharpe Ratio","Information Ratio","Alpha")
 
-table <- kable(tmp, caption = "Funds Analyzed Through the 'Buffet's Alpha Framework'",
+table <- kable(tmp, caption = "Funds Analyzed Through the 'Buffett's Alpha Framework'",
                row.names=FALSE)
 
 table %>%
@@ -96,9 +99,9 @@ These questions lead us to use a factor framework to explain where these perform
 
 # Performance Attribution through a Factor Framework
 
-I create a matrix of six factors by merging the three factors of Famma French with another three factors taken from AQR and eliminating all the rows with missing observations.  The resulting table represents 792 monthly returns of each factor over the time period July 1956 until Jun 2023 (66 years). I can estimate the expected return on each factor as the mean of its column, and the corresponding covariance matrix of the factors provides an estimate of the variance covariance matrix of the factors.  If I know how a portfolio loads onto the factors I can compute the expected return on the portfolio as well as the variance of the systematic risk of the portfolio.  One way to estimate the loadings of a portfolio onto factors is to regress the returns of the portfolio onto the returns of the factors, which is the approach taken by Table 4 of Buffet's Alpha.  
+I create a matrix of six factors by merging the three factors of Famma French with another three factors taken from AQR and eliminating all the rows with missing observations.  The resulting table represents 792 monthly returns of each factor over the time period July 1956 until Jun 2023 (66 years). I can estimate the expected return on each factor as the mean of its column, and the corresponding covariance matrix of the factors provides an estimate of the variance covariance matrix of the factors.  If I know how a portfolio loads onto the factors I can compute the expected return on the portfolio as well as the variance of the systematic risk of the portfolio.  One way to estimate the loadings of a portfolio onto factors is to regress the returns of the portfolio onto the returns of the factors, which is the approach taken by Table 4 of Buffett's Alpha.  
 
-Table 2 presents the factor loadings of each fund obtained by regressing each fund's returns on the 6 factors.  The second row matches with the fifth column of Table 4 in Buffet's alpha.^[While the numbers are not materially different, they are not identical.  The biggest difference is for the QMJ factor (0.3917 versus 0.47).  My understanding it that small differences in the results are to be expected because the factors I recently downloaded are not identical to what the paper used five years ago.]  The table as been sort by descending alpha.
+Table 2 presents the factor loadings of each fund obtained by regressing each fund's returns on the 6 factors.  The second row matches with the fifth column of Table 4 in Buffett's alpha. {While the numbers are not materially different, they are not identical.  The biggest difference is for the QMJ factor (0.3917 versus 0.47).  My understanding it that small differences in the results are to be expected because the factors I recently downloaded are not identical to what the paper used five years ago.}  The table as been sort by descending alpha.
 
 A few things to note. The so called factor ETFs are loading in a sensible manner.  DGRO & QUAL loads on QMJ, VLUE loads on SMB, SPY loads on MKT, MTUM loads on UMD and USMV loads on both BAB and QUAL.  Not surprisinginly, BRK loads on HML, BAB & QMJ at least for the long time periods.  For the past ten years, however, BRK loads heavily on HML but is short BAB and the loading on QMJ has fallen considerably.  Surprisingly, SIZE does not appear to load on SMB. I have also included two growth mutual funds that are short HML and QMJ.   
 
