@@ -1,12 +1,12 @@
 ---
-title: Excecutive Summary
+title: Executive Summary
 author: Douglas W. Dwyer
 output: 
   html_document:
     css: styles.css
 ---
 
-# An Unified Approach to Value Investing
+# A Unified Approach to Value Investing
 
 
 One approach to long-term investing involves allocating the majority of one's capital to well-diversified funds and the remainder to a selection of stocks considered undervalued with promising future potential. Valuable tools for choosing which funds and stocks to invest in include frameworks for performance attribution and valuation. The intent of Value Space is to make a set of such tools accessible to the retail investor.
@@ -37,4 +37,4 @@ My understanding of factor investing is heavily influenced by two articles writt
 
 My implementation of a DCF calculation builds on the work of Aswath Damodaran. It is described in the posts "Ordinary Returns for Extraordinary Performance" and "The Crux of the Damodaran Valuation Framework." The post "Using Models to Understand Prices" places the new construct of an 'implied sustainable margin' within the context of similar constructs in finance, such as yields, spreads, and option-implied volatility.
 
-(last revised October 31, 2023)
+(Last revised October 31, 2023)
