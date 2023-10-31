@@ -24,10 +24,19 @@ getSymbols(symbol, src =src0)
 
 tmp = eval( str2lang(symbol))
 x=as.numeric(tmp[nrow(tmp),1])
+x0=as.numeric(tmp[1,1])
+averageX = mean(as.numeric(tmp[,1]), na.rm=TRUE)
+
 #plot(tmp,main=paste("MR of",symbol,"is",x))
 
 #df <- data.frame(date = index(symbol), value = coredata(symbol))
 df <- data.frame(date = index(tmp), value = coredata(tmp))
+
+firstDate = df$date[1]
+lastDate = df$date[nrow(df)]
+yearsOfData = as.numeric( (lastDate - firstDate)/365.26 )
+
+avgGrowth = log(x/x0)/yearsOfData
 
 tst = ggplot(data = df, aes(x = df[,1], y = df[,2])) +
   geom_line() +
@@ -35,8 +44,16 @@ tst = ggplot(data = df, aes(x = df[,1], y = df[,2])) +
 
 
 sentence = paste0("Most Recent Value of ",symbol," is ",x, " (as of ", max(df$date),")")
+
+sentence2 = paste0("Based on ", round(yearsOfData,2), " years of data, the average growth rate is ",
+             round(100*avgGrowth,2),"%.")
+
+sentence3 = paste0("Based on ", round(yearsOfData,2), " years of data, the average of the time series is ",
+             round(averageX,2),".")
+
+
 plot1 = ggplotly(tst)
-return(list(plot1,sentence))
+return(list(plot1,sentence,x,0,firstDate,lastDate,yearsOfData,avgGrowth,sentence2, sentence3))
 }
 
 TBill_ts = makeTS('DGS10')
@@ -44,12 +61,15 @@ BB_yield_ts = makeTS("BAMLH0A1HYBBEY")
 VIX_ts =makeTS("VIXCLS")
 B_yield_ts = makeTS("BAMLH0A2HYBEY")
 CPI_ts = makeTS("CPALTT01USA661S")
+CPIAUCSL_ts = makeTS("CPIAUCSL")
 ```
 
 
 # Time Series of the 10 year T bill
 
-`r TBill_ts[[2]]`
+- `r TBill_ts[[2]]` 
+
+- `r TBill_ts[[10]]` 
 
 ```{r,  echo=F,message=FALSE,warning=FALSE}
 TBill_ts[[1]]
@@ -58,7 +78,10 @@ TBill_ts[[1]]
 
 # Time Series of yield on B Bond
 
-`r B_yield_ts[[2]]`
+- `r B_yield_ts[[2]]`
+
+- `r B_yield_ts[[10]]`
+
 
 ```{r,  echo=F,message=FALSE,warning=FALSE}
 B_yield_ts[[1]]
@@ -77,7 +100,9 @@ BB_yield_ts[[1]]
 
 # Time Series of the VIX
 
-`r VIX_ts[[2]]`
+- `r VIX_ts[[2]]`
+
+- `r VIX_ts[[10]]`
 
 ```{r,  echo=F,message=FALSE,warning=FALSE}
 VIX_ts[[1]]
@@ -88,6 +113,8 @@ getSymbols('^GSPC')
 symbol='GSPC'
 tmp = eval( str2lang(symbol))
 x=as.numeric(tmp[nrow(tmp),1])
+x0=as.numeric(tmp[1,1])
+
 #plot(tmp,main=paste("MR of",symbol,"is",x))
 
 #df <- data.frame(date = index(symbol), value = coredata(symbol))
@@ -97,18 +124,45 @@ tst = ggplot(data = df, aes(x = df[,1], y = df[,2])) +
   geom_line() +
   labs(title = paste("Time Series Plot of",symbol), x = "Date", y = "Value")
 
-
 sentence = paste0("Most Recent Value of ",symbol," is ",round(x,3), " (as of ", max(df$date),")")
+
+firstDate = df$date[1]
+lastDate = df$date[nrow(df)]
+yearsOfData = as.numeric( (lastDate - firstDate)/365.26 )
+
+avgGrowth = log(x/x0)/yearsOfData
+
+tst = ggplot(data = df, aes(x = df[,1], y = df[,2])) +
+  geom_line() +
+  labs(title = paste("Time Series Plot of",symbol), x = "Date", y = "Value")
+
+
+sentence = paste0("Most Recent Value of ",symbol," is ",x, " (as of ", max(df$date),")")
+
+sentence2 = paste0("Based on ", round(yearsOfData,2), "years of data, the average growth rate is ",
+             round(100*avgGrowth,2),"%.")
+
 plot1 = ggplotly(tst)
-GSPC_ts = list(plot1,sentence)
+GSPC_ts = list(plot1,sentence,sentence2)
 
 ```
 
 
 # Time Series of the S&P 500
 
-`r GSPC_ts[[2]]`
+- `r GSPC_ts[[2]]` 
+- `r GSPC_ts[[3]]`
 
 ```{r, echo=F,message=FALSE,warning=FALSE}
 GSPC_ts[[1]]
+```
+
+# Time Series of "CPI for All Urban Consumers (CPIAUCSL)" 
+
+- `r CPIAUCSL_ts[[9]]`
+
+```{r, echo=F,message=FALSE,warning=FALSE}
+CPIAUCSL_ts[[1]]
+
+
 ```
