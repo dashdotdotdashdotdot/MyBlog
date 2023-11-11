@@ -18,7 +18,7 @@ tags:
 
 # Introduction
 
-There is a long literature on the existence of so-called factors that represent "long-short" portfolios that are self-financing and have positive returns on average over long periods of time.  Some factors such as "market minus the risk-free" rate have obvious risk/reward interpretations: : going long the market and shorting a risk-free asset should have a positive return as the market is riskier than the risk-free rate. For other factors, there are a variety of hypothesis to explain the excess returns including systematic pricing errors by the market. 
+There is a long literature on the existence of so-called factors that represent "long-short" portfolios that are self-financing and have positive returns on average over long periods of time.  Some factors such as "market minus the risk-free" rate have obvious risk/reward interpretations: going long the market and shorting a risk-free asset should have a positive return as the market is riskier than the risk-free rate. For other factors, a variety of hypotheses have been put forth to explain the excess returns including systematic pricing errors by the market. 
 
 The existence of such factors implies that if one can construct a well-diversified portfolio that has a beta of about one and has positive exposures to these factors, one will outperform the market as measured by Sharpe Ratios, Excess Returns and Information Ratios.  For a retail investor to construct and maintain such a portfolio by taking exposures to individual stocks, however, is a daunting task as one would need to rebalance positions in many different stocks regularly.
 
