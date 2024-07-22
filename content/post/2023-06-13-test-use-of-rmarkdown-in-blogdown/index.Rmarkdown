@@ -53,6 +53,9 @@ sentence3 = paste0("Based on ", round(yearsOfData,2), " years of data, the avera
 
 
 plot1 = ggplotly(tst)
+
+
+
 return(list(plot1,sentence,x,0,firstDate,lastDate,yearsOfData,avgGrowth,sentence2, sentence3))
 }
 
@@ -62,6 +65,7 @@ VIX_ts =makeTS("VIXCLS")
 B_yield_ts = makeTS("BAMLH0A2HYBEY")
 CPI_ts = makeTS("CPALTT01USA661S")
 CPIAUCSL_ts = makeTS("CPIAUCSL")
+CoreInflation_ts = makeTS("CORESTICKM159SFRBATL")
 ```
 
 
@@ -163,6 +167,15 @@ GSPC_ts[[1]]
 
 ```{r, echo=F,message=FALSE,warning=FALSE}
 CPIAUCSL_ts[[1]]
+
+
+```
+# Correlation Inflation Series" 
+
+- `r CoreInflation_ts[[1]]`
+
+```{r, echo=F,message=FALSE,warning=FALSE}
+[[1]]
 
 
 ```
